@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include<conio.h>
+#define lang "CPP"
 class Access {
 public:
     int publicVar;    // Public member variable
@@ -46,6 +47,6 @@ int main() {
     // obj.privateMethod();
     Derived derivedObj;
     derivedObj.accessProtected();
-    
+
     return 0;
 }
