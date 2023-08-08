@@ -1,6 +1,5 @@
 #include<iostream>
 #include<conio.h>
-#include<string.h>
 
 int main(int argc, char const *argv[])
 {
@@ -12,7 +11,7 @@ int main(int argc, char const *argv[])
     long b;
     short s;
     bool c;
-
+    std::string name;
     std::cout << "All Data Types of C are Supported in C++ " << std::endl;
 
     return 0;
