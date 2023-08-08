@@ -44,6 +44,8 @@ int main() {
 
     // obj.privateVar = 20; 
     // obj.privateMethod();
-
+    Derived derivedObj;
+    derivedObj.accessProtected();
+    
     return 0;
 }
