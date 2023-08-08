@@ -23,6 +23,14 @@ private:
     }
 };
 
+class Derived : public Access {
+public:
+    void accessProtected() {
+        protectedVar = 30; 
+        protectedMethod();       
+    }
+};
+
 int main() {
     Access obj;
 
