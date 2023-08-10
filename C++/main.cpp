@@ -17,6 +17,7 @@ class Human{
         name = "Unknown";
     }
     Human(int id, string name){
+        
         this->id = id;
         this->name = name;
         //speak();
