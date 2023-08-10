@@ -1,27 +1,36 @@
-#include<iostream>
-
-class Base
+#include <iostream>
+#include <conio.h>
+class Animal
 {
 public:
-    virtual void print()
+    virtual void speak() = 0; // pure virtual function
+};
+
+class Dog : public Animal
+{
+public:
+    void speak() override
     {
-        std::cout << "Base::print()" << std::endl;
+        std::cout << "Woof!" << std::endl;
     }
 };
 
-class Derived : public Base
+class Cat : public Animal
 {
 public:
-    void print()
+    void speak() override
     {
-        std::cout << "Derived::print()" << std::endl;
+        std::cout << "Meow!" << std::endl;
     }
 };
 
-int main()
+int main() // With DMA
 {
-    Base *b = new Derived();
-    b->print();
+    Animal *a = new Dog();
+    a->speak();
+
+    a = new Cat();
+    a->speak();
 
     return 0;
 }
