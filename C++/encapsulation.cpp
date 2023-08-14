@@ -2,7 +2,13 @@
 #include <conio.h>
 
 int main(int argc, char **argv[]){
-    std::cout << "Car : " << std::endl;
+    Car *car = new Car("Lamborghini", "LP700");
+
+    std::cout << "Car Maker : " << car->getMake()<< std::endl;
+    std::cout << "Car Model : " << car->getModel()<< std::endl;
+
+    car->startEngine();
+    return (0);
 }
 
 class Car{
