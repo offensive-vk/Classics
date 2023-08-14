@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
+// Convert From TypeScript .. Please Ignore This.
 class Kid {
 private:
     std::string name;
