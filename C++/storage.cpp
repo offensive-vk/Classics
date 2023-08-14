@@ -1,6 +1,7 @@
 #include <iostream>
 #include <conio.h>
 int global_var = 10; // Global variable
+extern long int numbers[10]; // External Array
 
 int main() {
     // Using 'auto' keyword to automatically infer variable type
