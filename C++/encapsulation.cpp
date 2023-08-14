@@ -1,23 +1,13 @@
 #include <iostream>
 #include <conio.h>
 
-int main(int argc, char **argv[]){
-    Car *car = new Car("Lamborghini", "LP700");
-
-    std::cout << "Car Maker : " << car->getMake()<< std::endl;
-    std::cout << "Car Model : " << car->getModel()<< std::endl;
-
-    car->startEngine();
-    return (0);
-}
-
 class Car{
     private:
     std::string make;
     std::string model;
     void drive()
     {
-        std::cout << this->make << "is being driven." << std::endl;
+        std::cout << this->make << " is being driven." << std::endl;
     }
 
     public:
@@ -42,3 +32,13 @@ class Car{
     }
     
 };
+
+int main(int argc, char **argv[]){
+    Car *car = new Car("Lamborghini", "LP700");
+
+    std::cout << "Car Maker : " << car->getMake()<< std::endl;
+    std::cout << "Car Model : " << car->getModel()<< std::endl;
+
+    car->startEngine();
+    return (0);
+}
