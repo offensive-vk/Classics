@@ -9,9 +9,9 @@ class Car{
     private:
     std::string make;
     std::string model;
-    void startEngine()
+    void drive()
     {
-        std::cout << "Starting engine of " << this->make << this->model << std::endl;
+        std::cout << this->make << "is being driven." << std::endl;
     }
 
     public:
@@ -23,6 +23,10 @@ class Car{
     std::string getModel()
     {
         return this->model;
+    }
+    void startEngine()
+    {
+        std::cout << "Starting engine of " << this->make << this->model << std::endl;
     }
     
     Car(std::string make, std::string model)
