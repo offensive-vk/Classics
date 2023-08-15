@@ -13,6 +13,5 @@ int main(int argc, char const *argv[])
     bool c = false;
     std::string name = "C++";
     std::cout << "All Data Types of C are Supported in C++ " << std::endl;
-
     return 0;
 }
