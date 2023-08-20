@@ -1,20 +1,28 @@
 #include <iostream>
 #include <conio.h>
+#include <iomanip>
 using namespace std;
 
 const int ROWS = 3;
 const int COLS = 4;
 
 // Function to display a 2D array
+// void displayArray(int arr[][COLS]) {
+//     for (int i = 0; i < ROWS; i++) {
+//         for (int j = 0; j < COLS; j++) {
+//             cout << arr[i][j] << "\t";
+//         }
+//         cout << endl;
+//     }
+// }
 void displayArray(int arr[][COLS]) {
     for (int i = 0; i < ROWS; i++) {
         for (int j = 0; j < COLS; j++) {
-            cout << arr[i][j] << "\t";
+            cout << setw(4) << arr[i][j]; // Using setw for formatting
         }
         cout << endl;
     }
 }
-
 // Function to find the sum of all elements in a 2D array
 int sumArray(int arr[][COLS]) {
     int sum = 0;
