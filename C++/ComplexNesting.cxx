@@ -57,14 +57,14 @@ public:
 };
 
 int main() {
-    // Class Nesting
+
+    // Class Nesting - class within a class.
     OuterClass outerObj(10);
     OuterClass::InnerClass innerObj(5);
 
     outerObj.display();
     innerObj.display();
 
-    // Interface Nesting
     Circle circle(3.0);
     Square square(4.0);
 
