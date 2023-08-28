@@ -7,9 +7,11 @@ class Parent{
     public:
         int id;
         int reg;
+
     Parent(int id, int reg) : id(id), reg(reg) {
         std::cout << "\t :: Constructor Has been Called :: \n" << std::endl;
         // this->id = id;
+
     }
     void show(){
         std::cout << this->id << std::endl;
