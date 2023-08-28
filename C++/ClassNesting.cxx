@@ -8,9 +8,9 @@ class Parent{
         int id;
         int reg;
 
-    Parent(int id, int regx) : id(id), reg(regx) {
+    Parent(int id, int reg) : id(id), reg(reg) {
         std::cout << "\t :: Constructor <Parent> Has been Called :: \n" << std::endl;
-
+        std::cout << "Values Has Been Initialized :: \n" << std::endl;
     }
     void show(){
         std::cout << this->id << std::endl;
