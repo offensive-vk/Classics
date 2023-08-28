@@ -8,15 +8,22 @@ class Parent{
         int id;
         int reg;
 
-    Parent(int id, int reg) : id(id), reg(reg) {
-        std::cout << "\t :: Constructor Has been Called :: \n" << std::endl;
-        // this->id = id;
+    Parent(int id, int regx) : id(id), reg(regx) {
+        std::cout << "\t :: Constructor <Parent> Has been Called :: \n" << std::endl;
 
     }
     void show(){
         std::cout << this->id << std::endl;
         std::cout << this->reg << std::endl;
+    }
+    class Kid{
+        std::string name;
+        int id;
+        bool reg;
 
+        Kid(std::string name, int id, bool reg){
+            std::cout << "\t :: Constructor <Kid> Has been Called :: \n" << std::endl;
+        }
     }
 };
 
