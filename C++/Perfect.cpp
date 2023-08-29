@@ -1,5 +1,6 @@
 #include <iostream>
 #include <conio.h>
+#include <unistd.h> 
 
 using namespace std;
 
@@ -23,6 +24,7 @@ int main()
 
         if (sum == i)
         {
+            sleep(2);
             cout << i << " is a perfect number." << "\n";
         }
 
@@ -30,6 +32,6 @@ int main()
         u = 1;
         sum = 0;
     } // End of First loop
-    
+
     getch();
 }
