@@ -6,7 +6,6 @@ int main()
     int number, reverse = 0;
 
     cout << "Input a Number to Reverse and press Enter: ";
-    // Taking Input Number in variable number
     cin >> number;
 
     while (number != 0)
