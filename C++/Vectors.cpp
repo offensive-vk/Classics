@@ -19,8 +19,8 @@ int main() {
 
     // Using range-based for loop to access elements
     std::cout << "Elements of the vector using range-based for loop: ";
-    for (int num : numbers) {
-        std::cout << num << " ";
+    for (int i = 0; i < numbers.size(); i++) {
+        std::cout << numbers[i] << " ";
     }
     std::cout << std::endl;
 
@@ -29,8 +29,8 @@ int main() {
 
     // Display the updated vector
     std::cout << "Vector after removing an element: ";
-    for (int num : numbers) {
-        std::cout << num << " ";
+    for (int i = 0; i < numbers.size(); i++) {
+        std::cout << numbers[i] << " ";
     }
     std::cout << std::endl;
 
