@@ -1,13 +1,17 @@
 #include <iostream>
 #include <conio.h>
+#include <windows.h>
 
 int main(int *argc, char **argv[]) {
+	
     float input;
-
-    std::cout << "Enter a float value to tell your gender : " << std::endl;
+    std::cout << "-> :: Please Enter A Floating Value from : 1.0 to 20.0 :: \n " << std::endl;
+    std::cout << "What do you think? : " << std::endl;
     std::cin >> input;
-
-    if (input == 1.2f) {
+	
+	if(input == 1.0){
+		std::cout << "Human" << std::endl;
+	} else if (input == 1.2f) {
         std::cout << "RTX 3060" << std::endl;
     } else if (input == 1.5f) {
         std::cout << "Hitler" << std::endl;
@@ -47,9 +51,12 @@ int main(int *argc, char **argv[]) {
         std::cout << "Star" << std::endl;
     } else if (input == 19.8f) {
         std::cout << "Chocolate" << std::endl;
+    } else if (input == 20.0f) {
+        std::cout << "Intel Core i9 13900HX" << std::endl;
     } else {
-        std::cout << "Unknown gender <doesn't exists>\n" << std::endl;
+        std::cout << "Undefined " << std::endl;
     }
-
+    
+	// The End
     return 0;
 }
