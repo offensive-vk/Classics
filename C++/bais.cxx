@@ -4,6 +4,7 @@
 
 int main(int argc, char* argv[]) {
     float input;
+    std::cout << "This Program Tells your fortune !" << std::endl;
     std::cout << "-> :: Please Enter A Floating Value from : 1.0 to 20.0 :: \n " << std::endl;
     std::cout << "What do you think? : ";
     std::cin >> input;
