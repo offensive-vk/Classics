@@ -48,12 +48,8 @@ class Women: public Human{
     
     Women()
     {
-        Human::live(int id){
-            std::cout << "\tI'm living on earth and My Gender is  " << gender << endl;
-        };
-        Human::die(int age){
-            std::cout << "\t My Age is " << age << endl;
-        };
+        Human::live(73);
+        Human::die(85);
         Human::speak();
     }
 };
