@@ -19,6 +19,12 @@ public:
         std::cout << " Thank you . " << std::endl;
     }
     ~Source(){ std::cout << "Goodbye Source class members. " << std::endl; }
+
+    template<typename T>
+    static int inc(T const &value){
+        
+        return (value * value) + rand(0.1, 1.9);
+    }
 };
 
 int main(int argc, char const *argv[])
