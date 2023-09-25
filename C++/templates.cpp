@@ -22,3 +22,18 @@ private:
     T1 first_;
     T2 second_;
 };
+int main() {
+    // Create pairs of different data types
+    Pair<int, double> intDoublePair(1, 3.14);
+    Pair<std::string, bool> stringBoolPair("Hello", true);
+
+    // Display the pairs
+    intDoublePair.display();
+    stringBoolPair.display();
+
+    // Access elements of the pairs
+    std::cout << "First element of intDoublePair: " << intDoublePair.getFirst() << std::endl;
+    std::cout << "Second element of stringBoolPair: " << stringBoolPair.getSecond() << std::endl;
+
+    return 0;
+}
