@@ -31,5 +31,49 @@ int main() {
     cout << "char o = " << o << endl;
     cout << "int p = " << p << endl;
 
+        // Static Cast
+    double q = 3.14;
+    int r = static_cast<int>(q);
+    char s = 'C';
+    int t = static_cast<int>(s);
+
+    cout << "Static Cast:" << endl;
+    cout << "double q = " << q << endl;
+    cout << "int r = " << r << endl;
+    cout << "char s = " << s << endl;
+    cout << "int t = " << t << endl;
+
+    // Dynamic Cast
+    class Base {
+        virtual void print() {}
+    };
+    class Derived : public Base {
+        void print() {}
+    };
+
+    Base* b1 = new Derived;
+    Derived* d1 = dynamic_cast<Derived*>(b1);
+    if (d1 == nullptr) {
+        cout << "Dynamic Cast Failed" << endl;
+    } else {
+        cout << "Dynamic Cast Succeeded" << endl;
+    }
+
+    Base* b2 = new Base;
+    Derived* d2 = dynamic_cast<Derived*>(b2);
+    if (d2 == nullptr) {
+        cout << "Dynamic Cast Failed" << endl;
+    } else {
+        cout << "Dynamic Cast Succeeded" << endl;
+    }
+
+    // Reinterpret Cast
+    int* u = new int(65);
+    char* v = reinterpret_cast<char*>(u);
+    cout << "Reinterpret Cast:" << endl;
+    cout << "int* u = " << *u << endl;
+    cout << "char* v = " << *v << endl;
+
+    return 0;
 }
 
