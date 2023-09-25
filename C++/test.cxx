@@ -24,6 +24,7 @@ public:
 int main(int argc, char const *argv[])
 {
     Source *X;
-    
+    X = new Source(55, 100, "Test.cxx");
+    X->display();
     return 0;
 }
