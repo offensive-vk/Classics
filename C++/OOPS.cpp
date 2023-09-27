@@ -63,3 +63,13 @@ public:
     }
 };
 
+int main() {
+    // Usage of the classes
+    Circle circle("Red", 5);
+    Rectangle rectangle("Blue", 4, 6);
+
+    std::cout << "Circle - Color: " << circle.getColor() << ", Radius: " << circle.getRadius() << ", Area: " << circle.calculateArea() << std::endl;
+    std::cout << "Rectangle - Color: " << rectangle.getColor() << ", Width: " << rectangle.getWidth() << ", Height: " << rectangle.getHeight() << ", Area: " << rectangle.calculateArea() << std::endl;
+
+    return 0;
+}
