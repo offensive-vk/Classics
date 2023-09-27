@@ -26,3 +26,29 @@ public:
         std::cout << "Derived2::bar()" << std::endl;
     }
 };
+// Another base class with a 'final' specifier to prevent further inheritance
+class FinalBase final {
+public:
+    void someFunction() {
+        std::cout << "FinalBase::someFunction()" << std::endl;
+    }
+};
+
+// Attempting to derive from 'FinalBase' will result in a compilation error.
+// class InvalidDerived : public FinalBase {}; // Error: 'FinalBase' is marked 'final'
+
+int main() {
+    Base base;
+    Derived2 derived2;
+
+    base.foo(); // Calls Base::foo()
+    base.nonVirtualFunction(); // Calls Base::nonVirtualFunction()
+
+    derived2.foo(); // Calls Base::foo() (cannot override)
+    derived2.bar(); // Calls Derived2::bar()
+    
+    FinalBase finalBase;
+    finalBase.someFunction(); // Calls FinalBase::someFunction()
+
+    return 0;
+}
