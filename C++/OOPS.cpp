@@ -31,7 +31,7 @@ public:
     Circle(const std::string& color, double radius) : Shape(color), radius(radius) {}
 
     double calculateArea() const override {
-        return M_PI * radius * radius;
+        return 3.14 * radius * radius;
     }
 
     // Additional method specific to circles
