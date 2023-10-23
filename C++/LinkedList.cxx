@@ -1,9 +1,8 @@
 #include <iostream>
 #include <conio.h>
-
+using namespace std;
 // Node class to represent elements in the linked list
-template <class T>
-class Node {
+template <class T> class Node {
 public:
     T data;
     Node* next;
@@ -12,8 +11,7 @@ public:
 };
 
 // LinkedList class using generic programming
-template <class T>
-class LinkedList {
+template <class T> class LinkedList {
 private:
     Node<T>* head;
 
@@ -34,7 +32,7 @@ public:
         }
     }
 
-    // Function to display the elements in the linked list
+    //Function to display the elements in the linked list
     void display() {
         Node<T>* current = head;
         while (current != nullptr) {
