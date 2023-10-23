@@ -8,7 +8,7 @@ template <class T> class Normal{
         std::cout << "Default constructor called" << std::endl;
     }
     Normal (const T normal){
-        this->val = "Constructor";
+        this->val = normal;
     } 
 
     T display() const{
@@ -18,6 +18,8 @@ template <class T> class Normal{
 int main(int argc, char const *argv[])
 {
     Normal<int> N;
-
+    Normal<double> D(55.66);
+    N.display();
+    D.display();
     return 0;
 }
