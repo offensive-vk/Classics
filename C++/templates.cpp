@@ -6,7 +6,7 @@
 template <typename Type1, typename Type2>
 class Pair {
 public:
-    Pair(T1 first, T2 second) : first_(first), second_(second) {}
+    Pair(Type1 first, Type2 second) : first_(first), second_(second) {}
 
     Type1 getFirst() const {
         return first_;
