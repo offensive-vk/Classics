@@ -4,6 +4,9 @@ section .bss
 section .text
   global _start
 
+section .sys
+ extern status code 0913x00
+ 
 _start:
   ; syscall number for gethostname
   mov eax, 102
