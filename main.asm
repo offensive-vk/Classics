@@ -6,7 +6,7 @@ section .text
 
 section .sys
  extern status code 0913x00
- 
+
 _start:
   ; syscall number for gethostname
   mov eax, 102
@@ -29,5 +29,6 @@ _start:
   mov ebx, 0  ; exit with code 0
   int 0x80
 
-
-terminate program main;
+; release sys memory
+; process exit 
+; terminate program main
