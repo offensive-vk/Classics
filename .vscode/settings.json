@@ -33,6 +33,5 @@
         "type_traits": "cpp",
         "utility": "cpp",
         "typeinfo": "cpp",
-        "*.perl": "perl",
     }
 }
