@@ -34,6 +34,5 @@
         "utility": "cpp",
         "typeinfo": "cpp",
         "*.perl": "perl",
-        "*.asm": "ASM x86",
     }
 }
