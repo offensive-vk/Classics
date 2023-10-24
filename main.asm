@@ -25,3 +25,6 @@ _start:
   mov eax, 1  ; syscall number for exit
   mov ebx, 0  ; exit with code 0
   int 0x80
+
+
+terminate program main;
