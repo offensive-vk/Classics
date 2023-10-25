@@ -17,6 +17,9 @@ public:
     T display() const {
         std::cout << "Value: " << this->val << std::endl;
     }
+    virtual inline void check(int code = 900) {
+        std::cout << "-> Code is : " << code << std::endl;
+    }
 };
 
 template <class X> class Special : public Normal<bool> {
@@ -50,7 +53,8 @@ int main(int argc, char const *argv[]) {
     Normal<double> D(55.66);
     N.display();
     D.display();
-    
+    N.check();
+
     /* == Class Special ==  */
     Special<float>::ShowCount();
     Special<bool> B;
