@@ -10,18 +10,23 @@ template <class T> class Normal{
     Normal (const T normal){
         this->val = normal;
     } 
-
+    ~Normal(){
+        std::cout << "Special Class Object Destroyed." << std::endl;
+    }
     T display() const{
         std::cout << "Value: " << this->val << std::endl;
     }
 };
 
-template <class X> class Special {
+template <class X> class Special: public Normal {
+    static int count = 0;
     public:
     Special(){
+        count++;
         std::cout << "Special Class Default Constructor." << std::endl;
     }
     ~Special(){
+        count--;
         std::cout << "Special Class Object Destroyed." << std::endl;
     }
 
