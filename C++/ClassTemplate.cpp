@@ -15,6 +15,10 @@ template <class T> class Normal{
         std::cout << "Value: " << this->val << std::endl;
     }
 };
+
+template <class X> class Special {
+    
+};
 int main(int argc, char const *argv[])
 {
     Normal<int> N;
