@@ -22,22 +22,58 @@ public:
     }
 };
 
+/**
+ * @brief A class template called Special that inherits from another class template called Normal.
+ * 
+ * The Special class template has a default constructor, a parameterized constructor, a destructor, and a static member function.
+ * It also has a static member variable called count.
+ * 
+ * @tparam X The type of the object being created.
+ */
 template <class X> class Special : public Normal<bool> {
     static int count;
 public:
+    /**
+     * @brief Default constructor for the Special class template.
+     * 
+     * The constructor increments the static member variable count and prints a message.
+     */
     Special() {
         count++;
         std::cout << "Special Class Default Constructor." << std::endl;
     }    
+
+    /**
+     * @brief Parameterized constructor for the Special class template.
+     * 
+     * The constructor takes a parameter num of type X and calls the constructor of the base class Normal with the argument false.
+     * It then increments the static member variable count and prints a message.
+     * 
+     * @param num The value to be assigned to the num variable.
+     */
     Special(X num): Normal(false) {
         count++;
         std::cout << "Passed false to Parent Class(Normal) and num is assigned : " << num << std::endl;
         return;
     }
+
+    /**
+     * @brief Destructor for the Special class template.
+     * 
+     * The destructor decrements the static member variable count and prints a message.
+     */
     ~Special() {
         count--;
         std::cout << "Special Class Object Destroyed." << std::endl;
     }
+
+    /**
+     * @brief Static member function that shows the count of objects created.
+     * 
+     * The function prints the value of the static member variable count and returns it.
+     * 
+     * @return The count of objects created.
+     */
     static X ShowCount() {
         std::cout << "Total Objects Created : " << count << std::endl;
         return count;

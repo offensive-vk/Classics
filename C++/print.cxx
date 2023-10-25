@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-#include "vedansh.hxx"
+#include<vedansh.hxx>
 
 void print() {
     std::cout << std::endl;
