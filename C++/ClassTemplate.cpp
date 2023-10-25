@@ -29,13 +29,20 @@ template <class X> class Special: public Normal {
         count--;
         std::cout << "Special Class Object Destroyed." << std::endl;
     }
-
+    static X ShowCount(){
+        std::cout << "Total Objects Created : " << Special->count << std::endl;
+        return count;
+    }
 };
 int main(int argc, char const *argv[])
 {
+    /* == Class Normal ==  */
     Normal<int> N;
     Normal<double> D(55.66);
     N.display();
     D.display();
+
+    /* == Class Special ==  */
+    Special<float>::ShowCount();
     return 0;
 }
