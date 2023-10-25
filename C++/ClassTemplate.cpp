@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <conio.h>
 
 template <class T> class Normal {
 public:
@@ -42,8 +43,8 @@ public:
 
 // Initialize the static member count
 template <class X> int Special<X>::count = 0;
-
 int main(int argc, char const *argv[]) {
+
     /* == Class Normal ==  */
     Normal<int> N;
     Normal<double> D(55.66);
@@ -54,11 +55,15 @@ int main(int argc, char const *argv[]) {
     Special<float>::ShowCount();
     Special<bool> B;
     Special<float> *S = new Special<float>();
-    S->display();
     
+    S->display();
+    B.display();
+
     delete S;
     Special<float>::ShowCount();
-    
+
+    /* == End == */
     system("pause");
+    system("cls");
     return 0;
 }
