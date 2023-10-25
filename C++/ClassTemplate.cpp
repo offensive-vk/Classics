@@ -24,6 +24,11 @@ public:
     Special() {
         count++;
         std::cout << "Special Class Default Constructor." << std::endl;
+    }    
+    Special(X num): Normal(false) {
+        count++;
+        std::cout << "Passed false to Parent Class(Normal) and num is assigned : " << num << std::endl;
+        return;
     }
     ~Special() {
         count--;
@@ -47,11 +52,13 @@ int main(int argc, char const *argv[]) {
     
     /* == Class Special ==  */
     Special<float>::ShowCount();
+    Special<bool> B;
     Special<float> *S = new Special<float>();
     S->display();
     
-    system("pause");
-    
+    delete S;
     Special<float>::ShowCount();
+    
+    system("pause");
     return 0;
 }
