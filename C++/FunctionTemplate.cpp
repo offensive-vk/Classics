@@ -1,5 +1,6 @@
 #include<iostream>
 #include<conio.h>
+#define MAX_BUFFER_SIZE 1026;
 
 // Global Test Function.
 template <typename Type1, typename Type2> void Global(Type1 t, Type2 v) {
@@ -23,12 +24,18 @@ template <typename TData> TData Attack(TData data){
     }
     return data;
 }
+template <typename Def> Def Run(Def value){
+    std::cout << value.to_string() << std::endl;
+    return value.to_string();
+}
 int main(int argc, char const *argv[])
 {
     std::cout << "\n === Begin Program === \n" << std::endl;
 
     Global<int, int>(101, 102);
     Attack<double>(555.555);
+    Run<std::string>("Manish");
+
     std::cout << "\n === End Program === \n" << std::endl;
     return 0;
 }
