@@ -3,7 +3,7 @@
 
 template <class T> class Normal{
     public: 
-        std::string val;
+        T val;
     Normal (){
         std::cout << "Default constructor called" << std::endl;
     }
