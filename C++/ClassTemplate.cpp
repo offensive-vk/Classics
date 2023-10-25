@@ -17,7 +17,14 @@ template <class T> class Normal{
 };
 
 template <class X> class Special {
-    
+    public:
+    Special(){
+        std::cout << "Special Class Default Constructor." << std::endl;
+    }
+    ~Special(){
+        std::cout << "Special Class Object Destroyed." << std::endl;
+    }
+
 };
 int main(int argc, char const *argv[])
 {
