@@ -54,7 +54,7 @@ int main(int argc, char const *argv[]) {
     /* == Class Special ==  */
     Special<float>::ShowCount();
     Special<bool> B;
-    Special<float> *S = new Special<float>();
+    Special<float> *S = new Special<float>(900.11);
     
     S->display();
     B.display();
