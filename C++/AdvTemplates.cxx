@@ -29,3 +29,30 @@ public:
         return data.size();
     }
 };
+
+int main() {
+    // Create a stack of integers
+    Stack<int> intStack;
+
+    intStack.push(10);
+    intStack.push(20);
+    intStack.push(30);
+
+    std::cout << "Stack size: " << intStack.size() << std::endl;
+    while (!intStack.empty()) {
+        std::cout << "Popped: " << intStack.pop() << std::endl;
+    }
+
+    // Create a stack of strings
+    Stack<std::string> stringStack;
+
+    stringStack.push("Hello");
+    stringStack.push("World");
+
+    std::cout << "Stack size: " << stringStack.size() << std::endl;
+    while (!stringStack.empty()) {
+        std::cout << "Popped: " << stringStack.pop() << std::endl;
+    }
+
+    return 0;
+}
