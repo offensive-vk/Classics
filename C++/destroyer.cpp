@@ -3,6 +3,7 @@
 
 class MyClass {
     public:
+        int *data = new int[100];
         // Constructor
         MyClass() {
             std::cout << "Constructor called." << std::endl;
@@ -10,6 +11,7 @@ class MyClass {
         // Destructor
         ~MyClass() {
             std::cout << "Destructor called." << std::endl;
+            delete this->data;
         }
     };
 
