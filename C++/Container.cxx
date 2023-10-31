@@ -31,3 +31,26 @@ public:
         return size;
     }
 };
+int main() {
+    // Create a container for integers with a capacity of 5
+    Container<int, 5> intContainer;
+
+    intContainer.add(10);
+    intContainer.add(20);
+    intContainer.add(30);
+
+    std::cout << "Integers in the container: ";
+    intContainer.display();
+
+    // Create a container for strings with a capacity of 3
+    Container<std::string, 3> stringContainer;
+
+    stringContainer.add("Hello");
+    stringContainer.add("World");
+
+    std::cout << "Strings in the container: ";
+    stringContainer.display();
+
+    return 0;
+}
+
