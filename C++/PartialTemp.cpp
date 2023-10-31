@@ -1,18 +1,18 @@
 #include <iostream>
 #include <cstdlib>
 
-template <typename K, typename V>
+template <typename Key, typename Value>
 class MyPair {
 public:
-    MyPair(K k, V v) : key(k), value(v) {}
+    MyPair(Key k, Value v) : key(k), value(v) {}
 
     void print() const {
         std::cout << "General template: key = " << key << ", value = " << value << std::endl;
     }
 
 private:
-    K key;
-    V value;
+    Key key;
+    Value value;
 };
 template <typename T>
 class MyPair<T, int> {
