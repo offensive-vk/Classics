@@ -1,2 +1,2 @@
-*.asm linguist-language=ASM x86
-*.sh linguist-language=Shell Script
+*.asm linguist-language=ASMx86
+*.sh linguist-language=ShellScript
