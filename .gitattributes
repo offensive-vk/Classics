@@ -1,0 +1,2 @@
+*.asm linguist-language=ASM x86
+*.sh linguist-language=Shell Script
