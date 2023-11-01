@@ -41,6 +41,7 @@ int main() {
         std::cout << "Vector is not empty." << std::endl;
     }
 
+    std::cout << numbers.at(2) << std::endl;
     // Clear the vector
     numbers.clear();
 
@@ -48,6 +49,5 @@ int main() {
     if (numbers.empty()) {
         std::cout << "Vector is empty after clearing." << std::endl;
     }
-
     return 0;
 }
