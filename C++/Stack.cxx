@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+// Transpiled from TypeScript to C++.
+// Represent Stack Structure.
 template <typename T>
 class Stack {
 private:
