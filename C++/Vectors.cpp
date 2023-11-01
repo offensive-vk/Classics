@@ -10,6 +10,9 @@ int main() {
     numbers.push_back(20);
     numbers.push_back(30);
 
+    // Size of the vector
+    std::cout << "Size of vector: " << numbers.size() << std::endl;
+
     // Accessing elements using index
     std::cout << "Elements of the vector: ";
     for (size_t i = 0; i < numbers.size(); ++i) {
@@ -48,6 +51,5 @@ int main() {
     if (numbers.empty()) {
         std::cout << "Vector is empty after clearing." << std::endl;
     }
-
     return 0;
 }
