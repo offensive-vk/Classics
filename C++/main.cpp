@@ -53,17 +53,8 @@ class Women: public Human{
 int main(int argc, char **argv){
 
     std::cout << ":: \t C++ Programming - OOP !! :: " << endl;
-    
     std::cout << "\n\t ============================== \t\n" << endl;
-    int id = 0;
-    string name = " ";
-    std::cout << "\tEnter Your ID: " ;
-    std::cin >> id;
-    std::cout << "\tEnter Your Name: " ;
-    std::cin >> name;
-    std::cout << "\n\t ==============================\n" << endl;
-    
-    Human raju(id, name);
+    Human raju(45, "NULL");
 
     raju.speak();
     raju.die(59);
