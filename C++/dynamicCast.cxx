@@ -14,12 +14,12 @@ class DerivedClass : public BaseClass {
     }
 };
 int main() {
-    BaseClass *basePtr = new DerivedClass();  // Upcasting
+    BaseClass *basePtr = new DerivedClass(); 
     DerivedClass *derivedPtr;
 
-    derivedPtr = dynamic_cast<DerivedClass *>(basePtr);  // Downcasting
+    derivedPtr = dynamic_cast<DerivedClass *>(basePtr);  
     if (derivedPtr) {
-        derivedPtr->display();  // Output: DerivedClass
+        derivedPtr->display(); 
     } else {
         std::cout << "Invalid type conversion.";
     }

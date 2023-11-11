@@ -1,8 +1,7 @@
 #include <iostream>
 #include <windows.h>
 
-template <typename T, size_t Capacity>
-class Container {
+template <typename T, size_t Capacity> class Container {
 private:
     T data[Capacity];
     size_t size;
@@ -53,4 +52,3 @@ int main() {
 
     return 0;
 }
-
