@@ -10,6 +10,7 @@ static const int age = 10;
 class Human{
     public:
     int id;
+    unsigned int age = 0;
     string name;
     ~Human(){std:: cout << "\t Destructor Has Been Called !!\n" << endl;}
     Human(){
