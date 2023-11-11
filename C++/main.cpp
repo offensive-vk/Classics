@@ -11,16 +11,17 @@ class Human{
     public:
     int id;
     string name;
-    //static std::string gender = NULL;
     Human(){
         id = 10 + (rand() % (80 - 10 + 1));
         name = "Unknown";
     }
     Human(int id, string name){
-        
         this->id = id;
         this->name = name;
-        //speak();
+
+    }
+    void Spawn(const Human& human){
+
     }
     ~Human(){std:: cout << "\t Destructor Has Been Called !!\n" << endl;}
     void live(int id)
@@ -55,6 +56,7 @@ class Women: public Human{
 };
 
 int main(int argc, char **argv){
+
     std::cout << ":: \t C++ Programming - OOP !! :: " << endl;
     
     std::cout << "\n\t ============================== \t\n" << endl;
