@@ -40,14 +40,13 @@ class Human{
 
 class Women: public Human{
     public:
-    //static std::string gender = "Female";
     
     Women()
     {
-        Human::live(73);
         Human::die(85);
         Human::speak();
     }
+    ~Women(){ }
 };
 
 int main(int argc, char **argv){
@@ -65,7 +64,6 @@ int main(int argc, char **argv){
     
     Human raju(id, name);
 
-    raju.live(id);
     raju.speak();
     raju.die(59);
     
