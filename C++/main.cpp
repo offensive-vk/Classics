@@ -11,6 +11,7 @@ class Human{
     public:
     int id;
     string name;
+    ~Human(){std:: cout << "\t Destructor Has Been Called !!\n" << endl;}
     Human(){
         id = 10 + (rand() % (80 - 10 + 1));
         name = "Unknown";
@@ -18,18 +19,11 @@ class Human{
     Human(int id, string name){
         this->id = id;
         this->name = name;
-
     }
     void Spawn(const Human& human){
 
     }
-    ~Human(){std:: cout << "\t Destructor Has Been Called !!\n" << endl;}
-    void live(int id)
-    {   
-        id = 100% 10 + 10;
-        std::cout << "\t I'm living from " << id << " years on earth.\n" << endl;
-        id++;
-    }
+
     void speak(){
         std::cout << "\t Hello, My Name is " <<this->name << " and I am a Human.\n" << endl;
     }
