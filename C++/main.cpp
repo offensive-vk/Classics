@@ -21,8 +21,8 @@ class Human{
         this->id = id;
         this->name = name;
     }
-    void Spawn(const Human& human){
-
+    void Spawn(Human& human){
+        cout << "Spawned to Earth." << endl;
     }
 
     void speak(){
@@ -39,10 +39,11 @@ class Human{
 };
 
 class Women: public Human{
+
     public:
-    
+    string gender = "Female";
     Women()
-    {
+    {   
         Human::die(85);
         Human::speak();
     }
