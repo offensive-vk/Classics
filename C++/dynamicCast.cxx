@@ -5,6 +5,9 @@ class BaseClass {
     virtual void display() {
         std::cout << "BaseClass" << std::endl;
     }
+    inline virtual void deleteAll(){
+        std::cout << "BaseClass DeleteAll" << std::endl;
+    }
 };
 
 class DerivedClass : public BaseClass {
