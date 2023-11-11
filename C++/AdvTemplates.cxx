@@ -2,8 +2,7 @@
 #include <vector>
 
 // Template class for a generic stack
-template <typename T>
-class Stack {
+template <typename T> class Stack {
 private:
     std::vector<T> data;
 
