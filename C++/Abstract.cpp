@@ -32,3 +32,24 @@ public:
         std::cout << "Circle with radius " << radius << std::endl;
     }
 };
+
+// Concrete class Square, derived from Shape
+class Square : public Shape {
+private:
+    double side;
+
+public:
+    Square(double s) : side(s) {}
+
+    // Implementation of the pure virtual function
+    double calculateArea() const override {
+        return side * side;
+    }
+
+    // Override the display function
+    void display() const override {
+        std::cout << "Square with side length " << side << std::endl;
+    }
+};
+
+
