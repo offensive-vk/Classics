@@ -14,3 +14,21 @@ public:
     // Destructor (virtual to ensure proper cleanup in derived classes)
     virtual ~Shape() {}
 };
+// Concrete class Circle, derived from Shape
+class Circle : public Shape {
+private:
+    double radius;
+
+public:
+    Circle(double r) : radius(r) {}
+
+    // Implementation of the pure virtual function
+    double calculateArea() const override {
+        return 3.14 * radius * radius;
+    }
+
+    // Override the display function
+    void display() const override {
+        std::cout << "Circle with radius " << radius << std::endl;
+    }
+};
