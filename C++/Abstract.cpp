@@ -51,5 +51,21 @@ public:
         std::cout << "Square with side length " << side << std::endl;
     }
 };
+int main() {
+    // Creating objects of Circle and Square
+    Circle circle(5.0);
+    Square square(4.0);
 
+    // Using polymorphism to call functions through base class pointers
+    Shape* shape1 = &circle;
+    Shape* shape2 = &square;
 
+    // Calling virtual functions
+    shape1->display();
+    std::cout << "Area: " << shape1->calculateArea() << std::endl;
+
+    shape2->display();
+    std::cout << "Area: " << shape2->calculateArea() << std::endl;
+
+    return 0;
+}
