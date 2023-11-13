@@ -2,7 +2,8 @@
 #include <chrono>
 #include <thread>
 
-int main() {
+int main(int *argc, char const **argv[]) {
+    
     for (int i = 1; i <= 50; ++i) {
         std::cout << "Count: " << i << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
