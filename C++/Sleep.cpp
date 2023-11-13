@@ -3,16 +3,17 @@
 
 int main() {
     std::string s = "Hello, World!";
-    
-    // std::cin >> s;
+    std::cout << "Enter Your String : " << std::endl;
+
     std::getline(std::cin, s);
 
     for (char c : s) {
+
         std::cout << c;
 
         Sleep(1000);
-        system("cls");
     }
+    system("cls");
 
     return 0;
 }
