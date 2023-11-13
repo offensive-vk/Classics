@@ -1,7 +1,8 @@
 #include <iostream>
 #include <windows.h>
 
-int main() {
+int main(int *argc, char const **argv[]) {
+    
     std::string s = "Hello, World!";
     std::cout << "Enter Your String : " << std::endl;
 
