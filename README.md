@@ -1,3 +1,6 @@
+# What is C++?
+C++ is a general-purpose, high level, object based, statically typed programming language developed as an extension of the C programming language. 
+
 # C and C++ Programs
 This Contains All of My C & C++ Programs
 
