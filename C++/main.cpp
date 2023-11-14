@@ -12,7 +12,10 @@ class Human{
     int id;
     unsigned int age = 0;
     string name;
-    ~Human(){std:: cout << "\t Destructor Has Been Called !!\n" << endl;}
+
+    ~Human(){
+        std:: cout << "\t Destructor Has Been Called !!\n" << endl;
+    }
     Human(){
         id = 10 + (rand() % (80 - 10 + 1));
         name = "Unknown";
@@ -44,7 +47,7 @@ class Women: public Human{
     string gender = "Female";
     Women()
     {   
-        Human::die(age);
+        Human::die();
         Human::speak();
     }
     ~Women(){ }
@@ -55,7 +58,9 @@ int main(int argc, char **argv){
     std::cout << ":: \t C++ Programming - OOP !! :: " << endl;
     std::cout << "\n\t ============================== \t\n" << endl;
 
-
+    Women W;
+    W.Spawn(W);
+    W.speak();
 
     std::cout << "\n\t ============================== \t\n" << endl;
     return (0);
