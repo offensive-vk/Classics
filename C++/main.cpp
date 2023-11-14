@@ -9,22 +9,21 @@ static const int age = 10;
 
 class Human {
     public:
-    int id;
     unsigned int age = 0;
     string name;
 
-    ~Human(){
-        std:: cout << "\t Destructor Has Been Called !!\n" << endl;
-        this->die();
+    ~Human() {
+        std::cout << "\t Destructor Has Been Called !!\n" << endl;
     }
     Human(){
-        id = 10 + (rand() % (80 - 10 + 1));
         name = "Unknown";
+        // cin >> name;
     }
     Human(string name){
         this->name = name;
     }
     void spawn() {
+        cout << this->name;
         cout << "Spawned to Earth." << endl;
     }
 
@@ -49,9 +48,7 @@ class Women: public Human{
         cout << "Enter Your Name: " << endl;
         cin >> this->name;
     }
-    ~Women(){ 
-        die();
-    }
+    ~Women(){ }
 };
 
 int main(int argc, char **argv){
