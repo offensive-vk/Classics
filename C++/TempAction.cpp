@@ -1,6 +1,7 @@
 #include <iostream>
 #include <typeinfo>
 
+// Performs different action based on data type of parameter.
 template <typename T> void Action(const T& value) {
     if (typeid(value) == typeid(int)) {
         std::cout << "Performing action for int: " << value << std::endl;
@@ -28,5 +29,6 @@ int main() {
     Action(3.14);            // Calls the double version
     Action("Hello, World!"); // Calls the string version
 
+    performAction<int>(901); 
     return 0;
 }
