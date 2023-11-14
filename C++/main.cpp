@@ -27,11 +27,10 @@ class Human {
         cout << "Spawned to Earth." << endl;
     }
 
-    void speak(){
+    virtual void speak(){
         std::cout << "\t Hello, My Name is " << this->name << " and I am a Human.\n" << endl;
     }
-    void die()
-    {
+    virtual void die() {
         if(age <= 80 || age >= 90)
         {
             std::cout << "\t I lived enough for " << age << " years on earth.\n\t Goodbye!\n" << endl;
@@ -48,6 +47,9 @@ class Women: public Human{
         cout << "Enter Your Name: " << endl;
         cin >> this->name;
     }
+    void speak() override{
+        cout << "\t Hello, My Name is " << this->name << " and I am a Female \n" << endl;
+    }
     ~Women(){ }
 };
 
@@ -57,6 +59,9 @@ int main(int argc, char **argv){
     std::cout << "\n\t ============================== \t\n" << endl;
 
     Women W;
+    W.speak();
+
+    cout << endl;
     // W.spawn();
     // W.speak();
 
