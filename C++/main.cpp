@@ -47,8 +47,8 @@ class Women: public Human{
     string gender = "Female";
     Women()
     {   
-        Human::die();
-        Human::speak();
+        cout << "Enter Your Name: " << endl;
+        cin >> this->name;
     }
     ~Women(){ }
 };
