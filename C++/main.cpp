@@ -44,7 +44,7 @@ class Women: public Human{
     string gender = "Female";
     Women()
     {   
-        Human::die(85);
+        Human::die(age);
         Human::speak();
     }
     ~Women(){ }
@@ -54,11 +54,9 @@ int main(int argc, char **argv){
 
     std::cout << ":: \t C++ Programming - OOP !! :: " << endl;
     std::cout << "\n\t ============================== \t\n" << endl;
-    Human raju(45, "NULL");
 
-    raju.speak();
-    raju.die(59);
-    
+
+
     std::cout << "\n\t ============================== \t\n" << endl;
-    return (1);
+    return (0);
 }
