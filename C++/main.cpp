@@ -55,8 +55,8 @@ class Women: public Human{
 
 int main(int argc, char **argv){
 
-    std::cout << ":: \t C++ Programming - OOP !! :: " << endl;
-    std::cout << "\n\t ============================== \t\n" << endl;
+    std::cout << ":: \t C++ Programming - OOP !! :: " << std::endl;
+    std::cout << "\n\t ============================== \t\n" << std::endl;
 
     Women W;
     W.speak();
@@ -65,6 +65,6 @@ int main(int argc, char **argv){
     // W.spawn();
     // W.speak();
 
-    std::cout << "\n\t ============================== \t\n" << endl;
+    std::cout << "\n\t ============================== \t\n" << std::endl;
     return (0);
 }
