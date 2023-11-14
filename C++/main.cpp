@@ -28,13 +28,13 @@ class Human{
     void speak(){
         std::cout << "\t Hello, My Name is " <<this->name << " and I am a Human.\n" << endl;
     }
-    void die(int id)
+    void die()
     {
-        if(id <= 80 || id >= 90)
+        if(age <= 80 || age >= 90)
         {
-            std::cout << "\t I lived enough for " << id << "years on earth.\n\t\t Goodbye!\n" << endl;
+            std::cout << "\t I lived enough for " << age << "years on earth.\n\t\t Goodbye!\n" << endl;
         }
-        id--;
+        age--;
     }
 };
 
