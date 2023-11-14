@@ -7,7 +7,7 @@ using namespace std;
 static const int age = 10;
 #define MAX 999;
 
-class Human{
+class Human {
     public:
     int id;
     unsigned int age = 0;
@@ -15,42 +15,43 @@ class Human{
 
     ~Human(){
         std:: cout << "\t Destructor Has Been Called !!\n" << endl;
+        this->die();
     }
     Human(){
         id = 10 + (rand() % (80 - 10 + 1));
         name = "Unknown";
     }
-    Human(int id, string name){
-        this->id = id;
+    Human(string name){
         this->name = name;
     }
-    void Spawn(Human& human){
+    void spawn() {
         cout << "Spawned to Earth." << endl;
     }
 
     void speak(){
-        std::cout << "\t Hello, My Name is " <<this->name << " and I am a Human.\n" << endl;
+        std::cout << "\t Hello, My Name is " << this->name << " and I am a Human.\n" << endl;
     }
     void die()
     {
         if(age <= 80 || age >= 90)
         {
-            std::cout << "\t I lived enough for " << age << "years on earth.\n\t\t Goodbye!\n" << endl;
+            std::cout << "\t I lived enough for " << age << " years on earth.\n\t Goodbye!\n" << endl;
         }
-        age--;
     }
 };
 
 class Women: public Human{
 
-    public:
-    string gender = "Female";
+    private: string name = "";
+    public: string gender = "Female";
     Women()
     {   
         cout << "Enter Your Name: " << endl;
         cin >> this->name;
     }
-    ~Women(){ }
+    ~Women(){ 
+        die();
+    }
 };
 
 int main(int argc, char **argv){
@@ -59,8 +60,8 @@ int main(int argc, char **argv){
     std::cout << "\n\t ============================== \t\n" << endl;
 
     Women W;
-    W.Spawn(W);
-    W.speak();
+    // W.spawn();
+    // W.speak();
 
     std::cout << "\n\t ============================== \t\n" << endl;
     return (0);
