@@ -9,12 +9,13 @@ template <typename Type> inline int check(Type args) {
     cout << "Enter The Value : " << endl;
     cin >> name;
 
-    cout << "Your Name is : " << name << endl;
+    cout << "Your Value is : " << name << endl;
     return 1;
 }
 
 int main(int argc, char const *argv[])
 {
-    check<int>(false);
+    check<bool>(false); // boolean
+    check<double>(8832.53); // double
     return 0;
 }
