@@ -12,7 +12,13 @@ template <typename Type> inline int check(Type args) {
     cout << "Your Value is : " << name << endl;
     return 1;
 }
-
+template <> class Global {
+    public: Global(string value): value(value) { }
+    static Global getValue(){
+        cout << "The Value is : " << this->value << endl;
+        return this->value;
+    }
+};
 int main(int argc, char const *argv[])
 {
     check<bool>(false); // boolean
