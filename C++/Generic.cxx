@@ -18,6 +18,7 @@ template <> class Global {
         cout << "The Value is : " << this->value << endl;
         return this->value;
     }
+    private: template <typename X> virtual void Value();
 };
 int main(int argc, char const *argv[])
 {
