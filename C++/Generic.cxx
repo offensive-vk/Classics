@@ -18,6 +18,14 @@ template <> class Global {
     int private = 0;
     int public = 0;
     
+    Global(){
+        cout << "Protected : " << endl;
+        cin >> protected;
+        cout << "Private : " << endl;
+        cin >> private;
+        cout << "Public : " << endl;
+        cin >> public;
+    }
     protected: template <typename S> void static_member(){
         cout << "Protected Member Function : " << this->protected << endl;
     }
