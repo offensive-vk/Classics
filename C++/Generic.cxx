@@ -12,14 +12,16 @@ template <typename Type> inline int check(Type args) {
     cout << "Your Value is : " << name << endl;
     return 1;
 }
-// template <> class Global {
-//     public: Global(string value): value(value) { }
-//     static Global getValue(){
-//         cout << "The Value is : " << this->value << endl;
-//         return this->value;
-//     }
-//     private: template <typename X> virtual void Value();
-// };
+template <> class Global {
+    public:
+    int protected = 0;
+    int private = 0;
+    int public = 0;
+    
+    protected: template <typename S> void static_member(){
+        cout << "Protected Member Function : " << this->protected << endl;
+    }
+};
 int main(int argc, char const *argv[])
 {
     check<bool>(false); // boolean
