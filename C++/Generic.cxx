@@ -13,7 +13,7 @@ template <typename Type> inline int check(Type args) {
     cout << "Your Value is : " << name << endl;
     return 1;
 }
-template <> class Global {
+template <typename XGlobal> class Global {
     public:
     int protected_var = 0;
     int private_var = 0;
