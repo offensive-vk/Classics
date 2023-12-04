@@ -27,6 +27,12 @@ template <typename XGlobal> class Global {
         cout << "Public : " << endl;
         cin >> public_var;
     }
+
+    XGlobal showData() {
+        public_member();
+        private_member();
+        protected_member();
+    }
     template <typename C> void public_member() {
         cout << "Private Member Function : " << this->public_var << endl;
     }
@@ -44,5 +50,6 @@ int main(int argc, char const *argv[])
     // check<string>("String."); // string
 
     Global<int> G;
+    
     return 0;
 }
