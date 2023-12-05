@@ -9,7 +9,7 @@ int main(int argc, char **argv[]) {
     int arr[size];
 
     for(int i = 0; i < size; i++) {
-        std::cout << "Enter The Element At " << i << std::endl;
+        std::cout << "Enter The Element At Index : " << i << std::endl;
         std::cin >> arr[i];
     }
 
@@ -19,4 +19,12 @@ int main(int argc, char **argv[]) {
         std::cout << val << std::endl;
     }
     return 0;
+}
+long int Permute(int array[]) {
+    int result[INT_MAX][INT_MAX];
+
+    // if () {
+
+    // }
+    // DO it
 }
