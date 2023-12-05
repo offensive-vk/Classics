@@ -9,9 +9,14 @@ int main(int argc, char **argv[]) {
     int arr[size];
 
     for(int i = 0; i < size; i++) {
+        std::cout << "Enter The Element At " << i << std::endl;
         std::cin >> arr[i];
     }
 
-    std::cout << arr << std::endl;
+    std::cout << "\n==================\n" << std::endl;
+    std::cout << "Array Elements After Sorting : \n" << std::endl;
+    for(int val : arr) {
+        std::cout << val << std::endl;
+    }
     return 0;
 }
