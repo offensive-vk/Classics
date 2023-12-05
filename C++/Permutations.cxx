@@ -8,6 +8,10 @@ int main(int argc, char **argv[]) {
     std::cin >> size;
     int arr[size];
 
-    for(int i = 0; i < size; i++) {}
+    for(int i = 0; i < size; i++) {
+        std::cin >> arr[i];
+    }
 
+    std::cout << arr << std::endl;
+    return 0;
 }
