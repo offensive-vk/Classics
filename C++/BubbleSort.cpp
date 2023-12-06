@@ -1,9 +1,8 @@
-#include <stdio.h>
 #include <iostream>
 #include <conio.h>
 
-int& BubbleSort(int arr[]) {
-    int x = sizeof(arr) / sizeof(arr[0]);
+int& BubbleSort(int arr[], int size) {
+    int x = size;
     
     for(int i = 0; i < x - 1; i++) {
         for(int j = 0; j < x - 1 - i; j++) {
@@ -29,7 +28,7 @@ int main(int argc, char **argv[]) {
         std::cin >> arr[i];
     }
 
-    BubbleSort(arr);
+    BubbleSort(arr, size);
     std::cout << "\n==================\n" << std::endl;
     std::cout << "Array Elements After Sorting : \n" << std::endl;
 
