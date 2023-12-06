@@ -2,9 +2,19 @@
 #include <iostream>
 #include <conio.h>
 
-int BubbleSort(int arr[]) {
+int& BubbleSort(int arr[]) {
     int x = sizeof(arr) / sizeof(arr[0]);
     
+    for(int i = 0; i < x - 1; i++) {
+        for(int j = 0; j < x - 1 - i; j++) {
+            if(arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return *arr;
 }
 
 int main(int argc, char **argv[]) {
