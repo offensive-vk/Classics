@@ -45,11 +45,12 @@ template <typename XGlobal> class Global {
 };
 int main(int argc, char const *argv[])
 {
-    // check<bool>(false); // boolean
-    // check<double>(8832.53); // double
-    // check<string>("String."); // string
+    check<bool>(false); // boolean
+    check<double>(8832.53); // double
+    check<string>("String."); // string
 
     Global<int> G;
     G.showData();
+    G.public_member();
     return 0;
 }
