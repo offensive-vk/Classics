@@ -53,6 +53,9 @@ class Women: public Human{
     ~Women(){ }
 };
 
+class Kid: public Human {
+    private: string name = "";
+};
 int main(int argc, char **argv){
 
     std::cout << ":: \t C++ Programming - OOP !! :: " << std::endl;
