@@ -1,13 +1,11 @@
 #include <iostream>
 // A simple function template that prints its argument to the console
-template<typename T>
-void print(T value) {
+template<typename T> void print(T value) {
     std::cout << value << std::endl;
 }
 
 // Define the template function
-template<typename T>
-void myFunction(T value) {
+template<typename T> void myFunction(T value) {
     std::cout << "My value is: " << value << std::endl;
 }
 
