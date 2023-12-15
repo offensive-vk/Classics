@@ -1,6 +1,13 @@
 #include <iostream>
 #include <conio.h>
 
+template <class T> class Parent {
+    static bool isParent;
+    static int id;
+    static void displayStuff() {
+        std::cout << "IsParent? : " << Parent::isParent << std::endl;
+    }
+};
 class MyClass {
 public:
     static int staticVar;

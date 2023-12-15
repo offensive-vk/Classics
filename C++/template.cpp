@@ -1,4 +1,5 @@
 #include <iostream>
+
 // A simple function template that prints its argument to the console
 template<typename T> void print(T value) {
     std::cout << value << std::endl;
@@ -10,6 +11,7 @@ template<typename T> void myFunction(T value) {
 }
 
 int main() {
+    
     // Call the print function with different types of arguments
     print("Hello, world!");
     print(42);
