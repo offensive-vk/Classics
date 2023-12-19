@@ -2,6 +2,7 @@
 #include <string>
 
 int main() {
+    
     int intValue;
     double doubleValue;
     std::string stringValue;
