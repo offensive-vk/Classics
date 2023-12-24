@@ -15,6 +15,7 @@ template <typename Type> inline int check(Type args) {
 }
 template <typename XGlobal> class Global {
     public:
+    string parentName;
     int protected_var = 0;
     int private_var = 0;
     int public_var = 0;
@@ -27,7 +28,9 @@ template <typename XGlobal> class Global {
         cout << "Public : " << endl;
         cin >> public_var;
     }
-
+    void getParentName() const {
+        cout << "Parent's Name : " << this->parentName << endl;
+    }
     XGlobal showData() {
         this->public_member();
         this->private_member();
@@ -56,6 +59,7 @@ class Child : public Global<int> {
 };
 int main(int argc, char const *argv[])
 {
+    check<int>(861); // integer
     check<bool>(false); // boolean
     check<double>(8832.53); // double
     check<string>("String."); // string
@@ -64,6 +68,7 @@ int main(int argc, char const *argv[])
     G.showData();
 
     Child C;
-    
+    C.getChildName();
+
     return 0;
 }
