@@ -46,7 +46,7 @@ template <typename XGlobal> class Global {
         cout << "Private Member Function : " << this->private_var << endl;
     }
 };
-class Child : public Global<int> {
+template <typename X> class Child : public Global<int> {
     public:
     string childName = "";
     Child() {
@@ -65,9 +65,9 @@ int main(int argc, char const *argv[])
     check<string>("String."); // string
 
     Global<int> G;
-    G.showData();
+    G.getParentName();
 
-    Child C;
+    Child<int> C;
     C.getChildName();
 
     return 0;
