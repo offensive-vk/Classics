@@ -19,7 +19,7 @@ template <typename XGlobal> class Global {
     int private_var = 0;
     int public_var = 0;
 
-    Global(){
+    Global() {
         cout << "Protected : " << endl;
         cin >> protected_var;
         cout << "Private : " << endl;
@@ -43,6 +43,9 @@ template <typename XGlobal> class Global {
         cout << "Private Member Function : " << this->private_var << endl;
     }
 };
+class Child : public Global<int> {
+
+};
 int main(int argc, char const *argv[])
 {
     check<bool>(false); // boolean
@@ -51,6 +54,6 @@ int main(int argc, char const *argv[])
 
     Global<int> G;
     G.showData();
-    G.public_member();
+
     return 0;
 }
