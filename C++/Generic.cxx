@@ -44,7 +44,15 @@ template <typename XGlobal> class Global {
     }
 };
 class Child : public Global<int> {
-
+    public:
+    string childName = "";
+    Child() {
+        cout << "Please Enter Your Child's Name : " << endl;
+        cin >> this->childName;
+    }
+    void getChildName() const {
+        cout << "Your Child's Name : " << this->childName << endl;
+    }
 };
 int main(int argc, char const *argv[])
 {
@@ -55,5 +63,7 @@ int main(int argc, char const *argv[])
     Global<int> G;
     G.showData();
 
+    Child C;
+    
     return 0;
 }
