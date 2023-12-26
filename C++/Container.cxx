@@ -7,7 +7,7 @@ private:
     size_t size;
 
 public:
-    Container() : size(0) {}
+    Container() : size(0) { }
 
     void add(const T& item) {
         if (size < Capacity) {
@@ -31,6 +31,7 @@ public:
     }
 };
 int main() {
+    
     // Create a container for integers with a capacity of 5
     Container<int, 5> intContainer;
 
