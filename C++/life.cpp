@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-// Convert From TypeScript .. Please Ignore This.
+
 class Kid {
 private:
     std::string name;
@@ -69,6 +69,7 @@ public:
     std::string getInfo() {
         if (wife) {
             return name + " (Husband, " + std::to_string(age) + " years old) - Married to " + wife->getInfo();
+            // Change the arrow (->) to dot (.) here
         } else {
             return name + " (Husband, " + std::to_string(age) + " years old) - Single";
         }
@@ -79,9 +80,9 @@ int main() {
     Wife wife("Sneha", 27);
     Husband husband("Madhav", 30);
 
-    husband.marry(wife);
     wife.addChild("John", 5);
     wife.addChild("Clair", 3);
+    husband.marry(wife);
 
     std::cout << husband.getInfo() << std::endl;
     std::cout << "Children: " << wife.getKidsInfo() << std::endl;
