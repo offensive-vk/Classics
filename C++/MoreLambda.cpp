@@ -29,3 +29,18 @@ void performAsyncOperation(std::function<void()> callback) {
     // Execute the callback function
     callback();
 }
+int main() {
+    // Use Case 5: Lambda Function with std::function for Generic Operations
+    auto add = performOperation<int>('+');
+    auto multiply = performOperation<double>('*');
+
+    std::cout << "Addition result: " << add(5, 7) << std::endl;
+    std::cout << "Multiplication result: " << multiply(3.5, 2.0) << std::endl;
+
+    // Use Case 6: Lambda Function for Deferred Execution (Callback)
+    performAsyncOperation([] {
+        std::cout << "Callback executed." << std::endl;
+    });
+
+    return 0;
+}
