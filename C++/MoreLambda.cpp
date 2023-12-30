@@ -20,3 +20,12 @@ std::function<T(T, T)> performOperation(char op) {
     }
 }
 
+// Use Case 6: Lambda Function for Deferred Execution (Callback)
+void performAsyncOperation(std::function<void()> callback) {
+    std::cout << "Performing asynchronous operation..." << std::endl;
+    // Simulate some asynchronous task
+    std::cout << "Asynchronous task completed." << std::endl;
+
+    // Execute the callback function
+    callback();
+}
