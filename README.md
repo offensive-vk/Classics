@@ -20,4 +20,4 @@ int main(int *argc, char **argv[]) {
 }
 ```
 You are allowed to copy and implement these programs freely.
-# Happy Coding ~ @offensive-vk
+# Happy Coding ~ [@offensive-vk](https://github.com/offensive-vk/)
