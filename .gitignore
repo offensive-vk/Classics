@@ -2,6 +2,8 @@
 *.d
 *.perl
 *.sh
+.vscode
+.settings.json
 
 # Object files
 *.o
