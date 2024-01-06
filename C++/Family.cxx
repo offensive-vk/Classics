@@ -16,11 +16,17 @@ class Human {
     virtual void sleep( ) { }
     virtual void die() { }
 };
-template <typename X> class GrandParents: public Human {
+class GrandParents: public Human {
     public:
-    GrandParents(std::string &name, std::string &gender, int &age) {
+    GrandParents(std::string name, int age) {
         this->age = age;
         this->name = name;
-        this->gender = gender;
+        this->gender = "Male+Female";
     }
 };
+
+int main(int argc, char const *argv[])
+{
+    GrandParents G("GrandParents", 80);
+    return 0;
+}
