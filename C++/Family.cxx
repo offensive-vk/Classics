@@ -7,6 +7,7 @@ class Human {
     std::string name;
     int age;
     std::string gender;
+    bool life = true;
 
     Human() { }
     virtual void born( ) { }
@@ -16,6 +17,14 @@ class Human {
     virtual void speak() { }
     virtual void sleep( ) { }
     virtual void die() { }
+
+    protected:
+    void getDetails() const {
+        std::cout << "Human Name" << this->name << std::endl;
+        std::cout << "Human Age" << this->age << std::endl;
+        std::cout << "Human Gender" << this->gender << std::endl;
+        std::cout << "Is Living? " << this->life << std::endl;
+    }
 };
 class GrandParents: public Human {
     public:
@@ -37,6 +46,7 @@ class GrandParents: public Human {
 int main(int argc, char const *argv[])
 {
     GrandParents G("GrandParents", 80);
+    
     G.die();
     return 0;
 }
