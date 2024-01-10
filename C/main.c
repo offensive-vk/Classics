@@ -6,8 +6,12 @@ const char lang[] = "C Old Style";
 #include <stdlib.h>
 #include <conio.h>
 
-void main() {
+int main(void) {
     printf("Program Has Been Executed - %d\n", x);
-    
+    int *ptr;
+    int *global[INT_MAX];
+    for(size_t i = 0; i < INT_MAX; ++i) {
+        global[i] = 0xe30;
+        global[i+=1];
+    }
 }
-
