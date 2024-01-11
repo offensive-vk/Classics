@@ -65,7 +65,7 @@ int main() {
     // Create two Pokemon
     Pokemon pikachu, charmander;
     initializePokemon(&pikachu, "Pikachu", 10, 50, 20, 15);
-    initializePokemon(&charmander, "Charmander", 8, 45, 18, 12);
+    initializePokemon(&charmander, "Charmander", 7, 42, 20, 13);
 
     // Display Pokemon information
     printf("Initial Pokemon Information:\n");
@@ -96,7 +96,7 @@ int main() {
     }
 
     // Display the result of the battle
-    delay(1); // Introduce a delay for better visualization
+    delay(1);
     if (pikachu.health <= 0) {
         printf("Pikachu fainted. Charmander wins!\n");
     } else {
