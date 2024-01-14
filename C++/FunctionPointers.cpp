@@ -23,3 +23,28 @@ int operateNumbers(const int* num1Ptr, const int* num2Ptr) {
     // Performing an operation with the values pointed to by the pointers
     return (*num1Ptr) * (*num2Ptr);
 }
+int main() {
+    int number = 5;
+
+    std::cout << "Original number: " << number << std::endl;
+
+    // Calling the function with a pointer to the original number
+    int* resultPtr = showNum(&number);
+
+    std::cout << "Modified number: " << (*resultPtr) << std::endl;
+    std::cout << "Original number after modification: " << number << std::endl;
+
+    // Calling the function with a constant pointer to the original number
+    displayNum(&number);
+
+    // Creating two variables and their pointers to demonstrate operateNumbers function
+    int a = 3, b = 4;
+    int* aPtr = &a;
+    int* bPtr = &b;
+
+    // Calling the function to operate on two numbers using pointers
+    int operationResult = operateNumbers(aPtr, bPtr);
+    std::cout << "Result of operation: " << operationResult << std::endl;
+
+    return 0;
+}
