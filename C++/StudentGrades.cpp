@@ -3,8 +3,7 @@
 
 using namespace std;
 
-class Person
-{
+class Person {
 protected:
     string firstName;
     string lastName;
@@ -23,8 +22,7 @@ public:
     }
 };
 
-class Student : public Person
-{
+class Student : public Person {
 private:
     vector<int> testScores;
 
@@ -56,15 +54,16 @@ public:
     }
 };
 
-int main(void)
-{
+int main(void) {
     string firstName;
     string lastName;
     int id;
     int numScores;
+    cout << "Please Enter FirstName , LastName, id and number of scores respectively. \n " ;
     cin >> firstName >> lastName >> id >> numScores;
 
     vector<int> scores;
+    cout << "Enter Scores: " ;
     for (int i = 0; i < numScores; i++)
     {
         int tmpScore;
