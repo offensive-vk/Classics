@@ -43,5 +43,28 @@
     },
     "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
         "clang-diagnostic-error"
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#5d9abe",
+        "activityBar.background": "#5d9abe",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#edd2e3",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#e7e7e799",
+        "panel.border": "#5d9abe",
+        "sash.hoverBorder": "#5d9abe",
+        "sideBar.border": "#5d9abe",
+        "statusBar.background": "#4281a6",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#5d9abe",
+        "statusBarItem.remoteBackground": "#4281a6",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "tab.activeBorder": "#5d9abe",
+        "titleBar.activeBackground": "#4281a6",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#4281a699",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#4281a6"
 }
