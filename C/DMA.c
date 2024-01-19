@@ -39,7 +39,28 @@ int main() {
         scanf("%d", &dynamicIntArray[i]);
     }
 
+    // Display the dynamic array
+    printf("Values stored in dynamicIntArray: ");
+    for (int i = 0; i < 5; ++i) {
+        printf("%d ", dynamicIntArray[i]);
+    }
+    printf("\n");
 
+    // Display the resized array (if reallocation was successful)
+    if (resizedArray != NULL) {
+        printf("Resized array values: ");
+        for (int i = 0; i < 10; ++i) {
+            printf("%d ", resizedArray[i]);
+        }
+        printf("\n");
+
+        // Free memory for the resized array
+        free(resizedArray);
+    }
+
+    // Free memory for the dynamic integer and array
+    free(dynamicInt);
+    free(dynamicIntArray);
 
     return 0; // Exit successfully
 }
