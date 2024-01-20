@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<conio.h>
-// program to add two numbers using pointer. suuuuuuuuuuuuuuuuuuuuuuuu
-int main(){
+
+int main() {
 	int *a, *b, sum;
 	int first, second;
 	printf("Enter two Numbers : ");

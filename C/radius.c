@@ -2,10 +2,9 @@
 #include<math.h>
 int main()
 {   
-    // program - 2nd
+    
 	float radius, answer;
 	const int pi = 3.14;
-	printf(">> A Program by Vedansh <<\n");
 	printf(">> Area of Circle <<\n");
 	printf("Enter A Radius:");
 	scanf("%f", &radius);
