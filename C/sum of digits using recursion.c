@@ -1,5 +1,5 @@
-//to be noted in practical file
-//wap to perform the sum of digits of given number using recursion.
+
+// Program to perform the sum of digits of given number using recursion.
 #include<stdio.h>
 int sumOfDigit(int n)
 {  
