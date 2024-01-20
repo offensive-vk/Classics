@@ -1,7 +1,7 @@
-#include<vedansh.h>
+#include<stdio.h>
 
 int main(){
-	//dated : Jan,2, 2023
+	
 	FILE *fp = fopen("sample.txt", "a+");
 	char str[100];
 	printf("Enter String : ");

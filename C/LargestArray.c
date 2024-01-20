@@ -1,7 +1,5 @@
 #include<stdio.h> 
-
 int main(){
-	printf("\t>> A Program By Vedansh <<\n");
 	//Finding Largest and Smallest Number in Array..
 	int size, largest,smallest, i,j;
 	printf("Enter Array Size :");
@@ -39,4 +37,3 @@ int main(){
 	printf("\t\tElement %d is Smallest \n", smallest);
 	return 0;
 }
-
