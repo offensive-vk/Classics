@@ -51,5 +51,9 @@ int main(int *argc, char **argv[]) {
     return 0;
 }
 ```
+### To Compile Any .cpp | .cxx | .c++ Source Code File :
+```bash
+$ g++ filename.cpp -o filename
+```
 You are allowed to copy and implement these programs freely.
 # Happy Coding ~ [@offensive-vk](https://github.com/offensive-vk/)
