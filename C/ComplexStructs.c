@@ -1,6 +1,5 @@
-#include<vedansh_string.h>
-#include<vedansh_library.h>
-#include<vedansh.h>
+#include<string.h>
+#include<stdio.h>
 
 struct Employee{
 	int empid;
@@ -31,19 +30,3 @@ int main(){
 	displayEmpData(&emp2);
 	return 0;
 }
-
-/*
- 	printf("Employee Id : %d\n", e1.empid);
-	printf("Employee Name : %s\n", e1.empname);
-	printf("Employee Department : %s\n", e1.dept);
-	printf("Employee Id : %d\n", e1.salary);
-	return 0;
-*/
-
-
-
-
-
-
-
-

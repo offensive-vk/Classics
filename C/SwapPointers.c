@@ -1,8 +1,5 @@
-
 #include<stdio.h>
-// program to swap two numbers using pointer. suuuuuuuuuuuuuuuuuuuuuuuu
 int main(){
-	printf("\t\t\t\t\t>> A Program  by Vedansh <<\n");
 	int *a, *b;
 	int first, second;
 	int *temp;
@@ -20,5 +17,4 @@ int main(){
     printf("\n");
     printf("After Swapping :\na = %d\nb = %d", *a, *b);
 	return 0;
-	
 }

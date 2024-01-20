@@ -1,6 +1,6 @@
-#include<vedansh_string.h>
-#include<vedansh_library.h>
-#include<vedansh.h>
+#include<string.h>
+#include<stdlib.h>
+#include<stdio.h>
 
 struct Employee{
 	int empid;

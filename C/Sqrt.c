@@ -7,5 +7,5 @@ int main()
 	scanf("%lf", &var1);
 	result = sqrt(var1);
 	printf("The Square Root of the given number is %lf", result);
-	return 00;
+	return 0;
 }

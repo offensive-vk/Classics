@@ -11,10 +11,10 @@ strcmp(string1, string2): is used to compare two stings.
   if string1 > string will return 1.
 */
 
-
-#include<string.h>
-#include<stdio.h>
-int length(){
+#include <string.h>
+#include <stdio.h>
+void length()
+{
 	char s1[25];
 	printf("Enter String : ");
 	gets(s1);
@@ -23,9 +23,9 @@ int length(){
 	sleep(5);
 	printf("\n");
 	printf("Length of Given String : %d", s1);
-	return 0;
 }
-int copy(){
+void copy()
+{
 	char str1[100], str2[100];
 	printf("Enter String : ");
 	gets(str1);
@@ -33,10 +33,10 @@ int copy(){
 	printf("Processing...");
 	sleep(5);
 	printf("\n");
-	printf("Copied Given String To str2: %s", s2);
-	return 0;
+	printf("Copied Given String To str2: %s", str2);
 }
-int upper(){
+void upper()
+{
 	char s1[25];
 	printf("Enter String : ");
 	gets(s1);
@@ -45,9 +45,9 @@ int upper(){
 	sleep(5);
 	printf("\n");
 	printf("Converted String To Upppercase: %s", s1);
-	return 0;
 }
-int lower(){
+void lower()
+{
 	char s1[25];
 	printf("Enter String : ");
 	gets(s1);
@@ -56,10 +56,10 @@ int lower(){
 	sleep(5);
 	printf("\n");
 	printf("Converted String To Lowercase : %s", s1);
-	return 0;
 }
-int reverse(){
-    char s1[25];
+void reverse()
+{
+	char s1[25];
 	printf("Enter String : ");
 	gets(s1);
 	strrev(s1);
@@ -67,24 +67,32 @@ int reverse(){
 	sleep(5);
 	printf("\n");
 	printf("Reversed String : %s", s1);
-	return 0;
 }
-int compare(){
+void compare()
+{
 	char s1[100], s2[100];
-    printf("Enter String 1 : ");
-    gets(s1);
-    printf("Enter String 2 : ");
-    gets(s2);
-    int result = strcmp(s1, s2);
-    printf("Processing...");
-    sleep(5);
-    printf("\n");
-    if (result == 0)
-	   printf("Both String Are Same !!");
-	else if(result == -1)
-	   printf("String 1 is greater than String 2\n");
+	printf("Enter String 1 : ");
+	gets(s1);
+	printf("Enter String 2 : ");
+	gets(s2);
+	int result = strcmp(s1, s2);
+	printf("Processing...");
+	sleep(5);
+	printf("\n");
+	if (result == 0)
+		printf("Both String Are Same !!");
+	else if (result == -1)
+		printf("String 1 is greater than String 2\n");
 	else
-	   printf("String 2 is greater than String 1\n");
-	    
-		
+		printf("String 2 is greater than String 1\n");
+}
+
+int main(void) {
+	length();
+	reverse();
+	copy();
+	upper();
+	lower();
+	compare();
+	return 0;
 }
