@@ -1,7 +1,7 @@
+// Area of circle.
 #include<stdio.h>
-int main(){
-	// to calculate area of cicle.
-	printf(">> A Program by Vedansh <<\n");
+int main() {
+	
 	float radius, area;
 	printf("Enter Radius : ");
 	scanf("%f", &radius);

@@ -5,7 +5,7 @@ int main() {
   printf("Enter rows and columns: ");
   scanf("%d %d", &r, &c);
 
-  // asssigning elements to the matrix
+  // assigning elements to the matrix
   printf("\nEnter matrix elements:\n");
   for (i = 0; i < r; ++i)
   for (j = 0; j < c; ++j) {
@@ -38,4 +38,3 @@ int main() {
   }
   return 0;
 }
-

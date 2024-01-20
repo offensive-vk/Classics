@@ -1,8 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	//program 14 to print ASCII value of given character.
-	printf(">> A Program By Vedansh <<\n");
+	//program to print ASCII value of given character.
 	char c;
 	printf(">> Enter A Character to Print its ASCII Value:");
 	scanf("%c", &c);
