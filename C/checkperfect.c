@@ -1,7 +1,5 @@
 #include <stdio.h>
 int checkPerfect(int n){
-	//The first perfect number is 6, because 1, 2, and 3
-	//are its proper positive divisors, and 1 + 2 + 3 = 6.
 	int i = 1, sum = 0;
 	while (i < n)
 	{
@@ -28,3 +26,4 @@ int main(){
 	checkPerfect(n);
 	return 0;
 }
+//The first perfect number is 6, because 1, 2, and 3 are its proper positive divisors, and 1 + 2 + 3 = 6.

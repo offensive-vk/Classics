@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<conio.h>
+
 // pointer constant to pointer to constant.
 int main(){
 	int x = 55, y = 46;

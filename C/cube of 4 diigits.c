@@ -1,8 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	// program 12 sum of four digits and its cube.
-	printf(">> A Program By Vedansh <<\n");
+	// Sum of four digits and its cube.
 	int x, a, b, c, cube, result;
     printf("Enter A Number of Four Digits :");
     scanf("%d", &x);
@@ -17,5 +16,5 @@ int main()
     printf(">> The Sum of Three Integer is : %d", result);
     printf("\n");
     printf(">> The Cube of This Number is : %d", cube);
-	return 00;
+	return 0;
 }
