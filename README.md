@@ -32,7 +32,10 @@ C++ was designed with systems programming and embedded, resource-constrained sof
 - Read More at [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B)
 
 # Classics - C and C++ Programs
-This Repo Contains All of My C & C++ Programs.
+- This Repo Contains All of My C & C++ Programs.
+- Trick - All Valid C Code is Also A Valid C++ Code.
+- (i.e You Can Save Your C Code with .cpp extension.)
+- Enjoy !
 
 ## Sample Code:
 ```c++
