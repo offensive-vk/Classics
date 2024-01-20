@@ -1,8 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	// program 10 sum of three digits.
-	printf(">> A Program By Vedansh <<");
+	// sum of three digits.
 	int x, a, b, result;
     printf("Enter A Number of Three Digits :");
     scanf("%d", &x);
@@ -12,5 +11,5 @@ int main()
     x = x/10;
     result = a + b + x; 
     printf("The Sum of Three Integer is : %d", result);
-	return 00;
+	return 0;
 }
