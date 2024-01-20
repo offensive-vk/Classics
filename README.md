@@ -1,3 +1,12 @@
+<div align="center">
+    <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> 
+        <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/c/c-original.svg" alt="c" width="200" height="200" /> 
+    </a> 
+    <a href="https://cplusplus.com/" target="_blank" rel="noreferrer"> 
+        <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/cplusplus/cplusplus-original.svg" alt="cplusplus" width="200" height="200" /> 
+    </a> 
+</div>
+
 # **What is C** ?
 C is a general-purpose, low level computer programming language. It was created in the 1970s by Dennis Ritchie, and remains very widely used and influential.
 C is an imperative procedural language, supporting structured programming, lexical variable scope, and recursion, with a static type system. It was designed to be compiled to provide low-level access to memory and language constructs that map efficiently to machine instructions.
