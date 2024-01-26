@@ -1,6 +1,6 @@
 #include <iostream>
 #include<conio.h>
-#define lang "CPP"
+
 class Access {
 public:
     int publicVar;    // Public member variable
