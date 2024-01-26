@@ -1,0 +1,78 @@
+The structure of a C++ program typically consists of several parts, organized in a specific order. Here's a breakdown of the general structure:
+
+Preprocessor Directives:
+
+Preprocessor directives are instructions to the compiler that are executed before the actual compilation process begins.
+These directives start with a hash symbol (#) and are used to include header files, define macros, and perform conditional compilation.
+Example: #include <iostream>, #define PI 3.14
+
+Namespace Declaration:
+
+Namespaces are used to organize code into logical groups and avoid naming conflicts.
+They begin with the keyword namespace followed by the namespace name and enclosed in curly braces {}.
+Example: namespace myNamespace { }
+
+Main Function:
+
+Every C++ program must contain a main() function, which serves as the entry point of the program.
+Execution of the program starts from the beginning of the main() function.
+The main() function returns an integer value to indicate the status of program execution to the operating system.
+Example:
+
+int main() {
+    // Code goes here
+    return 0;
+}
+
+Function Definitions:
+Function definitions can appear before or after the main() function.
+They consist of the return type, function name, parameter list (if any), and the function body enclosed in curly braces {}.
+Example:
+int add(int a, int b) {
+    return a + b;
+}
+
+User-Defined Classes and Structures:
+User-defined classes and structures can be defined in C++ programs to represent custom data types and encapsulate related data and functions.
+They are declared using the class or struct keyword followed by the class/struct name and the body enclosed in curly braces {}.
+Example:
+
+class MyClass {
+    // Class members
+};
+
+Global Variables:
+Global variables are declared outside of any function and have global scope.
+They can be accessed and modified from any part of the program.
+Example: int globalVariable = 10;
+
+Comments:
+Comments are used to document the code and improve its readability.
+They are ignored by the compiler and can be single-line (//) or multi-line (/* */).
+Example:
+
+// This is a single-line comment
+/* This is
+   a multi-line
+   comment */
+
+Other Statements and Expressions:
+Other statements and expressions such as variable declarations, control structures (if-else, loops), and function calls can be included as needed.
+
+Standard Input/Output:
+Input and output operations are often performed using the standard input/output streams (std::cin and std::cout) provided by the <iostream> header.
+Example:
+
+#include <iostream>
+int main() {
+    int x;
+    std::cout << "Enter a number: ";
+    std::cin >> x;
+    std::cout << "You entered: " << x << std::endl;
+    return 0;
+}
+
+Return Statement:
+The return statement is used to return a value from a function.
+In the main() function, it indicates the successful completion of the program.
+Example: return 0;
