@@ -1,8 +1,7 @@
 #include<stdio.h>
 int main(){
+
 	int n, i, j;
-	//program to get a table of a given number..
-	printf(">> A Program by Vedansh <<\n");
 	printf("Enter A Number To Get Table :");
 	scanf("%d", &n);
     for(i = 2; i<= n; i++)

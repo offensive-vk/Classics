@@ -2,7 +2,7 @@
 *.d
 *.perl
 *.sh
-.vscode
+.vscode/
 .settings.json
 
 # Object files

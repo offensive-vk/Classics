@@ -12,7 +12,7 @@
 
 	return 0;
 }*/
-void main(){
+int main() {
 	char name[20], emailid[20], address[100], para[200];
 	printf("Enter Paragraph : ");
 	gets(para);
