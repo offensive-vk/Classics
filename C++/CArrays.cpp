@@ -3,7 +3,7 @@
 const int SIZE = 5;
 
 int main() {
-    // old C style -
+
     // datatype arrayName [size];
     int numbers[SIZE]; 
 

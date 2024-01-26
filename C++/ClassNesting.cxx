@@ -3,7 +3,7 @@
 #include<windows.h>
 static const char limit = 'A';
 
-class Parent{
+class Parent {
     public:
         int id;
         int reg;
@@ -12,26 +12,26 @@ class Parent{
         std::cout << "\t :: Constructor <Parent> Has been Called :: \n" << std::endl;
         std::cout << "Values Has Been Initialized :: \n" << std::endl;
     }
-    void show(){
+    void show() {
         std::cout << this->id << std::endl;
         std::cout << this->reg << std::endl;
     }
-    class Kid{
+    class Kid {
         public:
             std::string name;
             int id;
             bool reg;
 
-        Kid(std::string name, int id, bool reg){
+        Kid(std::string name, int id, bool reg) {
             std::cout << "\t :: Constructor <Kid> Has been Called :: \n" << std::endl;
             this->name = name;
             this->id = id;
             this->reg = reg;
         }
-        ~Kid(){
+        ~Kid() {
             std::cout << "\t :: Destructor <Kid> Has been Called :: \n" << std::endl;
         }
-        void show(){
+        void show() {
             std::cout << "Name : "<< this->name << std::endl;
             std::cout << this->id << std::endl;
             std::cout << this->reg << std::endl;
