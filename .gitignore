@@ -1,7 +1,6 @@
 # Prerequisites
 *.d
 *.perl
-*.sh
 .vscode
 .settings.json
 
