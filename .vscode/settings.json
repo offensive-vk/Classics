@@ -39,32 +39,33 @@
         "ratio": "cpp",
         "thread": "cpp",
         "deque": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "vedansh_library.h": "c"
     },
     "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
         "clang-diagnostic-error"
     ],
     "workbench.colorCustomizations": {
-        "activityBar.activeBackground": "#5d9abe",
-        "activityBar.background": "#5d9abe",
+        "activityBar.activeBackground": "#dcba3f",
+        "activityBar.background": "#dcba3f",
         "activityBar.foreground": "#15202b",
         "activityBar.inactiveForeground": "#15202b99",
-        "activityBarBadge.background": "#edd2e3",
-        "activityBarBadge.foreground": "#15202b",
-        "commandCenter.border": "#e7e7e799",
-        "panel.border": "#5d9abe",
-        "sash.hoverBorder": "#5d9abe",
-        "sideBar.border": "#5d9abe",
-        "statusBar.background": "#4281a6",
-        "statusBar.foreground": "#e7e7e7",
-        "statusBarItem.hoverBackground": "#5d9abe",
-        "statusBarItem.remoteBackground": "#4281a6",
-        "statusBarItem.remoteForeground": "#e7e7e7",
-        "tab.activeBorder": "#5d9abe",
-        "titleBar.activeBackground": "#4281a6",
-        "titleBar.activeForeground": "#e7e7e7",
-        "titleBar.inactiveBackground": "#4281a699",
-        "titleBar.inactiveForeground": "#e7e7e799"
+        "activityBarBadge.background": "#19876f",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "panel.border": "#dcba3f",
+        "sash.hoverBorder": "#dcba3f",
+        "sideBar.border": "#dcba3f",
+        "statusBar.background": "#c4a124",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#997e1c",
+        "statusBarItem.remoteBackground": "#c4a124",
+        "statusBarItem.remoteForeground": "#15202b",
+        "tab.activeBorder": "#dcba3f",
+        "titleBar.activeBackground": "#c4a124",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#c4a12499",
+        "titleBar.inactiveForeground": "#15202b99"
     },
-    "peacock.color": "#4281a6"
+    "peacock.color": "#c4a124"
 }
