@@ -47,6 +47,7 @@ int main() {
     class Base {
         virtual void print() {}
     };
+
     class Derived : public Base {
         void print() {}
     };
@@ -76,4 +77,3 @@ int main() {
 
     return 0;
 }
-

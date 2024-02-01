@@ -7,8 +7,8 @@ int main() {
     int* ptr = &num;
     int* ptx = new int; 
     int* arr[size];
-    *arr[0] = 01;
-    *arr[1] = 02;
+    *arr[0] = 141;
+    *arr[1] = 105;
 
     std::cout << "Value of num: " << num << std::endl;
     std::cout << "Address of num: " << &num << std::endl;
@@ -24,3 +24,6 @@ int main() {
 
     return 0;
 }
+/**
+ * A pointer in C++ is a variable that holds the memory address of another variable. Pointers are used to store the memory address of variables, arrays, functions, or other pointers. 
+*/

@@ -1,8 +1,9 @@
 #include <iostream>
 #include <conio.h>
 
-class Car{
-    private:
+class Car
+{
+private:
     std::string make;
     std::string model;
     void drive()
@@ -10,7 +11,7 @@ class Car{
         std::cout << this->make << " is being driven." << std::endl;
     }
 
-    public:
+public:
     int src;
     std::string getMake()
     {
@@ -24,20 +25,20 @@ class Car{
     {
         std::cout << "Starting engine of " << this->make << this->model << std::endl;
     }
-    
+
     Car(std::string make, std::string model)
     {
         this->make = make;
         this->model = model;
     }
-    
 };
 
-int main(int argc, char **argv[]){
+int main(int argc, char **argv[])
+{
     Car *car = new Car("Lamborghini", "LP700");
 
-    std::cout << "Car Maker : " << car->getMake()<< std::endl;
-    std::cout << "Car Model : " << car->getModel()<< std::endl;
+    std::cout << "Car Maker : " << car->getMake() << std::endl;
+    std::cout << "Car Model : " << car->getModel() << std::endl;
 
     car->startEngine();
     return (0);

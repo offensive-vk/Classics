@@ -28,7 +28,7 @@ public:
  * The Special class template has a default constructor, a parameterized constructor, a destructor, and a static member function.
  * It also has a static member variable called count.
  * 
- * @tparam X The type of the object being created.
+ * @param X The type of the object being created.
  */
 template <class X> class Special : public Normal<bool> {
     static int count;

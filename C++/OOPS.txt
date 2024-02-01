@@ -1,0 +1,17 @@
+In C++, "OOPS" typically refers to Object-Oriented Programming (OOP), which is a programming paradigm based on the concept of "objects," which can contain data in the form of fields (often known as attributes or properties) and code in the form of procedures (often known as methods or functions). OOP aims to structure code in a way that models real-world entities and their interactions.
+
+The four main pillars of Object-Oriented Programming in C++ are:
+
+Encapsulation: Encapsulation refers to the bundling of data (attributes) and methods (functions) that operate on the data into a single unit called an object. Encapsulation helps in hiding the internal state of an object from the outside world and only exposing the necessary functionalities to interact with the object. This is typically achieved by declaring the data members as private and providing public methods (getters and setters) to access and modify them.
+
+Inheritance: Inheritance is a mechanism that allows a class (derived class or subclass) to inherit properties and behavior from another class (base class or superclass). The derived class can access the members (attributes and methods) of the base class and can also override or extend them to provide specialized behavior. Inheritance promotes code reusability and facilitates the creation of hierarchical relationships between classes.
+
+Polymorphism: Polymorphism means the ability of objects to take on multiple forms. In C++, polymorphism is primarily achieved through function overloading and function overriding. Function overloading allows multiple functions with the same name but different parameters to coexist within the same scope, while function overriding enables a subclass to provide a specific implementation of a method that is already defined in its superclass. Polymorphism allows objects of different classes to be treated uniformly, providing flexibility and extensibility in code design.
+
+Abstraction: Abstraction involves focusing on the essential characteristics of an object while ignoring its non-essential details. It allows the programmer to model real-world entities as classes with relevant attributes and methods, hiding the complex implementation details from the users of the class. Abstraction helps in managing complexity, enhancing maintainability, and promoting code reuse by defining clear interfaces for interacting with objects while concealing their internal workings.
+
+== In One line ==
+- Encapsulation: Bundling data and methods into a single unit (object) and controlling access to the object's internals.
+- Inheritance: Deriving new classes from existing ones to inherit and extend their attributes and behaviors.
+- Polymorphism: Allowing objects of different classes to be treated uniformly, often achieved through function overloading and overriding.
+- Abstraction: Focusing on essential characteristics while hiding implementation details, facilitating clearer interfaces and code maintenance. Hiding irrelevant data and showing only necessary details.

@@ -1,20 +1,36 @@
 #include <iostream>
-#include<conio.h>
 
-int add(int a, int b) {
-    return a + b;
+// Function to calculate the area of a rectangle
+double area(double length, double width) {
+    return length * width;
 }
 
-double add(double a, double b) {
-    return a + b;
+// Function to calculate the area of a circle
+double area(double radius) {
+    return 3.14 * radius * radius;
+}
+
+// Function to calculate the volume of a box
+double volume(double length, double width, double height) {
+    return length * width * height;
 }
 
 int main() {
-    int num1 = 5, num2 = 10;
-    double num3 = 2.5, num4 = 3.7;
+    double rectangleLength = 5.0;
+    double rectangleWidth = 3.0;
+    double circleRadius = 2.5;
+    double boxLength = 4.0;
+    double boxWidth = 2.0;
+    double boxHeight = 3.0;
 
-    std::cout << "Sum of " << num1 << " and " << num2 << " is: " << add(num1, num2) << std::endl;
-    std::cout << "Sum of " << num3 << " and " << num4 << " is: " << add(num3, num4) << std::endl;
+    // Calculate and display the area of a rectangle
+    std::cout << "Area of rectangle: " << area(rectangleLength, rectangleWidth) << std::endl;
+
+    // Calculate and display the area of a circle
+    std::cout << "Area of circle: " << area(circleRadius) << std::endl;
+
+    // Calculate and display the volume of a box
+    std::cout << "Volume of box: " << volume(boxLength, boxWidth, boxHeight) << std::endl;
 
     return 0;
 }

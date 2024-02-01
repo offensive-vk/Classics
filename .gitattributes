@@ -1,0 +1,3 @@
+*.sh linguist-language=Shell Script
+*.sh linguist-detectable=true
+*.asm linguist-detectable=true
