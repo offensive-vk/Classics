@@ -41,7 +41,7 @@ C++ was designed with systems programming and embedded, resource-constrained sof
 ## Sample Code:
 ```c++
 #include <iostream>
-int main(int *argc, char **argv[]) {
+int main(int argc, char const *argv[]) {
     int i = 0;
     while (i < 1000000000)
     {
@@ -52,9 +52,15 @@ int main(int *argc, char **argv[]) {
     return 0;
 }
 ```
-### To Compile Any .cpp | .cxx | .c++ Source Code File :
+### To Compile Any .cpp | .cxx | .c++ Source File :
 ```bash
 $ g++ filename.cpp -o filename
 ```
+
+### To Compile Any .c Source File :
+```bash
+$ gcc filename.c -o filename
+```
+
 You are allowed to copy and implement these programs freely.
 ## Happy Coding ~ [@offensive-vk](https://github.com/offensive-vk/)
