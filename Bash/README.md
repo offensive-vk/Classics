@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://(https://en.wikipedia.org/wiki/Shell_script/" target="_blank" rel="noreferrer"> 
+    <a href="https://en.wikipedia.org/wiki/Shell_script/" target="_blank" rel="noreferrer"> 
         <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/bash/bash-original.svg" alt="c" width="200" height="200" /> 
     </a> 
 </div> 
