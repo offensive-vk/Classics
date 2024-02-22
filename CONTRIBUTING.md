@@ -11,7 +11,8 @@
 - Thank you.
 
 ### When contributing to this repository, please follow these rules: (For Expert Contributors)
-- First of all create an issue for the change you wish to make via [GitHub](https://github.com/offensive-vk/Classics/issues)
+
+- Firstly, create an issue for the change you wish to make via [GitHub](https://github.com/offensive-vk/Classics/issues)
 - If you want to contribute in any part to this repository please consider submitting a [Pull Request](https://github.com/offensive-vk/Classics/pulls) first.
 - Code review is required on every push / pr, minimum 1 or more reviewers should be assigned.
 - Review from Code Owners is required for making helpful contribution to this repository.
