@@ -31,11 +31,12 @@ C++ was designed with systems programming and embedded, resource-constrained sof
 - Filename extensions	- .C, .cc, .cpp, .cxx, .c++, .h, .H, .hh, .hpp, .hxx, .h++ .cppm, .ixx.
 - Read More at [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B)
 
-# Classics - C and C++ Programs
-- This Repo Contains All of My C & C++ Programs.
+## Classics - C and C++ Programs 
+- You can find Contribution Guidelines [here](https://github.com/offensive-vk/Classics/blob/classic/CONTRIBUTING.md) and Security Guidelines [here.](https://github.com/offensive-vk/Classics/blob/classic/SECURITY.md)
+- This Repository Contains All of My Best C & C++ Programs.
 - Trick - All Valid C Code is Also A Valid C++ Code.
-- (i.e You Can Save Your C Code with .cpp extension.)
-- Enjoy !
+- (i.e You Can Save Your C Source Code with .cpp extension.)
+- Enjoy ! _You can try Shell Scripting too._ [Try Now >](https://github.com/offensive-vk/Classics/blob/classic/Bash/)
 
 ## Sample Code:
 ```c++
@@ -51,9 +52,16 @@ int main(int argc, char const *argv[]) {
     return 0;
 }
 ```
-### To Compile Any .cpp | .cxx | .c++ Source Code File :
+
+### To Compile Any .cpp | .cxx | .c++ Source File :
 ```bash
 $ g++ filename.cpp -o filename
 ```
+
+### To Compile Any .c Source File :
+```bash
+$ gcc filename.c -o filename
+```
+
 You are allowed to copy and implement these programs freely.
-## Happy Coding ~ [@offensive-vk](https://github.com/offensive-vk/)
+## Happy Coding ~ [offensive-vk](https://github.com/offensive-vk/)
