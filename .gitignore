@@ -1,8 +1,6 @@
 # Prerequisites
 *.d
 *.perl
-.vscode/
-.settings.json
 
 # Object files
 *.o
