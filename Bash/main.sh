@@ -1,4 +1,5 @@
 #!/bin/bash
+# DO NOT EXECUTE / RUN THIS FILE.
 
 LOG_FILE="access.log"
 REPORT_FILE="report.txt"
