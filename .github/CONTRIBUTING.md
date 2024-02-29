@@ -1,6 +1,7 @@
 # Please Follow Contribution Guidelines Below. ✨
 
-## Pre-requisties before contributing to this repo: (For new or first time contributors)
+## Requirements for contributing to this repository: (For new or first time contributors)
+
 - A Github Account 
 - An Version Control System. (Git).
 - Any Code Editor Like [Visual Studio Code](https://code.visualstudio.com/download)
@@ -10,7 +11,7 @@
 - Author : [offensive-vk](https://github.com/offensive-vk/)
 - Thank you.
 
-### When contributing to this repository, please follow these rules: (For Expert Contributors)
+## When contributing to this repository, please follow these rules: (For Expert Contributors)
 
 - Firstly, create an issue for the change you wish to make via [GitHub](https://github.com/offensive-vk/Classics/issues)
 - If you want to contribute in any part to this repository please consider submitting a [Pull Request](https://github.com/offensive-vk/Classics/pulls) first.
