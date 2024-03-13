@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GH_TOKEN }}
+        issue-message: "Greetings from the owner. Thanks for opening an issue here. We will inform you soon."
+        pr-message: "Best Regards from Author, Thanks for your valuable contribution to this repository."
