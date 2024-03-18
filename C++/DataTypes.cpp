@@ -13,7 +13,6 @@ int main() {
     int* pointerVariable = &intVariable;
     std::string stringVariable = "Hello, world!";
     std::pair<int, char> pairVariable = std::make_pair(42, 'X');
-    std::tuple<int, float, std::string> tupleVariable = std::make_tuple(1, 2.3f, "Tuple");
 
     // User-defined data types (classes)
     class MyClass {
@@ -37,8 +36,6 @@ int main() {
     std::cout << "Pointer variable: " << pointerVariable << std::endl;
     std::cout << "String variable: " << stringVariable << std::endl;
     std::cout << "Pair variable: (" << pairVariable.first << ", " << pairVariable.second << ")" << std::endl;
-    std::cout << "Tuple variable: (" << std::get<0>(tupleVariable) << ", " << std::get<1>(tupleVariable) << ", "
-              << std::get<2>(tupleVariable) << ")" << std::endl;
 
     std::cout << "Class member variable: " << classVariable.memberVariable << std::endl;
     classVariable.memberFunction();
