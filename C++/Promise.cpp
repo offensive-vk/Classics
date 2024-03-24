@@ -14,6 +14,9 @@ void compute_task(std::promise<int>& promise, int input) {
     promise.set_value(result);
 }
 
+void syncTask() {
+    std::cout << "Doing an Sync Task.\n" ; 
+}
 int main() {
     // Create a promise to produce an int value
     std::promise<int> promise;
@@ -27,6 +30,9 @@ int main() {
 
     // Do some other work while waiting for the result
     std::cout << "Doing some other work..." << std::endl;
+
+    // Do a sync task
+    syncTask();
 
     // Wait for the result from the asynchronous task
     int result = future.get();
