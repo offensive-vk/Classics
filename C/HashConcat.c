@@ -4,7 +4,7 @@
   printf(#a " and " #b ": We love you!\n")
 
 int main(void) {
-  message_for(Nick, Lila);
+  message_for(Nick, Fury);
 
   return 0;
 }
