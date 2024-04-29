@@ -1,17 +1,5 @@
 #include<stdio.h>
-/*int main(){
-	int x,y;
-	printf("Enter 1st Value : ");
-	scanf("%d", &x);
-	fflush(stdin); //buffered value deletion function.
 
-	printf("Enter 2nd Value : ");
-	scanf("%d", &y);
-	printf("1st Value : %d\n", x);
-	printf("2st Value : %d\n", y);
-
-	return 0;
-}*/
 int main() {
 	char name[20], emailid[20], address[100], para[200];
 	printf("Enter Paragraph : ");

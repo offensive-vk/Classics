@@ -1,6 +1,5 @@
 #include <stdio.h>
-int main()
-{
+int main() {
 	printf(">> A Program by Vedansh <<\n");
 	char main;
 	printf("Enter A Character: ");

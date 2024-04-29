@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main(){
+int main() {
 	
 	FILE *fp = fopen("sample.txt", "a+");
 	char str[100];

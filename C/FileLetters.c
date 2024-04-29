@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int main(){
+int main() {
 	char ch;
 	int upper=0,lower=0,digits=0;
 	FILE *fp = fopen("myfile.txt","r");
