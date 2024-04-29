@@ -4,11 +4,11 @@ int main()
 {
 	// Program to check if a given number is a Armstrong or Not.
 	printf("----------------------------\n");
-	
+
 	int n, temp, rem, sum = 0, cnt = 0;
 	printf("Enter A Number To Check:");
 	scanf("%d", &n);
-	
+
 	temp = n;
 	while (temp != 0)
 	{

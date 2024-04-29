@@ -1,8 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 
-int main()
-{  
+int main() {  
 	float base, height, answer;
 	const int pi = 3.14;
 	printf(">> Area of Triangle <<\n");
