@@ -1,7 +1,5 @@
 #include<stdio.h>
-//program to take user input and convert days into years and months and days.
-int main()
-{
+int main() {
 	int x, days, years, months;
 	printf(">> Enter Days :");
 	scanf("%d", &days);

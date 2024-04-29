@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(void) {
-    // create variables
+    
     int myNum = 5; // integer
     float myFloatNum = 5.99; // floating point number
     char myLetter = 'D'; // string
