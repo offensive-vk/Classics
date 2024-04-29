@@ -1,6 +1,6 @@
 #include<stdio.h> 
 int main(){
-	//Finding Largest and Smallest Number in Array..
+	// Finding Largest and Smallest Number in Array..
 	int size, largest,smallest, i,j;
 	printf("Enter Array Size :");
 	scanf("%d", &size);
