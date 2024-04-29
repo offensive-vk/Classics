@@ -1,6 +1,5 @@
 #include <stdio.h>
-int main()
-{
+int main() {
 
 	printf("\n\tPlaying With 2D Arrays...\n");
 	int row, column, i, j;
@@ -10,13 +9,11 @@ int main()
 	scanf("%d", &row);
 	printf("Enter Number of Columns: \n");
 	scanf("%d", &column);
-	int arr1[row][column]; // first array
+	int arr1[row][column];
 	printf("You Chose %d Rows... %d Columns...\n", row, column);
-	for (i = 0; i < row; i++)
-	{
+	for (i = 0; i < row; i++) {
 		printf("Enter Array Elements : \n");
-		for (j = 0; j < column; j++)
-		{
+		for (j = 0; j < column; j++) {
 			scanf("%d", &arr1[i][j]);
 		}
 	}
@@ -25,10 +22,9 @@ int main()
 	scanf("%d", &row);
 	printf("Enter Number of Columns: \n");
 	scanf("%d", &column);
-	int arr2[row][column]; // second array..
+	int arr2[row][column];
 	printf("You Chose %d Rows... %d Columns...\n", row, column);
-	for (i = 0; i < row; i++)
-	{
+	for (i = 0; i < row; i++) {
 		printf("Enter Array Elements : \n");
 		for (j = 0; j < column; j++)
 		{
@@ -36,11 +32,8 @@ int main()
 		}
 	}
 
-	// addition of matrices...
-	for (i = 0; i < row; i++)
-	{
-		for (j = 0; j < column; j++)
-		{
+	for (i = 0; i < row; i++) {
+		for (j = 0; j < column; j++) {
 			sum[row][column] = arr1[i][j] + arr2[i][j];
 			printf("%d\t", sum[i][j]);
 		}

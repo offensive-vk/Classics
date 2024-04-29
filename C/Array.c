@@ -1,9 +1,7 @@
 #include<stdio.h>
 int main(void) {
-    // Declare an array of four integers:
     int myNumbers[4];
 
-    // add element
     myNumbers[0] = 25;
     myNumbers[1] = 50;
     myNumbers[2] = 75;
@@ -12,7 +10,6 @@ int main(void) {
     int myNumbers[] = {25, 50, 75, 100};
 
     printf("%d", myNumbers[0]);
-    // output 25
 
     int myNumbers[] = {25, 50, 75, 100};
     myNumbers[0] = 33;
