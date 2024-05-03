@@ -4,7 +4,7 @@ int main()
 {
 	printf(">> A Program by Vedansh <<\n");
 	printf("------------------------------\n");
-	// declaration of all variables.
+
 	char username[20];
 	int choice;
 	float length, width, result;
