@@ -8,7 +8,7 @@
 	Only one member can contain a value at a time.
 */
 
-union list{
+union list {
 	char name[50];
 	int pin;
 	float x;
