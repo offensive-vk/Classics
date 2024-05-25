@@ -36,7 +36,7 @@ C++ was designed with systems programming and embedded, resource-constrained sof
 ## Classics - C and C++ Programs 
 
 - C/C++ is an awesome programming languages. Yet Powerful also.
-- You can find Contribution Guidelines [here](https://github.com/offensive-vk/Classics/blob/classic/CONTRIBUTING.md) and Security Guidelines [here.](https://github.com/offensive-vk/Classics/blob/classic/SECURITY.md)
+- You can find Contribution Guidelines [here](https://github.com/offensive-vk/Classics/blob/classic/.github/CONTRIBUTING.md) and Security Guidelines [here.](https://github.com/offensive-vk/Classics/blob/classic/.github/SECURITY.md)
 - This Repository Contains All of My Best C & C++ Programs.
 - Trick - All Valid C Code is Also A Valid C++ Code.
 - (i.e You Can Save Your C Source Code with .cpp extension.)
