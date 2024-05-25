@@ -4,13 +4,13 @@
 
 Please ensure all the boxes below are checked before submitting your pull request:
 
-0. [ ] I've understood the Readme of this Project.
-1. [ ] I've discussed this change with the team and/or community members.
-2. [ ] I've read and understood the [Contributing Guidelines](https://github.com/offensive-vk/Classics/blob/classic/CONTRIBUTING.md) and [Code of Conduct](https://github.com/offensive-vk/Classics/blob/classic/CODE_OF_CONDUCT.md).
-3. [ ] I have sufficient knowledge of all topics required to contribute to this project.
-4. [ ] This Pull Request is not a duplicate of any previously submitted PR.
-5. [ ] I am the sole author of this PR.
-6. [ ] I've formatted any changed code according to the project's code style guidelines.
+0. [x] I've understood the Readme of this Project.
+1. [x] I've discussed this change with the team and/or community members.
+2. [x] I've read and understood the [Contributing Guidelines](https://github.com/offensive-vk/Classics/blob/classic/.github/CONTRIBUTING.md) and [Code of Conduct](https://github.com/offensive-vk/Classics/blob/classic/.github/CODE_OF_CONDUCT.md).
+3. [x] I have sufficient knowledge of all topics required to contribute to this project.
+4. [x] This Pull Request is not a duplicate of any previously submitted PR.
+5. [x] I am the sole author of this PR.
+6. [x] I've formatted any changed code according to the project's code style guidelines.
 
 ***
 Thanks for considering to submit a pull request! We appreciate your contribution.
@@ -49,4 +49,5 @@ This PR fixes/implements the following **bugs/features**:
 ### Additional Information (If any.)
 
 <!-- Add any additional information or context that may be helpful for reviewers -->
+
 ***
