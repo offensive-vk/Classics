@@ -15,7 +15,7 @@
 //     return 0;
 // }
 
-int main(){
+int main() {
     int i = 0;
     while (i< 1000000000)
     {
