@@ -1,20 +1,9 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <any>
+#include <array>
 #define LIMIT 91863
 #define SOURCE "Tricks.cpp"
-
-template <typename T> class Primary {
-    std::vector<T> List;
-    std::vector<T> Names;
-    Primary() { }
-    ~Primary() {
-        std::cout << "Destructor Called." << std::endl;
-        delete this->List;
-        delete this->Names;
-    }
-};
 
 auto trick1 = []() {
     /**
@@ -24,37 +13,59 @@ auto trick1 = []() {
     std::string str = "Hello, World!";
     std::vector<std::string> vec;
     vec.push_back(std::move(str)); // str is now in a valid but unspecified state
-}
+};
 
 auto trick2 = []() {
     /**
-    std::any for Type Erasure - Allows storing a value of any type.
+     * Use std::array Instead of C-Style Arrays
+     * Provides a safer and more convenient way to handle fixed-size arrays.
     */
-    std::any var = 5;
-    var = std::string("Hello");
-    try {
-        std::cout << std::any_cast<std::string>(var);
-    } catch (const std::bad_any_cast& e) {
-        std::cout << e.what();
+    std::array<int, 5> arr = {1, 2, 3, 4, 5};
+    for (auto &a : arr) {
+        std::cout << a << ' ';
     }
-}
+};
+
 auto trick3 = []() {
+    /*
+    std::optional for Optional Return Values
+    Represents a value that may or may not be present.
+    */
+    std::optional<int> findValue(bool found) {
+        if (found) return 42;
+        return std::nullopt;
+    }
+    auto val = findValue(true);
+    if (val) {
+        std::cout << "Value found: " << *val;
+    } else {
+        std::cout << "Value not found";
+    }
+
+};
+
+auto trick4 = []() {
     /**
-     Template Meta-Programming - Powerful technique for compile-time computation and code generation.
-     */
-    template<int N>
-    struct Factorial {
-        static const int value = N * Factorial<N - 1>::value;
-    };
-    template<>
-    struct Factorial<0> {
-        static const int value = 1;
-    };
-    std::cout << Factorial<5>::value; // Outputs: 120
+     * constexpr for Compile-Time Constants
+     * Enables computation at compile time.
+    */
+    constexpr int square(int x) {
+        return x * x;
+    }
+    constexpr int result = square(5); // Computed at compile time
+}
+
+auto trick5 = []() {
+    /**
+     * Smart Pointers 
+     * Use std::unique_ptr and std::shared_ptr to manage dynamic memory and avoid memory leaks.
+    */
+    std::unique_ptr<int> p1(new int(5));
+    std::shared_ptr<int> p2 = std::make_shared<int>(10);
 
 }
 
 int main() {
-    
+
     return 0;
 }
