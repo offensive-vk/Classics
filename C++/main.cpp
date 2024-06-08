@@ -1,8 +1,8 @@
-#include<iostream>
-#include<stdio.h>
-#include<conio.h>
-#include<string.h>
-#include<cstdlib>
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+#include <cstdlib>
 
 #define MAX 65535;
 #define MIN 1;
