@@ -1,28 +1,56 @@
 #include <iostream>
 #include <vector>
-#include <cstddef>
-#include <memory>
-using namespace std;
-#define MAX_LENGTH 1000;
+#include <algorithm>
 
-// Function to display the elements of an array
-void display(const vector<int>& arr) {
-    cout << "Array elements: ";
-    for (int num : arr) {
-        cout << num << " ";
+int main() {
+    // Create a vector of integers
+    std::vector<int> vec;
+
+    // 1. Adding elements to the vector using push_back
+    vec.push_back(10);
+    vec.push_back(20);
+    vec.push_back(30);
+    std::cout << "Vector after adding elements: ";
+    for (const auto& elem : vec) {
+        std::cout << elem << " ";
     }
-    cout << endl;
-}
+    std::cout << std::endl;
 
-// Main execution.
-int main(void) {
-  int *arr = new int[MAX_LENGTH];
-  
-  std::vector<int> vec = {14, 54, 12, 22, 45, 99, 32};
-  std::vector<char> names = {"Jack", "Roy", "Manish", "Claire", "Michael"};
-  display(vec);
-  display(names);
+    // 2. Modifying elements in the vector
+    vec[1] = 25; // Change the second element from 20 to 25
+    std::cout << "Vector after modifying the second element: ";
+    for (const auto& elem : vec) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
 
-  std::cout << " The End " << std::endl;
-  return 0;
+    // 3. Removing elements from the vector using erase
+    vec.erase(vec.begin() + 1); // Remove the second element
+    std::cout << "Vector after removing the second element: ";
+    for (const auto& elem : vec) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 4. Inserting elements at a specific position using insert
+    vec.insert(vec.begin() + 1, 20); // Insert 20 at the second position
+    std::cout << "Vector after inserting 20 at the second position: ";
+    for (const auto& elem : vec) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 5. Clearing the vector using clear
+    vec.clear();
+    std::cout << "Vector after clearing all elements: ";
+    if (vec.empty()) {
+        std::cout << "Vector is empty" << std::endl;
+    } else {
+        for (const auto& elem : vec) {
+            std::cout << elem << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
 }
