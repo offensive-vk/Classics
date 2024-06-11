@@ -1,7 +1,7 @@
 #include<iostream>
 #include<conio.h>
 
-int main() {
+int main(void) {
     int size = 5;
     int num = 10;
     int* ptr = &num;

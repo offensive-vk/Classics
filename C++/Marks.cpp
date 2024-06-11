@@ -3,8 +3,7 @@
 
 using namespace std;
 
-class Student
-{
+class Student {
     int maximum;
     char subject[30];
 
@@ -45,15 +44,13 @@ class Student
             }
         }
     }
-    void display()
-    {
+    void display()     {
         cout<<"\nMaximum Marks: ";
         cout<<"\nYou Had Scored "<<maximum<<" marks in "<<subject;
     }
 };
 
-int main()
-{
+int main(void) {
     Student s1;
 
     s1.get_data();
