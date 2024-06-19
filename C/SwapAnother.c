@@ -1,7 +1,8 @@
-// program to take user input and swap the values without using third variable.
+/**
+ Program to take user input and swap the values without using third variable.
+*/
 #include <stdio.h>
-int main()
-{
+int main() {
     int x = 87, y = 45;
     printf("Before  Swapping \nx = %d\ny = %d\n", x, y);
     // temp = x;

@@ -1,7 +1,5 @@
 #include<stdio.h>
-int main()
-{
-	// sum of three digits.
+int main() {
 	int x, a, b, result;
     printf("Enter A Number of Three Digits :");
     scanf("%d", &x);

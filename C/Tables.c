@@ -1,6 +1,5 @@
 #include<stdio.h>
-int main(){
-
+int main() {
 	int n, i, j;
 	printf("Enter A Number To Get Table :");
 	scanf("%d", &n);

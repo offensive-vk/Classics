@@ -2,12 +2,13 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-struct Employee{
+struct Employee {
 	int empid;
 	char empname[30];
 	char dept[20];
 	int salary;
 };
+
 int main(){
 	struct Employee e1;
 	printf("Enter Employee id : ");
@@ -25,5 +26,4 @@ int main(){
 	printf("Employee Department : %s\n", e1.dept);
 	printf("Employee Id : %d\n", e1.salary);
 	return 0;
-
 }
