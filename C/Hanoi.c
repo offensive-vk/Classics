@@ -15,7 +15,7 @@ int main() {
 }
 
 void towers(int num, char frompeg, char topeg, char auxpeg){
-	//Exit condition for recursive function or base condition lol.
+	// Exit condition for recursive function or base condition lol.
 	if(num == 1) {
 		printf("\n :: Move disk 1 from peg %c to peg %c :: \n", frompeg, topeg);
 		return;

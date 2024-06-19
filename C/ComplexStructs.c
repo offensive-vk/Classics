@@ -7,6 +7,7 @@ struct Employee {
 	char dept[20];
 	int salary;
 };
+
 void readEmpData(struct Employee *e1) {
 	printf("Enter Employee id : ");
 	scanf("%d", &e1->empid);
@@ -19,9 +20,11 @@ void readEmpData(struct Employee *e1) {
 	scanf("%d", &e1->salary);
 	printf("\n");
 }
+
 void displayEmpData(struct Employee *e1) {
 	printf("%d \t %s \t %s \t %d \t\n ", e1->empid, e1->empname, e1->dept, e1->salary);
 }
+
 int main() {
 	struct Employee emp1, emp2;
 	readEmpData(&emp1);

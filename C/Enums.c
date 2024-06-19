@@ -12,12 +12,12 @@ int main(void) {
     scanf("%d", &day);
 
     switch(day) {
-    case Mon: puts("Monday"); break;
-    case Tues: puts("Tuesday"); break;
-    case Wed: puts("Wednesday"); break;
-    case Thursday: puts("Thursday"); break;
-    default: puts("Error!");
-}
+        case Mon: puts("Monday"); break;
+        case Tues: puts("Tuesday"); break;
+        case Wed: puts("Wednesday"); break;
+        case Thursday: puts("Thursday"); break;
+        default: puts("Error!");
+    }
 
     return 0;
 }

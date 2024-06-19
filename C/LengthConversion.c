@@ -1,6 +1,5 @@
 #include<stdio.h>
-int main()
-{
+int main(void) {
 	int c,m,k;
 	printf("Enter the value of c:");
 	scanf("%d",&c);
