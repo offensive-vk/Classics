@@ -17,7 +17,7 @@ int main()
 		{12001, "Andy Smith", 1597, 50000},
 		{12002, "Manish Paan Wala", 1234, 45000},
 		{12003, "Mahak Saini", 7103, 150000},
-		{12004, "Rupesh Lassan", 4567, 15000},
+		{12004, "Payal", 4567, 15000},
 		{12005, "John Wick", 7309, 75000}};
 	int choice, i, acc, pin, flag = 0, withdraw, amount, deposit;
 	while (1)
