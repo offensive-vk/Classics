@@ -2,7 +2,7 @@
 #include<conio.h>
 
 void Show(int n) { 
-	if(n>0) {
+	if(n > 0) {
 		printf("\t %d ",n);
 		Show(n-1);
 	}

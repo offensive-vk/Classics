@@ -1,6 +1,5 @@
 #include<stdio.h>
 int main() {
-	
 	float radius, area;
 	printf("Enter Radius : ");
 	scanf("%f", &radius);

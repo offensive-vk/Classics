@@ -1,8 +1,5 @@
 #include<stdio.h>
-int main()
-{
-    //program 17 swap the values with using third variable.
-	printf(">> A Program By Vedansh <<\n");
+int main(void) {
 	int x, y, temp;
 	x = 36; y = 87;
 	printf("Before Swapping \nx = %d\ny = %d", x, y);
@@ -11,5 +8,5 @@ int main()
     y = temp;
     printf("\n-----------------------\n");
     printf("After Swapping \nx = %d\ny = %d", x, y);
-    return 999;
+    return 0;
 }

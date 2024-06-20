@@ -11,13 +11,13 @@ int main(void) {
 		arr[c+1] = arr[c] + arr[c] * 1024;
 	}
 	
-	printf("Successfully Created and Filled with Values \n");
+	printf("Successfully Created and Assigned Values.\n");
 	
 	
-//	printf("Printing Values: \n");
-//	for(c = 0; c < size; c++) {
-//		printf("%d \t", arr[c]);
-//	}
+	printf("Printing Values: \n");
+	for(c = 0; c < size; c++) {
+		printf("%d \t", arr[c]);
+	}
 	
 	printf("Size of array : %d\n", size);
 	printf(" >> Program Finished !! << ");

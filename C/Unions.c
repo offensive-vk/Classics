@@ -14,7 +14,7 @@ union list {
 	float x;
 };
 
-int main(){
+int main(void) {
 	int x,y;
 	union list data;
 	//strcpy(data.name,'Madhav');

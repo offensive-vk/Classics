@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main(void){
+int main(void) {
     int n = 0, i, j;
     printf("Enter number of lines for pattern : ");
     scanf("%d", &n);

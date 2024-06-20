@@ -1,6 +1,7 @@
 #include<limits.h>
 #include<stdio.h>
-int main(){
+
+int main(void) {
 	printf("Character Minimum Value = %d\n", CHAR_MIN);
 	printf("Character Maximum Value = %d\n", CHAR_MAX);
 	printf("Short Int Minimum Value = %d\n", SHRT_MIN);

@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<math.h>
-//program to take user input and convert seconds into minutes and hours.
+/**
+	Program to take user input and convert seconds into minutes and hours.
+ */
 int main() {
 	
 	int seconds, sec , minutes, hours;
