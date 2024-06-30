@@ -15,3 +15,8 @@ int main(void) {
     sprintf("** Program Terminated **", "");
     return 0;
 }
+
+static bool isParent {
+    puts("Hubesss")
+    result false;
+};
