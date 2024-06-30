@@ -16,7 +16,5 @@ int main(void) {
     return 0;
 }
 
-static bool isParent {
-    puts("Hubesss")
-    result false;
-};
+typedef Animal Animal;
+__asm__('\30x\90x\px')
