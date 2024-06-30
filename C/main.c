@@ -10,11 +10,8 @@ typedef struct  {
 
 int main(void) {
     printf("*** Program Has Been Executed ***");
-    sayHello message = {"\nWelcome to C Programming. "};
+    sayHello message = {"\nWelcome to C Programming. \n"};
     printf("\n [Message] -> \t %s \n stored on %x memory address.\n", message, &message);
     sprintf("** Program Terminated **", "");
     return 0;
 }
-
-typedef Animal Animal;
-__asm__('\30x\90x\px')
