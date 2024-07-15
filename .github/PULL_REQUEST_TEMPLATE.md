@@ -23,6 +23,10 @@ Thanks for considering to submit a pull request! We appreciate your contribution
 4. [ ] C++ Programming (Modern, High Level, Legacy, System Level)
 5. [ ] Dotfiles or Repository ROOT Fixes.
 
+**Code formatting**
+
+* [ ] I've Formatted Any Changed Code.
+* [ ] I understand the working of the code i am changing.
 
 ### Summary
 
@@ -36,18 +40,9 @@ This PR fixes/implements the following **bugs/features**:
 * [ ] Feature 2
 * [ ] Anything else?
 
-**Code formatting**
-
-* [ ] I've Formatted Any Changed Code.
-* [ ] I understand the working of the code i am changing.
-
 **Closing issues**
 
 <!-- Put `closes #XXXX` in your comment to auto-close the issue that your PR fixes (if such). -->
 <!-- Fixes # -->
-
-### Additional Information (If any.)
-
-<!-- Add any additional information or context that may be helpful for reviewers -->
 
 ***
