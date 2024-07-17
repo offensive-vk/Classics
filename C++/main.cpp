@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <algorithm>
 #include <vector>
+#include <memory>
 
 #define MAX 65535;
 #define MIN 1;
@@ -25,7 +26,8 @@ int main(int argc, char **argv){
     std::cout << "Length of Vector: " << res.size() << std::endl;
     std::cout << "\n\t ============================== \t\n" << std::endl;
 
-
+    std::unique_ptr<Overload<bool>> ptr(new Overload<bool>);
+    std::cout << "Is Overloaded class? -> " << ptr->isOverload << std::endl;
     return (0);
 }
 
@@ -41,8 +43,8 @@ public:
     Overload() { }
     ~Overload() { }
     Overload(bool x, bool y) {
-        this->isOverload = (bool)x;
-        this->isVector = (bool)y;
+        this->isOverload = x;
+        this->isVector = y;
         char* sayX = displayX();
         std::cout << *sayX << std::endl;
     }
