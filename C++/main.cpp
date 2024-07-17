@@ -43,5 +43,7 @@ public:
     Overload(bool x, bool y) {
         this->isOverload = (bool)x;
         this->isVector = (bool)y;
+        char* sayX = displayX();
+        std::cout << *sayX << std::endl;
     }
 };
