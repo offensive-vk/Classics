@@ -25,9 +25,23 @@ int main(int argc, char **argv){
     std::cout << "Length of Vector: " << res.size() << std::endl;
     std::cout << "\n\t ============================== \t\n" << std::endl;
 
-    for(const auto& str: res) {
-        std::cout << str << res[0 && 1];
-    }
-    std::cout << std::endl;
+
     return (0);
 }
+
+const char* displayX() noexcept {
+    return "-X*X*X-";
+}
+
+template <class T> class Overload: public std::vector<T> {
+public:
+    std::vector<std::vector<T>> LONG_LIST_UINT;
+    bool isOverload = false;
+    bool isVector = true;
+    Overload() { }
+    ~Overload() { }
+    Overload(bool x, bool y) {
+        this->isOverload = (bool)x;
+        this->isVector = (bool)y;
+    }
+};
