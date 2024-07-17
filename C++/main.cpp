@@ -14,7 +14,7 @@ int main(int argc, char **argv){
     std::cout << ":: \t C++ Programming - OOP !! :: " << std::endl;
     std::cout << "\n\t ============================== \t\n" << std::endl;
 
-    std::vector<std::string> res = {0};
+    std::vector<std::string> res;
     std::string data = "C++ is Cool!";
 
     for(size_t c = 0; c <= 99; ++c) {
@@ -24,5 +24,10 @@ int main(int argc, char **argv){
     std::cout << std::endl;
     std::cout << "Length of Vector: " << res.size() << std::endl;
     std::cout << "\n\t ============================== \t\n" << std::endl;
+
+    for(const auto& str: res) {
+        std::cout << str << res[0 && 1];
+    }
+    std::cout << std::endl;
     return (0);
 }
