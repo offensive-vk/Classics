@@ -1,40 +1,33 @@
 #include <iostream>
 #include <conio.h>
 
-class Car
-{
+class Car {
 private:
     std::string make;
     std::string model;
-    void drive()
-    {
+    void drive() {
         std::cout << this->make << " is being driven." << std::endl;
     }
 
 public:
     int src;
-    std::string getMake()
-    {
+    std::string getMake() {
         return this->make;
     }
-    std::string getModel()
-    {
+    std::string getModel() {
         return this->model;
     }
-    void startEngine()
-    {
+    void startEngine() {
         std::cout << "Starting engine of " << this->make << this->model << std::endl;
     }
 
-    Car(std::string make, std::string model)
-    {
+    Car(std::string make, std::string model) {
         this->make = make;
         this->model = model;
     }
 };
 
-int main(int argc, char **argv[])
-{
+int main(int argc, char **argv[]) {
     Car *car = new Car("Lamborghini", "LP700");
 
     std::cout << "Car Maker : " << car->getMake() << std::endl;
