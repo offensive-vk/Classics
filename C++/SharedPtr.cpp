@@ -20,7 +20,6 @@ int main() {
     {
         // create another shared pointer and initialize it with the previously created pointer
         std::shared_ptr<MyClass> ptr2 = ptr1;
-
         std::cout << "Inside the inner scope." << std::endl;
         // both pointers share the same object, and the reference counter has been increased to 2
     }
