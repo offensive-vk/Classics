@@ -2,6 +2,8 @@
 #include <algorithm>
 #include <vector>
 #include <array>
+#include <memory>
+
 #define LIMIT 91863
 #define SOURCE "Tricks.cpp"
 
@@ -31,16 +33,16 @@ auto trick3 = []() {
     std::optional for Optional Return Values
     Represents a value that may or may not be present.
     */
-    std::optional<int> findValue(bool found) {
-        if (found) return 42;
-        return std::nullopt;
-    }
-    auto val = findValue(true);
-    if (val) {
-        std::cout << "Value found: " << *val;
-    } else {
-        std::cout << "Value not found";
-    }
+    // std::optional<int> findValue(bool found) {
+    //     if (found) return 42;
+    //     return std::nullopt;
+    // }
+    // auto val = findValue(true);
+    // if (val) {
+    //     std::cout << "Value found: " << *val;
+    // } else {
+    //     std::cout << "Value not found";
+    // }
 
 };
 
@@ -53,7 +55,7 @@ auto trick4 = []() {
         return x * x;
     }
     constexpr int result = square(5); // Computed at compile time
-}
+};
 
 auto trick5 = []() {
     /**
@@ -63,7 +65,7 @@ auto trick5 = []() {
     std::unique_ptr<int> p1(new int(5));
     std::shared_ptr<int> p2 = std::make_shared<int>(10);
 
-}
+};
 
 int main() {
 
