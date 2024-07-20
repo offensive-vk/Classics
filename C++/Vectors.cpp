@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 
-void extra();
 int main() {
     // Creating an empty vector of integers
     std::vector<int> numbers;
@@ -53,11 +52,11 @@ int main() {
         std::cout << "Vector is empty after clearing." << std::endl;
     }
     
-    extra();
+    MoreExamples();
     return 0;
 }
 
-void extra(){
+void MoreExamples() {
     
     // Create an empty vector of integers
     std::vector<int> numbers;

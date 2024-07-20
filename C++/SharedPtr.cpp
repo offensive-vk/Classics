@@ -25,10 +25,10 @@ int main() {
     }
 
     std::cout << "Outside the inner scope." << std::endl;
-    // leaving the inner scope will destroy ptr2, and the reference counter is decremented to 1
-    
-    // the main function returns, ptr1 goes out of scope, and the reference counter becomes 0
-    // this causes the MyClass object to be deleted and the destructor is called.
-
+    /**
+     * leaving the inner scope will destroy ptr2, and the reference counter is decremented to 1
+     * the main function returns, ptr1 goes out of scope, and the reference counter becomes 0
+     * this causes the MyClass object to be deleted and the destructor is called.
+     */
     return 0;
 }
