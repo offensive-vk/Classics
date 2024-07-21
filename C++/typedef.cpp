@@ -1,6 +1,6 @@
 #include <iostream>
 #include <conio.h>
-// Define a custom data type using typedef
+
 typedef int MyInt;
 typedef std::string string;
 

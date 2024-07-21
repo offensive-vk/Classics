@@ -1,31 +1,25 @@
 #include <iostream>
 #include <conio.h>
-class Animal
-{
+class Animal {
 public:
     virtual void speak() = 0; // pure virtual function
 };
 
-class Dog : public Animal
-{
+class Dog : public Animal {
 public:
-    void speak() override
-    {
+    void speak() override {
         std::cout << "Woof!" << std::endl;
     }
 };
 
-class Cat : public Animal
-{
+class Cat : public Animal {
 public:
-    void speak() override
-    {
+    void speak() override {
         std::cout << "Meow!" << std::endl;
     }
 };
 
-int main() // With DMA
-{
+int main() {
     Animal *a = new Dog();
     a->speak();
 

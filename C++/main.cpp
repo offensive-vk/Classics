@@ -10,6 +10,25 @@
 #define MAX 65535;
 #define MIN 1;
 
+const char* displayX() noexcept {
+    return "-X*X*X-";
+}
+
+template <class T> class Overload: public std::vector<T> {
+public:
+    std::vector<std::vector<T>> LONG_LIST_UINT;
+    bool isOverload = false;
+    bool isVector = true;
+    Overload() { }
+    ~Overload() { }
+    Overload(bool x, bool y) {
+        this->isOverload = x;
+        this->isVector = y;
+        char* sayX = displayX();
+        std::cout << *sayX << std::endl;
+    }
+};
+
 int main(int argc, char **argv){
 
     std::cout << ":: \t C++ Programming - OOP !! :: " << std::endl;
@@ -30,22 +49,3 @@ int main(int argc, char **argv){
     std::cout << "Is Overloaded class? -> " << ptr->isOverload << std::endl;
     return (0);
 }
-
-const char* displayX() noexcept {
-    return "-X*X*X-";
-}
-
-template <class T> class Overload: public std::vector<T> {
-public:
-    std::vector<std::vector<T>> LONG_LIST_UINT;
-    bool isOverload = false;
-    bool isVector = true;
-    Overload() { }
-    ~Overload() { }
-    Overload(bool x, bool y) {
-        this->isOverload = x;
-        this->isVector = y;
-        char* sayX = displayX();
-        std::cout << *sayX << std::endl;
-    }
-};
