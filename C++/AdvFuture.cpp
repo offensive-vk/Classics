@@ -16,6 +16,7 @@ void time_consuming_task() {
 }
 
 int main() {
+    
     // Example 1: Using async to launch a task asynchronously and retrieve the result
     std::vector<int> vec{1, 2, 3, 4, 5};
     std::future<int> future_sum = std::async(std::launch::async, async_sum, vec);
