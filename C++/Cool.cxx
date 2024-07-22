@@ -1,40 +1,37 @@
 #include <iostream>
 #include <sstream>
+
 using namespace std;
 
 class Student {
     int age, standard;
     string first_name, last_name;
     public:
-    void set_age(int a){
+    void set_age(int a) {
         age=a;
     }
-    void set_standard(int s){
+    void set_standard(int s) {
         standard=s;
     }
-    void set_first_name(string fn){
+    void set_first_name(string fn) {
         first_name=fn;
     }
-    void set_last_name(string ln){
+    void set_last_name(string ln) {
         last_name=ln;
     }
-    int get_age()
-    {
+    int get_age() {
         return age;
     }
-    int get_standard()
-    {
+    int get_standard() {
         return standard;
     }
-    string get_first_name()
-    {
+    string get_first_name() {
         return first_name;
     }
-    string get_last_name()
-    {
+    string get_last_name() {
         return last_name;
     }
-    string to_string(){
+    string to_string() {
         stringstream ss;
         char c=',';
         ss<<age<<c<<first_name<<c<<last_name<<c<<standard;
