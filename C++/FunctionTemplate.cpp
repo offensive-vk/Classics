@@ -39,5 +39,3 @@ int main(int argc, char const *argv[])
     std::cout << "\n === End Program === \n" << std::endl;
     return 0;
 }
-
-
