@@ -13,23 +13,22 @@ template <typename Type1, typename Type2> void Global(Type1 t, Type2 v) {
 
     std::cout << "It Works !" << std::endl;
 }
-template <typename TData> TData Attack(TData data){
+template <typename TData> TData Attack(TData data) {
     
     std::cout << "\n\n" << std::endl;
     
     int count = 0;
-    while(count <= 10){
+    while(count <= 10) {
         std::cout << data << std::endl;
         count++;
     }
     return data;
 }
-template <typename Def> Def Run(Def value){
+template <typename Def> Def Run(Def value) {
     std::cout << value << std::endl;
     return value;
 }
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     std::cout << "\n === Begin Program === \n" << std::endl;
 
     Global<int, int>(101, 102);

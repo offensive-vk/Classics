@@ -25,6 +25,7 @@ template <typename T> void performAction(T value) {
     }
 }
 int main() {
+
     Action(42);              // Calls the int version
     Action(3.14);            // Calls the double version
     Action("Hello, World!"); // Calls the string version
