@@ -25,8 +25,7 @@ int main() {
     std::future<int> future = promise.get_future();
 
     // Launch a thread to perform the asynchronous computation
-    int input = 5;
-    std::thread t(compute_task, std::ref(promise), input);
+    std::thread t(compute_task, std::ref(promise), 5);
 
     // Do some other work while waiting for the result
     std::cout << "Doing some other work..." << std::endl;

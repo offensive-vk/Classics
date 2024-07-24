@@ -40,7 +40,8 @@ public:
 };
 
 int main() {
-    // Creating two Pokemon
+
+    // Creating two Pokemon(s)
     Pokemon pikachu("Pikachu", "Electric", 10);
     Pokemon charmander("Charmander", "Fire", 8);
 
