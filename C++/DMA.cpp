@@ -1,6 +1,9 @@
 #include <iostream>
 #include <cstdlib>
 #include <conio.h>
+#include <memory>
+#include <memory.h>
+
 int main() {
     int size;
 

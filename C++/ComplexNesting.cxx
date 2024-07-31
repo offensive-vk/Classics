@@ -1,5 +1,6 @@
 #include <iostream>
 #include <conio.h>
+#include <bits/c++io.h>
 
 class OuterClass {
 private:
