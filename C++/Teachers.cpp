@@ -38,6 +38,7 @@ public:
 };
 template <class Gender> class Human {
 public:
+    Human() { /** Default Constructor */ }
     std::string name;
     std::string age;
     std::string gender;
@@ -69,16 +70,25 @@ public:
 };
 
 class MaleTeacher : public Human<Male> {
+public:
+    MaleTeacher() { /** Default Constructor */}
+    ~MaleTeacher() { /** Default Destructor */}
 
 };
+
 class FemaleTeacher : public Human<Female> {
+public: 
+    FemaleTeacher() { /** Default Constructor */ }
+    ~FemaleTeacher() { /** Default Destructor */ }
 
 };
+
 typedef struct {
     std::string name;
     std::string gender;
     std::string age;
 } UserData;
+
 int main(int argc, char const *argv[]) {
 
     auto Manish = std::make_unique<Human<Male>>("Manish", "26", "Male");
