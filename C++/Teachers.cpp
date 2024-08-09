@@ -27,11 +27,11 @@ public:
     virtual void walk() const = 0;
     virtual void rest() const = 0;
     virtual void run() const = 0;
-    virtual void bath() const = 0;
-    virtual void wake() const = 0;
-    virtual void stand() const = 0;
     virtual void sit() const = 0;
+    virtual void stand() const = 0;
+    virtual void wake() const = 0;
     virtual void fresh() const = 0;
+    virtual void bath() const = 0;
     virtual void talk() const = 0;
     virtual void listen() const = 0;
 
@@ -39,12 +39,12 @@ public:
 
 class HumanActions: public AbstractHumanActions {
 private:
-    HumanActions() { /** Default Constructor */ }
-    ~HumanActions() { /** Default Destructor */ }
+    HumanActions::HumanActions() { /** Default Constructor */ }
+    HumanActions::~HumanActions() { /** Default Destructor */ }
 };
 
 template <class Gender> class Human: public HumanActions {
-public:
+    public:
     Human() { /** Default Constructor */ }
     std::string name;
     std::string age;
@@ -76,8 +76,60 @@ public:
     ~Human() { }
     protected:
     inline void breath() const noexcept override {
+        std::cout << this->name << " is breathing now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "Human is breathing now." ;
+    }
+    inline void eat() const noexcept override {
+        std::cout << this->name << " is eating now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void drink() const noexcept override {
+        std::cout << this->name << " is drinking now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void sleep() const noexcept override {
+        std::cout << this->name << " is sleeping now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void walk() const noexcept override {
+        std::cout << this->name << " is walking now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void rest() const noexcept override {
+        std::cout << this->name << " is resting now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void run() const noexcept override {
+        std::cout << this->name << " is running now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void sit() const noexcept override {
+        std::cout << this->name << " is siting now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void listen() const noexcept override {
+        std::cout << this->name << " is listening now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void talk() const noexcept override {
+        std::cout << this->name << " is talking now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void bath() const noexcept override {
+        std::cout << this->name << " is bathing now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void fresh() const noexcept override {
+        std::cout << this->name << " is busy freshing now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void wake() const noexcept override {
+        std::cout << this->name << " is waking up now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    inline void stand() const noexcept override {
+        std::cout << this->name << " is standing now." ;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 };
 
@@ -85,7 +137,6 @@ class MaleTeacher : public Human<Male> {
 public:
     MaleTeacher() { /** Default Constructor */}
     ~MaleTeacher() { /** Default Destructor */}
-
 };
 
 class FemaleTeacher : public Human<Female> {
