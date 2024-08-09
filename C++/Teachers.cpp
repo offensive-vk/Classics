@@ -36,7 +36,14 @@ public:
     virtual void listen() const = 0;
 
 };
-template <class Gender> class Human {
+
+class HumanActions: public AbstractHumanActions {
+private:
+    HumanActions() { /** Default Constructor */ }
+    ~HumanActions() { /** Default Destructor */ }
+};
+
+template <class Gender> class Human: public HumanActions {
 public:
     Human() { /** Default Constructor */ }
     std::string name;
@@ -67,6 +74,11 @@ public:
         return H;
     }
     ~Human() { }
+    protected:
+    inline void breath() const noexcept override {
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << "Human is breathing now." ;
+    }
 };
 
 class MaleTeacher : public Human<Male> {
