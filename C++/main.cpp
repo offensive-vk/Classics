@@ -10,15 +10,12 @@
 #define MAX 65535;
 #define MIN 1;
 
-class Unique {
-public: Unique() { }
-
-};
 int main(int argc, char **argv){
 
     std::cout << ":: \t C++ Programming - OOP !! :: " << std::endl;
     std::cout << "\n\t ============================== \t\n" << std::endl;
-        
+
+
     std::cout << "\n\t ============================== \t\n" << std::endl;
     return (0);
 }
