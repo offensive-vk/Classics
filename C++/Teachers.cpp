@@ -166,7 +166,9 @@ int main(int argc, char const *argv[]) {
     auto Manish = std::make_unique<Human<Male>>("Manish", "26", "Male");
     std::vector<std::unique_ptr<Human<Male>>> MaleList = {};
     std::vector<std::unique_ptr<Human<Female>>> FemaleList = {};
-
+    
+    auto M = std::make_unique<MaleTeacher>("Teacher", 22, "Male");
+    auto F = std::make_unique<FemaleTeacher>("Teacher", 20, "Female");
     std::vector<UserData> List = {
         {"User No.1", "10", "Male"},
         {"User No.2", "11", "Female"},
@@ -186,6 +188,10 @@ int main(int argc, char const *argv[]) {
 
     for(size_t c = 0; c < FemaleList.size(); ++c) {
         std::cout << FemaleList[c]->name << std::endl;
+    }
+    std::cout << std::endl;
+    for(size_t c = 0; c < MaleList.size(); ++c) {
+        std::cout << MaleList[c]->name << std::endl;
     }
     std::cout << std::endl;
 
