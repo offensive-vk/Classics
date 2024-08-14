@@ -38,9 +38,9 @@ public:
 };
 
 class HumanActions: public AbstractHumanActions {
-private:
-    HumanActions::HumanActions() { /** Default Constructor */ }
-    HumanActions::~HumanActions() { /** Default Destructor */ }
+public:
+    HumanActions() { /** Default Constructor */ }
+    ~HumanActions() { /** Default Destructor */ }
 };
 
 template <class Gender> class Human: public HumanActions {
@@ -137,13 +137,22 @@ class MaleTeacher : public Human<Male> {
 public:
     MaleTeacher() { /** Default Constructor */}
     ~MaleTeacher() { /** Default Destructor */}
+private:
+    std::vector<std::string> Subjects = {0};
+    int salary = 0;
+    int bonus = 0;
+    std::string Dept = "";
 };
 
 class FemaleTeacher : public Human<Female> {
 public: 
     FemaleTeacher() { /** Default Constructor */ }
     ~FemaleTeacher() { /** Default Destructor */ }
-
+private:
+    std::vector<std::string> Subjects = {0};
+    int salary = 0;
+    int bonus = 0;
+    std::string Dept = "";
 };
 
 typedef struct {
