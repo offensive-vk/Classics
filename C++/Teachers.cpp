@@ -38,9 +38,9 @@ public:
 };
 
 class HumanActions: public AbstractHumanActions {
-private:
-    HumanActions::HumanActions() { /** Default Constructor */ }
-    HumanActions::~HumanActions() { /** Default Destructor */ }
+public:
+    HumanActions() { /** Default Constructor */ }
+    ~HumanActions() { /** Default Destructor */ }
 };
 
 template <class Gender> class Human: public HumanActions {
@@ -137,13 +137,22 @@ class MaleTeacher : public Human<Male> {
 public:
     MaleTeacher() { /** Default Constructor */}
     ~MaleTeacher() { /** Default Destructor */}
+private:
+    std::vector<std::string> Subjects = {0};
+    int salary = 0;
+    int bonus = 0;
+    std::string Dept = "";
 };
 
 class FemaleTeacher : public Human<Female> {
 public: 
     FemaleTeacher() { /** Default Constructor */ }
     ~FemaleTeacher() { /** Default Destructor */ }
-
+private:
+    std::vector<std::string> Subjects = {0};
+    int salary = 0;
+    int bonus = 0;
+    std::string Dept = "";
 };
 
 typedef struct {
@@ -152,12 +161,20 @@ typedef struct {
     std::string age;
 } UserData;
 
+typedef struct {
+    int dept;
+    int user;
+    int level;
+} TeacherID;
+
 int main(int argc, char const *argv[]) {
 
     auto Manish = std::make_unique<Human<Male>>("Manish", "26", "Male");
     std::vector<std::unique_ptr<Human<Male>>> MaleList = {};
     std::vector<std::unique_ptr<Human<Female>>> FemaleList = {};
-
+    
+    auto M = std::make_unique<MaleTeacher>("Teacher", 22, "Male");
+    auto F = std::make_unique<FemaleTeacher>("Teacher", 20, "Female");
     std::vector<UserData> List = {
         {"User No.1", "10", "Male"},
         {"User No.2", "11", "Female"},
@@ -169,15 +186,21 @@ int main(int argc, char const *argv[]) {
     for(const auto& H: List) {
         if(H.gender == "Male") {
             MaleList.push_back(std::make_unique<Human<Male>>(H.name, H.age, H.gender));
+            std::cout << "Added a Male." << std::endl;
         }
         if(H.gender == "Female") {
             FemaleList.push_back(std::make_unique<Human<Female>>(H.name, H.age, H.gender));
+            std::cout << "Added a Female." << std::endl;
         }
     }
 
-    for(size_t c = 0; c < FemaleList.size(); ++c) {
-        std::cout << FemaleList[c]->name << std::endl;
-    }
+    // for(size_t c = 0; c < FemaleList.size(); ++c) {
+    //     std::cout << FemaleList[c]->name << std::endl;
+    // }
+    // std::cout << std::endl;
+    // for(size_t c = 0; c < MaleList.size(); ++c) {
+    //     std::cout << MaleList[c]->name << std::endl;
+    // }
     std::cout << std::endl;
 
     return 0;
