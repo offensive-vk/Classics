@@ -194,13 +194,13 @@ int main(int argc, char const *argv[]) {
         }
     }
 
-    for(size_t c = 0; c < FemaleList.size(); ++c) {
-        std::cout << FemaleList[c]->name << std::endl;
-    }
-    std::cout << std::endl;
-    for(size_t c = 0; c < MaleList.size(); ++c) {
-        std::cout << MaleList[c]->name << std::endl;
-    }
+    // for(size_t c = 0; c < FemaleList.size(); ++c) {
+    //     std::cout << FemaleList[c]->name << std::endl;
+    // }
+    // std::cout << std::endl;
+    // for(size_t c = 0; c < MaleList.size(); ++c) {
+    //     std::cout << MaleList[c]->name << std::endl;
+    // }
     std::cout << std::endl;
 
     return 0;
