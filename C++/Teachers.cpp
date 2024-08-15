@@ -161,6 +161,12 @@ typedef struct {
     std::string age;
 } UserData;
 
+typedef struct {
+    int dept;
+    int user;
+    int level;
+} TeacherID;
+
 int main(int argc, char const *argv[]) {
 
     auto Manish = std::make_unique<Human<Male>>("Manish", "26", "Male");
@@ -180,9 +186,11 @@ int main(int argc, char const *argv[]) {
     for(const auto& H: List) {
         if(H.gender == "Male") {
             MaleList.push_back(std::make_unique<Human<Male>>(H.name, H.age, H.gender));
+            std::cout << "Added a Male." << std::endl;
         }
         if(H.gender == "Female") {
             FemaleList.push_back(std::make_unique<Human<Female>>(H.name, H.age, H.gender));
+            std::cout << "Added a Female." << std::endl;
         }
     }
 
