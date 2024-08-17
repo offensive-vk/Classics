@@ -77,12 +77,13 @@ public:
 };
 
 int main() {
+    
     Wife wife("Sneha", 27);
     Husband husband("Madhav", 30);
 
+    husband.marry(wife);
     wife.addChild("John", 5);
     wife.addChild("Clair", 3);
-    husband.marry(wife);
 
     std::cout << husband.getInfo() << std::endl;
     std::cout << "Children: " << wife.getKidsInfo() << std::endl;
