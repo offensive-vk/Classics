@@ -75,59 +75,59 @@ template <class Gender> class Human: public HumanActions {
     }
     ~Human() { }
     protected:
-    inline void breath() const noexcept override {
+    inline void breath() const noexcept override final {
         std::cout << this->name << " is breathing now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void eat() const noexcept override {
+    inline void eat() const noexcept override final {
         std::cout << this->name << " is eating now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void drink() const noexcept override {
+    inline void drink() const noexcept override final {
         std::cout << this->name << " is drinking now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void sleep() const noexcept override {
+    inline void sleep() const noexcept override final {
         std::cout << this->name << " is sleeping now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void walk() const noexcept override {
+    inline void walk() const noexcept override final {
         std::cout << this->name << " is walking now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void rest() const noexcept override {
+    inline void rest() const noexcept override final {
         std::cout << this->name << " is resting now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void run() const noexcept override {
+    inline void run() const noexcept override final {
         std::cout << this->name << " is running now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void sit() const noexcept override {
+    inline void sit() const noexcept override final {
         std::cout << this->name << " is siting now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void listen() const noexcept override {
+    inline void listen() const noexcept override final {
         std::cout << this->name << " is listening now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void talk() const noexcept override {
+    inline void talk() const noexcept override final {
         std::cout << this->name << " is talking now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void bath() const noexcept override {
+    inline void bath() const noexcept override final {
         std::cout << this->name << " is bathing now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void fresh() const noexcept override {
+    inline void fresh() const noexcept override final {
         std::cout << this->name << " is busy freshing now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void wake() const noexcept override {
+    inline void wake() const noexcept override final {
         std::cout << this->name << " is waking up now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    inline void stand() const noexcept override {
+    inline void stand() const noexcept override final {
         std::cout << this->name << " is standing now." ;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
