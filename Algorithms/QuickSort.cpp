@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 
-// Function to partition the array and return the index of the pivot element
 int partition(std::vector<int>& arr, int low, int high) {
     // Select the rightmost element as the pivot
     int pivot = arr[high];
@@ -50,7 +49,6 @@ int main() {
     }
     std::cout << std::endl;
     
-    // Call quickSort function to sort the array
     quickSort(arr, 0, n - 1);
     
     std::cout << "Sorted array: ";

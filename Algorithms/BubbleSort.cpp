@@ -1,8 +1,8 @@
 #include <iostream>
+#include <vector>
 
-int& bubbleSort(int arr[], int size) {
+template <typename T> std::vector<T> bubbleSort(std::vector<T>& arr, size_t size) {
     int x = size;
-    
     for(int i = 0; i < x - 1; i++) {
         for(int j = 0; j < x - 1 - i; j++) {
             if(arr[j] > arr[j + 1]) {
@@ -12,14 +12,13 @@ int& bubbleSort(int arr[], int size) {
             }
         }
     }
-    return *arr;
 }
 
 int main(int argc, char **argv[]) {
-    int size = 5;
-    int arr[size] = {10, 78, 90, 33, 48};
 
-    bubbleSort(arr, size);
+    std::vector<int> arr = {10, 78, 90, 33, 48};
+
+    bubbleSort<int>(arr, arr.size());
     std::cout << "\n==================\n" << std::endl;
     std::cout << "Array Elements After Sorting : \n" << std::endl;
 

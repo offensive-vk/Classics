@@ -23,7 +23,6 @@ int binarySearch(const vector<int>& arr, int target) {
         }
     }
 
-    // If the target is not in the array, return -1
     return -1;
 }
 
