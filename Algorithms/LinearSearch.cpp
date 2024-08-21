@@ -9,14 +9,15 @@ int linearSearch(int arr[], int element) {
     }
     
 }
+
 int main(int argc, char **argv[]) {
-    int arr[] = {534, 728, 111, 960, 555};
+    int arr[] = {53, 72, 11, 60, 55};
 
     for(int x: arr) {
         std::cout << x << std::endl;
     }
     
-    auto result = linearSearch(arr, 960);
+    auto result = linearSearch(arr, 60);
     std::cout << "Element : "<< arr[result] << std::endl;
     return 0;
 }

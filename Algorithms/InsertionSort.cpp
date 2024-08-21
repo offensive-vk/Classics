@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void insertionSort(std::vector<int>& arr) {
+template <typename T> std::vector<T> insertionSort(std::vector<int>& arr) {
     int n = arr.size();
     for (int i = 1; i < n; ++i) {
         int key = arr[i];
@@ -25,7 +25,7 @@ int main() {
     }
     std::cout << std::endl;
     
-    insertionSort(arr);
+    insertionSort<int>(arr);
     
     std::cout << "Sorted Array: ";
     for (int num : arr) {

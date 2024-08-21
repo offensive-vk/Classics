@@ -7,7 +7,8 @@ int findSmallest(const std::vector<int>& arr, size_t size) {
     int smallest = arr[0];
     int smallest_index = 0;
 
-    for(size_t i = 1; i < size; ++i) {  // Start from 1 because arr[0] is already smallest initially
+    for(size_t i = 1; i < size; ++i) {  
+        // Start from 1 because arr[0] is already smallest initially
         if(arr[i] < smallest) {
             smallest = arr[i];
             smallest_index = i;

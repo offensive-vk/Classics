@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
-// Function to perform binary search
+using std::cin, std::cout, std::vector, std::endl;
+
 int binarySearch(const vector<int>& arr, int target) {
     int low = 0;
     int high = arr.size() - 1;
@@ -23,19 +23,16 @@ int binarySearch(const vector<int>& arr, int target) {
         }
     }
 
-    // If the target is not in the array, return -1
     return -1;
 }
 
 int main() {
-    // Example usage
+
     vector<int> sortedArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int target = 7;
 
-    // Perform binary search
     int result = binarySearch(sortedArray, target);
 
-    // Display the result
     if (result != -1) {
         cout << "Element found at index: " << result << endl;
     } else {
