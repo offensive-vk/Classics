@@ -1,6 +1,6 @@
 #include <iostream>
 
-int& BubbleSort(int arr[], int size) {
+int& bubbleSort(int arr[], int size) {
     int x = size;
     
     for(int i = 0; i < x - 1; i++) {
@@ -16,18 +16,10 @@ int& BubbleSort(int arr[], int size) {
 }
 
 int main(int argc, char **argv[]) {
-    int size = 0;
-    std::cout << "Please Enter The Size of Array : " << std::endl;
-    std::cin >> size;
-    int arr[size];
-    // int *arr = new int[size];
+    int size = 5;
+    int arr[size] = {10, 78, 90, 33, 48};
 
-    for(int i = 0; i < size; i++) {
-        std::cout << "Enter The Element At Index : " << i << std::endl;
-        std::cin >> arr[i];
-    }
-
-    BubbleSort(arr, size);
+    bubbleSort(arr, size);
     std::cout << "\n==================\n" << std::endl;
     std::cout << "Array Elements After Sorting : \n" << std::endl;
 
