@@ -9,7 +9,7 @@
 
 # **What is C** ?
 
-C is a general-purpose, low level computer programming language. It was created in the 1970s by Dennis Ritchie, and remains very widely used and influential.
+C is a general-purpose, low level computer programming language. It was created in the 1970s by Dennis Ritchie, and remains very widely used and most influential.
 C is an imperative procedural language, supporting structured programming, lexical variable scope, and recursion, with a static type system. It was designed to be compiled to provide low-level access to memory and language constructs that map efficiently to machine instructions.
 
 - Paradigm - Multi-paradigm: imperative (procedural), structured
@@ -30,19 +30,19 @@ C++ was designed with systems programming and embedded, resource-constrained sof
 - First appeared in 1985; (39 years ago)
 - Typing discipline - Static, strong, nominative, partially inferred
 - OS - Cross-platform
-- Filename extensions	- .C, .cc, .cpp, .cxx, .c++, .h, .H, .hh, .hpp, .hxx, .h++ .cppm, .ixx.
+- Filename extensions - .c, .cc, .cpp, .cxx, .c++, .h, .H, .hh, .hpp, .hxx, .h++ .cppm, .ixx.
 - Read More at [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B)
 
 ## Classics - C and C++ Programs 
 
-- C/C++ is an awesome programming languages. Yet Powerful also.
+- C/C++ both are awesome programming languages. Yet Powerful also.
 - You can find Contribution Guidelines [here](https://github.com/offensive-vk/Classics/blob/classic/.github/CONTRIBUTING.md) and Security Guidelines [here.](https://github.com/offensive-vk/Classics/blob/classic/.github/SECURITY.md)
 - This Repository Contains All of My Best C & C++ Programs.
 - Trick - All Valid C Code is Also A Valid C++ Code.
 - (i.e You Can Save Your C Source Code with .cpp extension.)
 - Enjoy ! _You can try Shell Scripting too._ [Try Now >](https://github.com/offensive-vk/Classics/blob/classic/Bash/)
 
-## Sample Code:
+## Sample Program
 
 ```c++
 #include <iostream>
@@ -52,7 +52,7 @@ int main(int argc, char const *argv[]) {
     {
         i++;
     }
-    std::cout << "Hello Users !!" << std::endl;
+    std::cout << "Hello All, C++ is Easy. !!" << std::endl;
     std::cout << i << std::endl;
     return 0;
 }
@@ -64,7 +64,8 @@ int main(int argc, char const *argv[]) {
 $ g++ filename.cpp -o filename
 ```
 
-### To Compile Any .c Source File :
+### To Compile Any .c Source File
+
 ```bash
 $ gcc filename.c -o filename
 ```
