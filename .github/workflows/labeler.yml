@@ -1,0 +1,11 @@
+documentation:
+	- changed-files:  
+	    - any-glob-to-any-file: '**/*.md'
+
+Algorithm:
+    - changed-files:
+        - any-glob-to-any-file: 'Algorithm/*'
+
+asm:
+    - changed-files:
+        - any-glob-to-any-file: '**/*.asm'
