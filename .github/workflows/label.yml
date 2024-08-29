@@ -4,8 +4,9 @@ on:
   issues:
     types: [opened, edited]
   pull_request:
-    branches: ["master"]
-
+    branches: ["classic", "*"]
+  schedule:
+    - cron: '0 0 * * 0' 
 jobs:
   label:
     runs-on: ubuntu-latest
