@@ -13,13 +13,15 @@ Please ensure all the boxes below are checked before submitting your pull reques
 ***
 Thanks for considering to submit a pull request! We appreciate your contribution.
 
-### Choose the language of this PR. (One or more)
+### Choose the type or language of this Pull Request. (One or more)
 
 1. [ ] Documentation Fixes (Markdown)
-2. [ ] Bash / Shell Scripting
+2. [ ] Bash Scripts / Shell Scripting
 3. [ ] C Programming (Old, Legacy, System Level)
 4. [ ] C++ Programming (Modern, High Level, Legacy, System Level)
-5. [ ] Dotfiles or Repository ROOT Fixes.
+5. [ ] Dotfiles or Repository Fixes.
+6. [ ] Assembly x86 (Oldest, Hard, No Changes)
+7. [x] Unclassified or Unknown Changes. (Automated)
 
 ### Yayy ! This Pull Request Was Automated by a [github-actions](https://github.com/features/actions) Robot.
 
