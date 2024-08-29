@@ -1,4 +1,4 @@
-## Please Tick / Choose Options Accordingly - Classics
+## Please Tick / Choose Options Accordingly - Classics | C/C++
 
 *Any change needs to be discussed before proceeding. Failure to do so may result in the rejection of the pull request.*
 
@@ -18,10 +18,12 @@ Thanks for considering to submit a pull request! We appreciate your contribution
 ### Choose the language of this PR. (One or more)
 
 1. [ ] Documentation Fixes (Markdown)
-2. [ ] Bash / Shell Scripting
+2. [ ] Bash Scripts / Shell Scripting
 3. [ ] C Programming (Old, Legacy, System Level)
 4. [ ] C++ Programming (Modern, High Level, Legacy, System Level)
-5. [ ] Dotfiles or Repository ROOT Fixes.
+5. [ ] Dotfiles or Repository Fixes.
+6. [ ] Assembly x86 (Oldest, Hard, No Changes)
+7. [ ] Unclassified or Unknown Changes. (Automated)
 
 **Code formatting**
 
