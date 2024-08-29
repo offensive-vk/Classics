@@ -5,18 +5,74 @@ on:
     types: [opened, edited]
   pull_request:
     types: [opened, synchronize]
-    branches: ["classic", "*"]
-  schedule:
-    - cron: '0 0 * * 0' 
 
 jobs:
   label:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      issues: write
       pull-requests: write
 
     steps:
-    - uses: actions/labeler@v4
+    - name: Label PRs
+      uses: actions/labeler@v4
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Label Issues
+      if: github.event_name == 'issues'
+      uses: actions/github-script@v3
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const issue = context.payload.issue;
+          const labels = [];
+          const title = issue.title.toLowerCase();
+          const body = issue.body ? issue.body.toLowerCase() : '';
+
+          // Match keywords to apply labels based on your labeler.yml configuration
+          if (title.includes('algorithm') || body.includes('algorithm')) {
+            labels.push('algorithm');
+          }
+          if (title.includes('.asm') || body.includes('.asm')) {
+            labels.push('asm');
+          }
+          if (title.includes('.c') || body.includes('.c')) {
+            labels.push('c');
+          }
+          if (title.includes('.cpp') || title.includes('.c++') || title.includes('.cxx') || title.includes('.ixx') ||
+              body.includes('.cpp') || body.includes('.c++') || body.includes('.cxx') || body.includes('.ixx')) {
+            labels.push('c++');
+          }
+          if (title.includes('.yml') || body.includes('.yml')) {
+            labels.push('ci/cd');
+          }
+          if (title.includes('.md') || body.includes('.md')) {
+            labels.push('documentation');
+            labels.push('docs');
+          }
+          if (title.includes('.sh') || body.includes('.sh')) {
+            labels.push('shell');
+          }
+          if (title.includes('.py') || body.includes('.py') ||
+              title.includes('.toml') || body.includes('.toml') ||
+              title.includes('.php') || body.includes('.php') ||
+              title.includes('.js') || body.includes('.js') ||
+              title.includes('.ts') || body.includes('.ts') ||
+              title.includes('.rs') || body.includes('.rs')) {
+            labels.push('unknown');
+          }
+
+          // Apply the labels to the issue
+          if (labels.length > 0) {
+            github.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              labels: labels
+            });
+          }
+    - name: Finish Off & Cleanup
+      run: |
+        echo "Sucessfully Labeled All of the Open Issues and Pull Requests."
