@@ -1,0 +1,46 @@
+algorithm:
+  - 'Algorithm/*'
+
+asm:
+  - '**/*.asm'
+
+c:
+  - C/*
+  - '**/*.c'
+
+c++:
+  - C++/*
+  - '**/*.cpp'
+  - '**/*.c++'
+  - '**/*.cxx'
+  - '**/*.ixx'
+
+ci/cd:
+  - '*.yml'
+  - .github/workflows/*.yml
+
+documentation:
+  - '**/*.md'
+  - .github/*
+
+docs:
+  - '**/*.md'
+
+shell:
+  - '**/*.sh'
+  - Bash/*
+
+pr_template:
+  - .github/PULL_REQUEST_TEMPLATE.md
+  - .github/pr-bot-template.md
+
+unknown:
+  - '**/*.py'
+  - '**/*.toml'
+  - '**/*.php'
+  - '**/*.js'
+  - '**/*.ts'
+  - '**/*.rs'
+  - '.gitignore'
+  - '.gitattributes'
+  - 'LICENSE'
