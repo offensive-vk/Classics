@@ -1,0 +1,24 @@
+documentation:
+	- '**/*.md'
+    - .github/*
+
+Algorithm:
+    - 'Algorithm/*'
+
+asm:
+    - '**/*.asm'
+
+c:
+    - C/*
+    - '**/*.c'
+
+c++:
+    - C++/*
+    - '**/*.cpp'
+    - '**/*.c++'
+    - '**/*.cxx'
+    - '**/*.ixx'
+
+ci/cd:
+    - '*.yml'
+    - .github/workflows/*.yml
