@@ -8,6 +8,7 @@ on:
     branches: ["classic", "*"]
   schedule:
     - cron: '0 0 * * 0' 
+
 jobs:
   label:
     runs-on: ubuntu-latest
@@ -18,4 +19,4 @@ jobs:
     steps:
     - uses: actions/labeler@v4
       with:
-        repo-token: ${{ secrets.GH_TOKEN }}
+        repo-token: ${{ secrets.MY_GH_TOKEN }}
