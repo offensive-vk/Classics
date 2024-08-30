@@ -1,4 +1,4 @@
-name: Automated PR Manager
+name: CI / Automated PR Manager
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - "classic"
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 */1 * * *'
 
 jobs:
   create_pr:
@@ -19,8 +19,8 @@ jobs:
         with:
           destination_branch: "classic"
           pr_title: "Automated Pull Request by Actions Bot."
-          pr_template: ".github/pr-bot-template.md"
+          pr_template: ".github/PR_BOT_TEMPLATE.md"
           pr_reviewer: "offensive-vk"
-          pr_label: "bot,automated"
+          pr_label: "bot,automated,unknown"
           pr_assignee: "npm-run-test"
           pr_draft: false

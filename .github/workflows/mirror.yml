@@ -1,7 +1,7 @@
 name: CI / Gitlab - Mirror Sync
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 */2 * * *'
   push: 
     branches: ["*"]
   workflow_dispatch:
