@@ -1,8 +1,8 @@
-name: CI / Mark Stale Issues and PRs
+name: CI / Stale Issues and PRs
 
 on:
   schedule:
-    - cron: '10 0 * * 0' # Runs daily at 12:10 AM
+    - cron: '10 0 * * *' # Runs daily at 12:10 AM
 
 jobs:
   stale:
@@ -15,7 +15,8 @@ jobs:
       - uses: actions/stale@v5
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          days-before-close: 7
           stale-issue-message: 'This issue seems to be inactive. If you believe its still relevant, please provide an update. Otherwise, it may be closed soon.'
           stale-pr-message: 'This pull request seems to be inactive. If you need further assistance or if there is any progress, please update the PR. Otherwise, it may be closed soon.'
-          stale-issue-label: 'no-issue-activity'
-          stale-pr-label: 'no-pr-activity'
+          stale-issue-label: 'no-activity'
+          stale-pr-label: 'no-activity'
