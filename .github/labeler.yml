@@ -4,35 +4,33 @@ algorithm:
 asm:
   - '**/*.asm'
 
-c:
-  - C/*
-  - '**/*.c'
-
-c++:
-  - C++/*
+c/c++:
+  - 'C++/*'
   - '**/*.cpp'
+  - '**/*.hpp'
   - '**/*.c++'
   - '**/*.cxx'
   - '**/*.ixx'
+  - 'C/*'
+  - '**/*.c'
+  - '**/*.h'
 
 ci/cd:
   - '*.yml'
-  - .github/workflows/*.yml
+  - '*.yaml'
+  - '.github/workflows/*.yml'
 
 documentation:
   - '**/*.md'
-  - .github/*
-
-docs:
-  - '**/*.md'
+  - '.github/*.md'
 
 shell:
   - '**/*.sh'
-  - Bash/*
+  - 'Bash/*'
 
 pr_template:
-  - .github/PULL_REQUEST_TEMPLATE.md
-  - .github/pr-bot-template.md
+  - '.github/PULL_REQUEST_TEMPLATE.md'
+  - '.github/PR_BOT_TEMPLATE.md'
 
 unknown:
   - '**/*.py'
@@ -41,6 +39,9 @@ unknown:
   - '**/*.js'
   - '**/*.ts'
   - '**/*.rs'
+
+dotfiles:
+  - 'CODEOWNERS'
   - '.gitignore'
   - '.gitattributes'
   - 'LICENSE'
