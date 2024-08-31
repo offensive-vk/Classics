@@ -1,4 +1,4 @@
-name: CI / Automated PR Manager
+name: CI / Automated Pull Request
 
 on:
   push:
@@ -9,18 +9,80 @@ on:
     - cron: '0 */1 * * *'
 
 jobs:
-  create_pr:
+  create_auto_pr:
     runs-on: ubuntu-latest
+    if: github.ref_name != 'classic'
     steps:
-      - uses: actions/checkout@v3
-      - name: Create or Open A PR
+      - uses: actions/checkout@v4
+
+      - name: Create Pull Request
         id: open-pr
-        uses: repo-sync/pull-request@v2
+        uses: peter-evans/create-pull-request@v6
         with:
-          destination_branch: "classic"
-          pr_title: "Automated Pull Request by Actions Bot."
-          pr_template: ".github/PR_BOT_TEMPLATE.md"
-          pr_reviewer: "offensive-vk"
-          pr_label: "bot,automated,unknown"
-          pr_assignee: "npm-run-test"
-          pr_draft: false
+          token: ${{ secrets.BOT_TOKEN }}
+          author: "Hamster [bot] <node_modules@hotmail.com>"
+          committer: "Hamster [bot] <node_modules@hotmail.com>"
+          signoff: true
+          branch: ${{ github.ref_name }}
+          base: classic
+          title: 'Automated Pull Request by Actions Bot.'
+          body: |
+            ## Automated Pull Request by Actions.
+            
+            > [!IMPORTANT]
+            > Trigger / What Happened: ${{ github.event_name }} at ${{ github.event_path }} path.
+            > Details of run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            - Author: @npm-run-test
+            - Admin: @offensive-vk
+            - Branch: ${{ github.ref }}
+            - Commit: ${{ github.sha }}
+            - Workflow Path: ${{ github.workflow_ref }}
+          labels: |
+            bot
+            automated
+          assignees: npm-run-test
+          reviewers: offensive-vk
+          draft: false
+
+  create_issue_on_success:
+    runs-on: ubuntu-latest
+    needs: create_auto_pr
+    if: success()
+    steps:
+      - name: Create Issue using Bot
+        uses: dacbd/create-issue-action@main
+        with:
+          token: ${{ secrets.BOT_TOKEN }}
+          title: |
+              [${{ github.workflow }}] - PR Created Successfully
+          assignees: npm-run-test
+          labels: automated,bot
+          body: |
+              ## PR Created Successfully:
+              
+              - PR URL: ${{ steps.open-pr.outputs.pull-request-url }}
+              - Branch: ${{ github.ref }}
+              - Commit: ${{ github.sha }}
+              - Workflow Path: ${{ github.workflow_ref }}
+
+  create_issue_on_failure:
+    runs-on: ubuntu-latest
+    needs: create_auto_pr
+    if: failure() # Only create issue if the PR creation failed
+    steps:
+      - name: Create Issue using Bot
+        uses: dacbd/create-issue-action@main
+        with:
+          token: ${{ secrets.BOT_TOKEN }}
+          title: |
+              [${{ github.workflow }}] - PR Creation Failed
+          assignees: npm-run-test
+          labels: automated,bot
+          body: |
+              ## PR Creation Failed:
+              
+              - Branch: ${{ github.ref }}
+              - Commit: ${{ github.sha }}
+              - Workflow Path: ${{ github.workflow_ref }}
+              - Error: ${{ job.status }}
