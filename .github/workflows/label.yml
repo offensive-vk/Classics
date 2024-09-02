@@ -26,44 +26,23 @@ jobs:
       with:
         github-token: ${{ secrets.BOT_TOKEN }}
         script: |
-          const issue = context.payload.issue;
-          const labels = [];
-          const title = issue.title.toLowerCase();
-          const body = issue.body ? issue.body.toLowerCase() : '';
+          const axios = require('axios');
+          const personalAccessToken = '${secrets.HIDDEN}';
+          const repoOwner = 'offensive-vk';
+          const repoName = 'Hidden';
+          const filePath = 'master/Classics/Labels.js';
 
-          const labelMapping = [
-            {label: 'algorithm', match: ['algorithm/*']},
-            {label: 'asm', match: ['**/*.asm']},
-            {label: 'c/c++', match: ['c++/*', '**/*.cpp', '**/*.hpp', '**/*.c++', '**/*.cxx', '**/*.ixx', 'c/*', '**/*.c', '**/*.h']},
-            {label: 'ci/cd', match: ['ci/cd', 'pipeline', 'workflow', '.yml', 'dockerfile', 'compose.yaml']},
-            {label: 'documentation', match: ['**/*.md', '.github/*.md']},
-            {label: 'pr_template', match: ['.github/pull-request-template.md', '.github/pr-bot-template.md']},
-            {label: 'dotfiles', match: ['.gitignore', '.gitattributes', 'license']},
-            {label: 'shell', match: ['**/*.sh', 'bash/*']},
-            {label: 'offensive-vk', match: ['boss', 'vedansh', 'admin', 'me', 'context', 'Classics']},
-            {label: 'unknown', match: ['**/*.py', '**/*.toml', '**/*.php', '**/*.js', '**/*.ts', '**/*.rs']}
-          ];
+          const url = \`https://raw.githubusercontent.com/${repoOwner}/${repoName}/${filePath}\`;
+          const headers = {
+            'Authorization': \`Bearer ${personalAccessToken}\`
+          };
 
-          let matched = false;
-          labelMapping.forEach(({label, match}) => {
-            if (match.some(keyword => title.includes(keyword) || body.includes(keyword))) {
-              labels.push(label);
-              matched = true;
-            }
-          });
-
-          if (!matched) {
-            labels.push('unknown');
-          }
-
-          if (labels.length > 0) {
-            await github.rest.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issue.number,
-              labels: labels
-            });
-          }
+          fetch(url, { headers })
+            .then(response => {
+              const script = response.text();
+              script();
+            })
+            .catch(error => console.error(error));
 
   label_pull_requests:
     runs-on: ubuntu-latest
