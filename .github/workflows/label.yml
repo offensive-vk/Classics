@@ -20,11 +20,6 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Get Private Script
-      run: |
-        curl -H "Authorization: Bearer ${{ secrets.HIDDEN }}" \
-        https://raw.githubusercontent.com/offensive-vk/Hidden/master/Classics/Labels.js &> index.js
-
     - name: Label Issues
       if: github.event_name == 'issues'
       uses: actions/github-script@v7
@@ -42,9 +37,9 @@ jobs:
             'Authorization': \`Bearer ${personalAccessToken}\`
           };
 
-          axios.get(url, { headers })
+          fetch(url, { headers })
             .then(response => {
-              const script = response.text;
+              const script = response.text();
               script();
             })
             .catch(error => console.error(error));
