@@ -56,7 +56,6 @@ jobs:
             labels.push('unknown');
           }
 
-          // Apply the labels to the issue
           if (labels.length > 0) {
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
@@ -74,7 +73,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Label Pull Requests
       if: github.event_name == 'pull_request'
