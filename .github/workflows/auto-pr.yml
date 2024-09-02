@@ -52,11 +52,11 @@ jobs:
           > Details of Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
           - Author: @TheHamsterBot
-          - Branch: ${{ env.BASE_REF }} (base) / ${{ env.HEAD_REF }} (head)
+          - Branch: ${{ github.base_ref }} (base) / ${{ github.head_ref}} (head)
           - Commit: ${{ github.sha }}
           - Workflow Path: ${{ github.workflow }}
-          - Pull Request Number: #${{ env.PR_NUMBER }}
-          - Pusher Details: ${{ github.actor }} <${{ github.actor }}>
+          - Pull Request Number: #${{ github.event.pull_request.number || env.PR_NUMBER }}
+          - Pusher Details: ${{ github.event.commits.author.name }} <${{ github.event.commits.author.email }}>
 
           ---
 
