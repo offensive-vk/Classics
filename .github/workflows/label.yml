@@ -24,23 +24,22 @@ jobs:
       if: github.event_name == 'issues'
       uses: actions/github-script@v7
       with:
-        github-token: ${{ secrets.BOT_TOKEN }}
+        token: ${{ secrets.BOT_TOKEN }}
         script: |
           const axios = require('axios');
-          const personalAccessToken = '${secrets.HIDDEN}';
+          const personalAccessToken = '${{ secrets.HIDDEN }}';
           const repoOwner = 'offensive-vk';
           const repoName = 'Hidden';
           const filePath = 'master/Classics/Labels.js';
 
-          const url = \`https://raw.githubusercontent.com/${repoOwner}/${repoName}/${filePath}\`;
+          const url = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${filePath}`;
           const headers = {
-            'Authorization': \`Bearer ${personalAccessToken}\`
+            'Authorization': `Bearer ${personalAccessToken}`
           };
 
-          fetch(url, { headers })
+          axios.get(url, { headers })
             .then(response => {
-              const script = response.text();
-              script();
+              eval(response.data);  // Use eval to execute fetched script
             })
             .catch(error => console.error(error));
 
@@ -51,7 +50,7 @@ jobs:
       pull-requests: write
 
     steps:
-    - name: Checkout repository
+    - name: Checkout Repository
       uses: actions/checkout@v4
 
     - name: Label Pull Requests
