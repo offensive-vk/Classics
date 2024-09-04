@@ -10,39 +10,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  label_issues:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      issues: write
-
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Label Issues
-      if: github.event_name == 'issues'
-      uses: actions/github-script@v7
-      with:
-        token: ${{ secrets.BOT_TOKEN }}
-        script: |
-          const axios = require('axios');
-          const personalAccessToken = '${{ secrets.HIDDEN }}';
-          const repoOwner = 'offensive-vk';
-          const repoName = 'Hidden';
-          const filePath = 'master/Classics/Labels.js';
-
-          const url = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${filePath}`;
-          const headers = {
-            'Authorization': `Bearer ${personalAccessToken}`
-          };
-
-          axios.get(url, { headers })
-            .then(response => {
-              eval(response.data);  // Use eval to execute fetched script
-            })
-            .catch(error => console.error(error));
-
   label_pull_requests:
     runs-on: ubuntu-latest
     permissions:
@@ -61,7 +28,7 @@ jobs:
 
   finish_cleanup:
     runs-on: ubuntu-latest
-    needs: [label_issues, label_pull_requests]
+    needs: [label_pull_requests]
     steps:
     - name: Finish Off & Cleanup
       run: echo "Successfully labeled all of the open issues and pull requests."
