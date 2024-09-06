@@ -1,6 +1,6 @@
 # Linguistic Data
 # ==================================
-*.sh linguist-language=Shell Script
+*.sh linguist-language=Shell
 *.sh linguist-detectable=true
 *.asm linguist-detectable=true
 # ==================================
