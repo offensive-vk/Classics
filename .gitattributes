@@ -3,4 +3,5 @@
 *.sh linguist-language=Shell
 *.sh linguist-detectable=true
 *.asm linguist-detectable=true
+*.asm linguist-language=Assembly
 # ==================================

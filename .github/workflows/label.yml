@@ -1,4 +1,4 @@
-name: CI / Automated Label
+name: Automated Label
 
 on: 
   schedule:
