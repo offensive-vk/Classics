@@ -1,4 +1,4 @@
-name: CI / Gitlab - Mirror Sync
+name: Mirror Sync
 on:
   schedule:
     - cron: '0 */2 * * *'

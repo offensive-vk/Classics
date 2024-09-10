@@ -1,4 +1,4 @@
-name: CI / Automated Issue
+name: Automated Issue
 
 on:
   pull_request:

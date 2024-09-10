@@ -1,4 +1,4 @@
-name: CI / Automated Pull Request
+name: Automated Pull Request
 
 on:
   push:

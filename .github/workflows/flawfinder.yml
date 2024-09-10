@@ -1,4 +1,4 @@
-name: CI / Code Scanning
+name: Code Scanning
 
 on:
   push:
