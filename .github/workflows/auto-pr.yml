@@ -48,7 +48,7 @@ jobs:
           > Details of Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
           - Author: @TheHamsterBot
-          - Branch: ${{ github.ref }} (base) / ${{ github.head_ref }} (head)
+          - Branch: ${{ github.ref }}
           - Commit: ${{ github.sha }}
           - Workflow Path: ${{ github.workflow }}
           - Pull Request Number: #${{ env.PR_NUMBER }}
