@@ -17,3 +17,13 @@ A shell script is a computer program designed to be run by a Unix shell, a comma
 - Written in C Language.
 - Filename extensions - .sh
 - Read More at [Wikipedia](https://en.wikipedia.org/wiki/Shell_script)
+
+---
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2020 - Present</i><br>
+  <i>Licensed under <a href="https://github.com/offensive-vk/Classics/tree/classic/LICENSE">GNU General Public License</a></i><br>
+  <a href="https://github.com/TheHamsterBot"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <kbd>Thanks for visiting :)</kbd>
+</p>
+</details>

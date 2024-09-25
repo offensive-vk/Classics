@@ -1,47 +1,116 @@
 algorithm:
-  - 'Algorithm/*'
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'Algorithm/*'
 
 asm:
-  - '**/*.asm'
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.asm'
 
 c/c++:
-  - 'C++/*'
-  - '**/*.cpp'
-  - '**/*.hpp'
-  - '**/*.c++'
-  - '**/*.cxx'
-  - '**/*.ixx'
-  - 'C/*'
-  - '**/*.c'
-  - '**/*.h'
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'C++/*'
+          - '**/*.cpp'
+          - '**/*.hpp'
+          - '**/*.c++'
+          - '**/*.cxx'
+          - '**/*.ixx'
+          - 'C/*'
+          - '**/*.c'
+          - '**/*.h'
 
 ci/cd:
-  - '*.yml'
-  - '*.yaml'
-  - '.github/workflows/*.yml'
+  - changed-files:
+      - any-glob-to-any-file:
+          - '*.yml'
+          - '*.yaml'
+          - '.github/workflows/*.yml'
 
 documentation:
-  - '**/*.md'
-  - '.github/*.md'
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.md'
+          - '.github/*.md'
 
 shell:
-  - '**/*.sh'
-  - 'Bash/*'
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.sh'
+          - 'Bash/*'
 
 pr_template:
-  - '.github/PULL_REQUEST_TEMPLATE.md'
-  - '.github/PR_BOT_TEMPLATE.md'
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/PULL_REQUEST_TEMPLATE.md'
+          - '.github/PR_BOT_TEMPLATE.md'
 
 unknown:
-  - '**/*.py'
-  - '**/*.toml'
-  - '**/*.php'
-  - '**/*.js'
-  - '**/*.ts'
-  - '**/*.rs'
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.py'
+          - '**/*.toml'
+          - '**/*.php'
+          - '**/*.js'
+          - '**/*.ts'
+          - '**/*.rs'
 
 dotfiles:
-  - 'CODEOWNERS'
-  - '.gitignore'
-  - '.gitattributes'
-  - 'LICENSE'
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'CODEOWNERS'
+          - '.gitignore'
+          - '.gitattributes'
+          - 'LICENSE'
+
+# -- OLDER EDITION --
+# algorithm:
+#   - 'Algorithm/*'
+
+# asm:
+#   - '**/*.asm'
+
+# c/c++:
+#   - 'C++/*'
+#   - '**/*.cpp'
+#   - '**/*.hpp'
+#   - '**/*.c++'
+#   - '**/*.cxx'
+#   - '**/*.ixx'
+#   - 'C/*'
+#   - '**/*.c'
+#   - '**/*.h'
+
+# ci/cd:
+#   - '*.yml'
+#   - '*.yaml'
+#   - '.github/workflows/*.yml'
+
+# documentation:
+#   - '**/*.md'
+#   - '.github/*.md'
+
+# shell:
+#   - '**/*.sh'
+#   - 'Bash/*'
+
+# pr_template:
+#   - '.github/PULL_REQUEST_TEMPLATE.md'
+#   - '.github/PR_BOT_TEMPLATE.md'
+
+# unknown:
+#   - '**/*.py'
+#   - '**/*.toml'
+#   - '**/*.php'
+#   - '**/*.js'
+#   - '**/*.ts'
+#   - '**/*.rs'
+
+# dotfiles:
+#   - 'CODEOWNERS'
+#   - '.gitignore'
+#   - '.gitattributes'
+#   - 'LICENSE'
+
+#############################

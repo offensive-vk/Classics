@@ -19,3 +19,13 @@
 - Follow the instructions of the PR Template wisely.
 - Code review is required on every push / pr, minimum 1 or more reviewers should be assigned.
 - Review from Code Owners is required for making helpful contribution to this repository.
+
+---
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
+  <i>Licensed under <a href="https://github.com/offensive-vk/Classics/tree/classic/LICENSE">GNU General Public License</a></i><br>
+  <a href="https://github.com/TheHamsterBot"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <kbd>Thanks for visiting :)</kbd>
+</p>
+</details>

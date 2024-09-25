@@ -73,3 +73,13 @@ $ gcc filename.c -o filename
 You are allowed to copy and implement these programs freely.
 
 ## Happy Coding ~ [offensive-vk](https://github.com/offensive-vk/)
+
+---
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2020 - Present</i><br>
+  <i>Licensed under <a href="https://github.com/offensive-vk/Classics/tree/classic/LICENSE">GNU General Public License</a></i><br>
+  <a href="https://github.com/TheHamsterBot"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <kbd>Thanks for visiting :)</kbd>
+</p>
+</details>
