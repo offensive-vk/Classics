@@ -1,7 +1,9 @@
-# Linguistic Data
+# Github Linguistic Library Config
 # ==================================
 *.sh linguist-language=Shell
 *.sh linguist-detectable=true
+*.md linguist-detectable=true
+*.md linguist-documentation=false
 *.asm linguist-detectable=true
 *.asm linguist-language=Assembly
 # ==================================
