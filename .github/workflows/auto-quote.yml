@@ -1,0 +1,22 @@
+name: Daily Motivational Quote 
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-quote:
+    name: Update Quote
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: offensive-vk/auto-update-quote@v5
+        with:
+          GH_TOKEN: ${{ secrets.CLASSIC_GH_TOKEN || secrets.BOT_TOKEN }}
+          COMMIT_MESSAGE: |
+            :cloud: Updated Daily Quote 
+
+
+            Signed-off-by: Hamster [bot] <TheHamsterBot@outlook.com> 
+            Co-Authored-by: Vedansh <superuser.ntsystems@outlook.com>
