@@ -12,6 +12,7 @@ on:
 jobs:
   label_pull_requests:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.state == 'open' && github.actor != 'dependabot[bot]' && github.event_name == 'pull_request' }}
     permissions:
       contents: read
       pull-requests: write
