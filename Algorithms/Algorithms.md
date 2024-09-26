@@ -65,3 +65,13 @@ Below is an overview of what is typically included in the `algorithm` header fil
     - `std::rotate`, `std::rotate_copy`: Rotates the elements in a range.
     - `std::is_sorted`, `std::is_sorted_until`: Checks if a range is sorted.
     - `std::lexicographical_compare`: Compares two ranges lexicographically.
+
+---
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2020 - Present</i><br>
+  <i>Licensed under <a href="https://github.com/offensive-vk/Classics/tree/classic/LICENSE">GNU General Public License</a></i><br>
+  <a href="https://github.com/TheHamsterBot"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <kbd>Thanks for visiting :)</kbd>
+</p>
+</details>
