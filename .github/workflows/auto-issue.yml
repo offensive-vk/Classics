@@ -2,7 +2,7 @@ name: Automated Issue
 
 on:
   pull_request:
-    types: ["opened", "closed"]
+    types: ["opened", "synchronize", "closed"]
   issue_comment:
     types: ["created"]
   workflow_dispatch:
@@ -12,7 +12,7 @@ on:
 jobs:
   create_issue:
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.event.pull_request.state == 'open'
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.state == 'open' && github.actor != 'dependabot[bot]' && github.event_name == 'pull_request' }}
     steps:
       - uses: actions/checkout@v4
       - name: Generate Issue Template
@@ -33,7 +33,6 @@ jobs:
             - Pull Request Number: #${{ github.event.number }}
             - Pull Request Title: ${{ github.event.pull_request.title }}
             - Issue Details: ${{ github.event.issue.id }} - ${{ github.event.issue.number }} 
-            - Current Action Status: ${{ github.action_status }}
 
             ---
 
