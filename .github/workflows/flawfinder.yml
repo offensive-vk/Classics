@@ -2,11 +2,11 @@ name: Code Scanning
 
 on:
   push:
-    branches: [ "classic" ]
+    branches: [ "classic", "**" ]
   pull_request:
-    branches: [ "classic" ]
+    branches: [ "classic", "**" ]
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 */4 * * *'
 
 jobs:
   flawfinder:
@@ -26,7 +26,7 @@ jobs:
           arguments: '--sarif ./'
           output: 'flawfinder_results.sarif'
 
-      - name: Upload analysis results to GitHub Security tab
+      - name: Upload Analysis Results to GitHub Security Tab
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: ${{github.workspace}}/flawfinder_results.sarif
+          sarif_file: ${{ github.workspace }}/flawfinder_results.sarif
