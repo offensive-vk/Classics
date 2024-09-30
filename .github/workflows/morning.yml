@@ -50,3 +50,5 @@ jobs:
           git add GREETINGS.md
           git commit -m "🤖 Hamster Sends Greeting of the Day."
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
