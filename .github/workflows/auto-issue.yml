@@ -2,7 +2,7 @@ name: Automated Issue
 
 on:
   pull_request:
-    types: ["opened", "synchronize", "closed"]
+    types: ["opened", "synchronize"]
   issue_comment:
     types: ["created"]
   workflow_dispatch:

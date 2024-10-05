@@ -74,7 +74,6 @@ You are allowed to copy and implement these programs freely.
 
 ## Happy Coding ~ [offensive-vk](https://github.com/offensive-vk/)
 
----
 
 <p align="center">
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2020 - Present</i><br>
