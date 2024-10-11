@@ -1,12 +1,12 @@
-FROM ubuntu:latest
+FROM debian:bullseye
 
 RUN apt-get update && \
     apt-get install -y \
-    build-essential \
     cmake \
     git \
     clang \
     libssl-dev \
+    gcc \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /base

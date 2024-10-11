@@ -12,7 +12,6 @@ jobs:
   create_pr:
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' && github.event.pusher.name != 'dependabot[bot]' }}
-
     steps:
       - uses: actions/checkout@v4
 
