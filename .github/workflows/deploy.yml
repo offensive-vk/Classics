@@ -89,7 +89,7 @@ jobs:
       - name: Check Manifests
         if: github.event_name != 'pull_request'
         run: |
-          docker buildx imagetools inspect ${{ env.DOCKERHUB }}:${{ steps.meta.outputs.version }}
+          docker buildx imagetools inspect ${{ env.GLCR }}:${{ steps.meta.outputs.version }}
           docker buildx imagetools inspect ${{ env.GHCR }}:${{ steps.meta.outputs.version }}
     
       - name: Inspect Image
@@ -99,17 +99,8 @@ jobs:
           docker image inspect ${{ env.GHCR }}:${{ steps.meta.outputs.version }}
           docker pull ${{ env.GLCR }}:${{ steps.meta.outputs.version }}
           docker image inspect ${{ env.GLCR }}:${{ steps.meta.outputs.version }}
-          
-      - name: Sign the Published image
-        if: ${{ github.event_name != 'pull_request' }}
-        env:
-          TAGS: ${{ steps.meta.outputs.tags }}
-          DIGEST: ${{ steps.build-and-push.outputs.digest }}
-        run: echo "Image with ${TAGS} tag has been sucessfully Signed."
-
+        
       - name: Verify Tags and Labels
         run: |
           echo "## Action Summary - Docker CI " >> $GITHUB_STEP_SUMMARY
-          echo "${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
           echo "${{ steps.meta.outputs.labels }} " >> $GITHUB_STEP_SUMMARY
-          echo "*** VERIFICATION COMPLETED ***"
