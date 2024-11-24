@@ -17,3 +17,5 @@ Sorting algorithms are methods used to rearrange elements in a list or array int
 - Radix Sort: Sorts numbers by processing individual digits from least significant to most significant.
 
 *Each algorithm has different performance characteristics and is suitable for different types of data and use cases.*
+
+Feel free to implement them on your own!
