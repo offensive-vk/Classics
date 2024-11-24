@@ -38,7 +38,7 @@ C++ was designed with systems programming and embedded, resource-constrained sof
 - C/C++ both are awesome programming languages. Yet Powerful also.
 - You can find Contribution Guidelines [here](https://github.com/offensive-vk/Classics/blob/classic/.github/CONTRIBUTING.md) and Security Guidelines [here.](https://github.com/offensive-vk/Classics/blob/classic/.github/SECURITY.md)
 - This Repository Contains All of My Best C & C++ Programs.
-- Trick - All Valid C Code is Also A Valid C++ Code.
+- Trick - Every C Program is also a Valid C++ Program.
 - (i.e You Can Save Your C Source Code with .cpp extension.)
 - Enjoy ! _You can try Shell Scripting too._ [Try Now >](https://github.com/offensive-vk/Classics/blob/classic/Bash/)
 
@@ -58,13 +58,13 @@ int main(int argc, char const *argv[]) {
 }
 ```
 
-### To Compile any .cpp | .cxx | .c++ Source File :
+### To Compile any .cpp | .cxx | .c++ file
 
 ```bash
 $ g++ filename.cpp -o filename
 ```
 
-### To Compile Any .c Source File
+### To Compile any .c program
 
 ```bash
 $ gcc filename.c -o filename
@@ -72,8 +72,9 @@ $ gcc filename.c -o filename
 
 You are allowed to copy and implement these programs freely.
 
-## Happy Coding ~ [offensive-vk](https://github.com/offensive-vk/)
+## Happy Coding - [offensive-vk](https://github.com/offensive-vk/)
 
+***
 
 <p align="center">
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2020 - Present</i><br>
