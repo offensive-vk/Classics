@@ -5,7 +5,7 @@
 
 int main(int argc, char const *argv[])
 {
-        // Use Case 1: Basic Lambda Function
+    // Use Case 1: Basic Lambda Function
     auto sum = [](int a, int b) {
         return a + b;
     };
