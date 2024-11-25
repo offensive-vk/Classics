@@ -42,9 +42,8 @@ static void tests() {
 
 /**
  * @brief Main function
- * @returns 0 on exit
  */
 int main() {
-    tests(); // run self-test implementations
+    tests();
     return 0;
 }
