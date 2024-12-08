@@ -50,8 +50,7 @@ jobs:
           - Author: @TheHamsterBot
           - Branch: ${{ github.ref }}
           - Commit: ${{ github.sha }}
-          - Workflow Path: ${{ github.workflow }}
-          - Pull Request Number: #${{ env.PR_NUMBER }}
+          - Workflow Path: ${{ github.workflow_path }}
           - Pusher Details: ${{ github.event.head_commit.author.name }} - ${{ github.event.head_commit.author.email }} 
 
           ---
