@@ -8,7 +8,6 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
     name: Sync
     steps:
     - uses: actions/checkout@v4
@@ -16,7 +15,7 @@ jobs:
         fetch-depth: 0
         
     - name: Action 
-      uses: offensive-vk/auto-repo-sync@v7
+      uses: offensive-vk/auto-repo-sync@master
       with:
         target-url: ${{ secrets.TARGET_URL }}
         target-username: ${{ secrets.TARGET_USERNAME }}

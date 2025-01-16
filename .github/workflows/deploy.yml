@@ -51,7 +51,6 @@ jobs:
           labels: |
             org.opencontainers.image.title=classics
             org.opencontainers.image.vendor=Vedansh
-            org.opencontainers.image.multi-platform=true
             org.opencontainers.image.source=https://github.com/offensive-vk/Classics
 
       - name: Install Cosign
