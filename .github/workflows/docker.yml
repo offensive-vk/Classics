@@ -2,9 +2,9 @@ name: Docker
 
 on:
   push:
-    branches: [ "classic", "**" ]
+    branches: [ "**" ]
   pull_request:
-    branches: [ "classic", "**" ]
+    branches: [ "**" ]
   workflow_dispatch:
 
 jobs:

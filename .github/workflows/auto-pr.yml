@@ -15,16 +15,16 @@ jobs:
 
       - name: Create or Query PR
         id: create-pr
-        uses: repo-sync/pull-request@v2
+        uses: offensive-vk/auto-pr-action@v8
         with:
-          github_token: ${{ secrets.BOT_TOKEN }}
-          destination_branch: "classic"
-          pr_title: "Hamster Left A Pull Request - (${{ github.event.head_commit.message }})"
-          pr_body: "Hamster is working here. Sit tight!"
-          pr_reviewer: "offensive-vk"
-          pr_label: "bot,automated,hamster,pull-request"
-          pr_assignee: "TheHamsterBot"
-          pr_draft: false
+          repo-token: ${{ secrets.BOT_TOKEN }}
+          destination-branch: "classic"
+          title: "Hamster Left A Pull Request - (${{ github.event.head_commit.message }})"
+          body: "Hamster is working here. Sit tight!"
+          reviewers: "offensive-vk"
+          labels: "bot,hamster,pull-request"
+          assignees: "TheHamsterBot"
+          draft: false
         continue-on-error: true
 
       - name: Save PR Number in ENV
@@ -44,13 +44,13 @@ jobs:
           ## This Pull Request Was Automated by [Hamster [bot]](https://github.com/TheHamsterBot)
 
           > [!NOTE]
-          > Workflow Trigger: ${{ github.event_name }} event at ${{ github.ref_name }} branch.
+          > Workflow Trigger: ${{ github.event_name }} event at ${{ github.ref_name }} ${{ github.ref_type }}.
           > Details of Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
           - Author: @TheHamsterBot
-          - Branch: ${{ github.ref }}
+          - Branch: ${{ github.ref_name }}
           - Commit: ${{ github.sha }}
-          - Workflow Path: ${{ github.workflow_path }}
+          - Workflow Path: ${{ github.event.workflow }}
           - Pusher Details: ${{ github.event.head_commit.author.name }} - ${{ github.event.head_commit.author.email }} 
 
           ---
