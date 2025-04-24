@@ -1,5 +1,5 @@
 #!/bin/bash
-# DO NOT EXECUTE OR RUN THIS FILE.
+# DO NOT RUN THIS FILE.
 
 LOG_FILE="access.log"
 REPORT_FILE="report.txt"
@@ -53,7 +53,7 @@ generate_report() {
     echo "Average Response Time: $average_response_time ms" >> "$REPORT_FILE"
 }
 
-# Main execution
+
 parse_log_file
 generate_report
 
