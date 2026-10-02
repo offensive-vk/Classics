@@ -80,13 +80,13 @@ int main() {
     HashMap<std::string, int> ageMap;
     ageMap.insert("Alice", 30);
     ageMap.insert("Bob", 25);
-    ageMap.insert("Charlie", 35);
+    ageMap.insert("Carrie", 35);
 
     std::cout << "Size of map: " << ageMap.getSize() << std::endl;
     std::cout << "Is Alice in the map? " << (ageMap.contains("Alice") ? "Yes" : "No") << std::endl;
     std::cout << "Age of Bob: " << ageMap.get("Bob") << std::endl;
 
-    ageMap.insert("Alice", 31); // Update Alice's age
+    ageMap.insert("Alice", 31);
     std::cout << "Updated age of Alice: " << ageMap.get("Alice") << std::endl;
 
     ageMap.remove("Bob");
