@@ -3,6 +3,7 @@
 #include <list>
 #include <string>
 #include <functional> // For std::hash
+#include <stdexcept> // For std::out_of_range
 
 template <typename K, typename V>
 class HashMap {
