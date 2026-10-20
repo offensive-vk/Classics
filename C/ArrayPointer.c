@@ -1,15 +1,24 @@
-#include<stdio.h>
-#include<conio.h>
-int main() {
-	int size, count=0, n, i, j;
-    printf("Enter Size of Array : ");
-    scanf("%d", &size);
-    int *arr[size]; 
-    for(i=0; i<size; i++) {
-    	scanf("%d", *arr[i]);
+#include <stdio.h>
+
+int main(void) {
+	int size;
+	printf("Enter Size of Array : ");
+	if (scanf("%d", &size) != 1 || size <= 0) {
+		printf("Invalid size.\n");
+		return 1;
 	}
-	for(i=0; i<size; i++) {
-		printf("The Array Data in Pointer : \n", *arr[i]);
+
+	int arr[size];
+	int *ptr = arr;
+
+	printf("Enter %d elements:\n", size);
+	for (int i = 0; i < size; i++) {
+		scanf("%d", ptr + i);
 	}
-    return 0;
+
+	printf("\nThe Array Data accessed via Pointer arithmetic:\n");
+	for (int i = 0; i < size; i++) {
+		printf("Element %d: %d (at address %p)\n", i, *(ptr + i), (void*)(ptr + i));
+	}
+	return 0;
 }

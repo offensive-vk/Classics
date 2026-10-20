@@ -1,7 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#ifdef _WIN32
 #include <windows.h>
+#include <conio.h>
+#define CLEAR_SCREEN() system("cls")
+#define PAUSE_SCREEN() system("pause")
+#else
+#define CLEAR_SCREEN() system("clear")
+#define PAUSE_SCREEN() do { printf("Press Enter to continue..."); while(getchar() != '\n'); } while(0)
+#endif
 
 struct Customer
 {
@@ -11,7 +20,7 @@ struct Customer
 	int amount;
 };
 
-int main()
+int main(void)
 {
 	struct Customer data[] = {
 		{12001, "Andy Smith", 1597, 50000},
@@ -19,119 +28,139 @@ int main()
 		{12003, "Mahak Saini", 7103, 150000},
 		{12004, "Payal", 4567, 15000},
 		{12005, "John Wick", 7309, 75000}};
-	int choice, i, acc, pin, flag = 0, withdraw, amount, deposit;
+
+	int choice, i, acc, pin, withdraw, deposit;
+
 	while (1)
 	{
-		char message[] = "Welcome To DBS Bank ATM ";
-		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t");
-		for (i = 0; i < strlen(message); i++)
-		{
-			printf("%c", message[i]);
-			sleep(1);
-		}
-		printf("\n\t\tPress 1 To Continue \n");
+		char message[] = "Welcome To DBS Bank ATM";
+		printf("\n\n\t\t\t%s\n", message);
+		printf("\t\tPress 1 To Continue \n");
 		printf("\t\tPress 2 To Exit \n");
+		printf("\t\tPlease Proceed With Your Choice : ");
 
-		printf("\t\tPlease Proceed With Your Choice :");
-		scanf("%d", &choice);
+		if (scanf("%d", &choice) != 1)
+		{
+			printf("\n\t\tInvalid input!\n");
+			break;
+		}
+
 		switch (choice)
 		{
 		case 1:
-			system("cls");
-			printf("\n\n\n\n\n");
-			printf("\n\t\tEnter Account Number : ");
+			CLEAR_SCREEN();
+			printf("\n\n\t\tEnter Account Number : ");
 			scanf("%d", &acc);
-			printf("\n\t\t\t\tEnter Your Pin : ");
+			printf("\t\tEnter 4-Digit Pin : ");
 			scanf("%d", &pin);
-			pin = 0;
-			for (i = 0; i < 4; i++)
-			{
-				pin = pin * 10 + (getch() - 48);
-				printf("*");
-			}
-			flag = 0;
+
+			int user_idx = -1;
 			for (i = 0; i < 5; i++)
 			{
 				if (data[i].acc_no == acc && data[i].pin == pin)
 				{
-					flag = 1;
+					user_idx = i;
 					break;
 				}
 			}
-			if (flag == 0)
-				printf("\n\t\t\t\tInvalid Account and Pin !!!!\n\n");
-			break;
-			while (flag == 1)
+
+			if (user_idx == -1)
 			{
-				if (flag == 1)
+				printf("\n\t\tInvalid Account or Pin !!!!\n\n");
+				PAUSE_SCREEN();
+				break;
+			}
+
+			printf("\n\t\tWelcome, %s!\n", data[user_idx].name);
+			int in_session = 1;
+			while (in_session)
+			{
+				CLEAR_SCREEN();
+				printf("\n\t\t--- ATM Menu (User: %s) ---\n", data[user_idx].name);
+				printf("\t1. Check Balance \n");
+				printf("\t2. Cash Withdrawal\n");
+				printf("\t3. Deposit Cash\n");
+				printf("\t4. Exit to Main Menu\n");
+				printf("\tEnter your choice : ");
+				scanf("%d", &choice);
+
+				switch (choice)
 				{
-					system("cls");
-					printf("\t1. Check Balance \n");
-					printf("\t2. Cash Withdrawal\n");
-					printf("\t3. Deposit Cash\n");
-					printf("\t4. Exit\n");
-					printf("\tEnter your choice : ");
-					scanf("%d", &choice);
-					printf("\n\n");
-					system("pause");
-					system("cls");
-					switch (choice)
+				case 1:
+					printf("\n\t\tYour current balance is : %d Rs\n\n", data[user_idx].amount);
+					break;
+
+				case 2:
+					printf("\n\t\tEnter Amount to Withdraw : ");
+					scanf("%d", &withdraw);
+					if (withdraw <= 0)
 					{
-					case 1:
-						printf("\n\n\n\t\t  Your current balance is : %d Rs  \n\n", data[i].amount);
-						break;
-
-					case 2:
-						printf("\n\t\t Enter Amount: ");
-						scanf("%d", &withdraw);
-
-						if (withdraw % 100 == 0)
-						{
-
-							if (data[i].amount >= withdraw)
-							{
-								amount = data[i].amount - withdraw;
-								printf("\n\n\t\t Please collect your cash \n");
-								printf("\n\t\t Your current balance is : %d Rs \n\n", amount);
-							}
-							else
-							{
-								printf("\n\n\t\t Insufficent balance \n\n");
-							}
-						}
-						else
-							printf("\n\t\t Enter amount in muliple of 100 \n\n");
-						break;
-					case 3:
-						printf("\n\t\t Enter amount to deposit : ");
-						scanf("%d", &deposit);
-						if (deposit % 100 == 0)
-						{
-							amount = data[i].amount + deposit;
-							printf("\n\t\t Your balance is : %d Rs \n\n", amount);
-						}
-						else
-							printf("\n\t\t Enter amount in muliple of 100 \n\n");
-						break;
-					case 4:
-						printf("\n\n\n\n\n\n\t\t\t\t THANK YOU \n\n\n\n");
-						exit(1);
-						break;
-					default:
-						printf("\n\t\t Please Select Correct Option \n\n");
+						printf("\n\t\tPlease enter a positive amount.\n");
 					}
-					printf("\n\n");
-					system("pause");
+					else if (withdraw % 100 == 0)
+					{
+						if (data[user_idx].amount >= withdraw)
+						{
+							data[user_idx].amount -= withdraw;
+							printf("\n\t\tPlease collect your cash.\n");
+							printf("\t\tYour remaining balance is : %d Rs\n\n", data[user_idx].amount);
+						}
+						else
+						{
+							printf("\n\t\tInsufficient balance!\n\n");
+						}
+					}
+					else
+					{
+						printf("\n\t\tEnter amount in multiples of 100.\n\n");
+					}
+					break;
+
+				case 3:
+					printf("\n\t\tEnter amount to deposit : ");
+					scanf("%d", &deposit);
+					if (deposit <= 0)
+					{
+						printf("\n\t\tPlease enter a positive amount.\n");
+					}
+					else if (deposit % 100 == 0)
+					{
+						data[user_idx].amount += deposit;
+						printf("\n\t\tDeposit successful!\n");
+						printf("\t\tYour new balance is : %d Rs\n\n", data[user_idx].amount);
+					}
+					else
+					{
+						printf("\n\t\tEnter amount in multiples of 100.\n\n");
+					}
+					break;
+
+				case 4:
+					printf("\n\t\tThank you for banking with us.\n");
+					in_session = 0;
+					break;
+
+				default:
+					printf("\n\t\tPlease select a valid option.\n\n");
+					break;
+				}
+
+				if (in_session)
+				{
+					PAUSE_SCREEN();
 				}
 			}
 			break;
+
 		case 2:
-			exit(1);
-			break;
+			printf("\n\t\tThank you for visiting! Goodbye.\n\n");
+			exit(0);
+
 		default:
-			printf("\n\t\t\t Invalid Choice........... \n\n");
+			printf("\n\t\tInvalid Choice! Try again.\n\n");
+			break;
 		}
-		system("pause");
+		PAUSE_SCREEN();
 	}
 	return 0;
 }
