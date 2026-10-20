@@ -2,9 +2,11 @@
 
 // Function to swap two integers using bitwise XOR operator
 void swap(int *a, int *b) {
-    *a ^= *b;
-    *b ^= *a;
-    *a ^= *b;
+    if (a != b) {
+        *a ^= *b;
+        *b ^= *a;
+        *a ^= *b;
+    }
 }
 
 int main() {

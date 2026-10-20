@@ -7,17 +7,17 @@ typedef struct {
 } Human;
 
 // Human constructor
-void Human_init(Human* this, const char* name) {
-    this->name = name;
+void Human_init(Human* self, const char* name) {
+    self->name = name;
 }
 
 // Human introduce function
-void Human_introduce(const Human* this) {
-    printf("Hello, my name is %s.\n", this->name);
+void Human_introduce(const Human* self) {
+    printf("Hello, my name is %s.\n", self->name);
 }
 
 // Human greet function
-void Human_greet(const Human* this) {
+void Human_greet(const Human* self) {
     printf("Hi, I'm a human.\n");
 }
 
@@ -27,17 +27,17 @@ typedef struct {
 } Men;
 
 // Men constructor
-void Men_init(Men* this, const char* name) {
-    Human_init(&this->super, name);
+void Men_init(Men* self, const char* name) {
+    Human_init(&self->super, name);
 }
 
 // Men fixThings function
-void Men_fixThings(const Men* this) {
+void Men_fixThings(const Men* self) {
     printf("I'm fixing things.\n");
 }
 
 // Men greet function
-void Men_greet(const Men* this) {
+void Men_greet(const Men* self) {
     printf("Hey, I'm a man.\n");
 }
 
@@ -47,17 +47,17 @@ typedef struct {
 } Women;
 
 // Women constructor
-void Women_init(Women* this, const char* name) {
-    Human_init(&this->super, name);
+void Women_init(Women* self, const char* name) {
+    Human_init(&self->super, name);
 }
 
 // Women shopping function
-void Women_shopping(const Women* this) {
+void Women_shopping(const Women* self) {
     printf("I'm going shopping.\n");
 }
 
 // Women greet function
-void Women_greet(const Women* this) {
+void Women_greet(const Women* self) {
     printf("Hi, I'm a woman.\n");
 }
 
